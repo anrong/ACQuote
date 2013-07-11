@@ -66,6 +66,13 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         $rootScope.notes=text;
     }
 
+    tinymce.init({
+        selector: "textarea#area1",
+        theme: "modern",
+        width: 300,
+        height: 300
+    });
+
 
     // Load and Save Module
     $scope.saveTextAsFile = function()
@@ -257,6 +264,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     }
 
     $rootScope.addClick = function() {
+
+        //Adds the base
         for (i=0; i < $scope.products.length; i++){
             if($scope.selectedBase.Part==$scope.products[i].Part){
                 $scope.products[i].Quoted=true;
@@ -264,6 +273,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
             }
         }
+
+        //Adds the Mud pump
         for (i=0; i < $scope.products.length; i++){
             if($scope.selectedPump==$scope.products[i].Part){
                 $scope.products[i].Quoted=true;
@@ -271,7 +282,15 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
             }
         }
-       // $scope.selectedBase="";
+
+        //Adds the Truck
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruck==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
     }
     $rootScope.addClick2 = function() {
         for (i=0; i < $scope.products.length; i++){
@@ -286,6 +305,14 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 $scope.products[i].Quoted2=true;
                 $scope.products[i].Quantity2=1;
                 //  $scope.products[i].checked = true;
+            }
+        }
+
+        //Adds the Truck
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruck==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
             }
         }
         // $scope.selectedBase="";
