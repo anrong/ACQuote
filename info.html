@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="QuotationApp">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" type="text/css" href="lib/css/ng-grid.css" /> -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-responsive.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+<body>
+<div ng-controller="InfoCtrl">
+<div class="row">
+    <div class="span2">
+        <h2>Front Page</h2>
+    </div>
+</div>
+    Company Name: <input type="text" ng-model="companyName" placeholder="Enter company name" class>
+    <br>
+    Customer Name: <input type="text" ng-model="customerName" placeholder="Enter customer name" class>
+    <br>
+    Quotation prepared by: <input type="text" ng-model="data.preparedBy" placeholder="Prepared by" class>
+    <br>
+    <br>
+    <h2>Please choose a cover letter </h2>
+
+    <!-- Where to get the letters? Create a variable/array in the controller?-->
+
+            <span class="nullable">
+                <select ng-model="selectedLetter" ng-options="letter.title for letter in coverLetters"><br>
+                    <option value="">No letter</option>
+                </select>
+                </span> <br>
+    <textarea ng-model="letterText" class>{{selectedLetter.content}}</textarea>
+    <br>
+    {{selectedLetter.content}}
+<br>
+    </div>
+</body>
+<script type="text/javascript" src="lib/js/jquery-1.9.1.js"></script>
+
+<!-- Angular -->
+<script src="lib/js/angular.js"></script>
+
+<!-- AngularUI-stuff and Bootstrap -->
+<!-- <script type="text/javascript" src="lib/js/ng-grid-2.0.6.min.js"></script> -->
+
+<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+
+<!-- SaveFiles -->
+<script type="text/javascript" src="lib/js/FileSaver.js"></script>
+
+<!--Application-->
+<script type="text/javascript" src="data/ProductData.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript" src="js/controllers.js"></script>
+</html>

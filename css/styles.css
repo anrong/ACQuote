@@ -1,0 +1,39 @@
+body{
+	margin-top: 60px;
+}
+
+.quantityInput {
+    text-align: right;
+    width: 25px;
+}
+
+.letterArea {
+    width: 600px;
+}
+
+pre {
+    font-family:"Helvetica";
+    font-size: 14px;
+    white-space: pre-wrap;
+    border: none;
+}
+
+#title {
+    text-align: center;
+    page-break-after: always;
+}
+
+.pbAfter {
+    page-break-after: always;
+}
+
+#logo {
+    text-align: center;
+}
+
+.tblCont {
+    font-size: 18px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}

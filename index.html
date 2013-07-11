@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" ng-app="QuotationApp">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" type="text/css" href="lib/css/ng-grid.css" /> -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+   
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-responsive.min.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+<body ng-controller="IndexCtrl">
+
+	<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Atlas Copco</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+
+              <li><a href="#/info">Information Input</a> </li>
+              <li><a href="#/products">Products</a></li>
+              <li><a href="#/quotation">Quotation</a></li>
+            
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="" ng-click="saveState()">Save</a></li>
+            <li><a href="">Load</a></li>
+            <li><a href="" ng-click="savePDF()">Export to PDF</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div ng-view></div>
+</div>
+<hr>
+
+
+<footer>
+<p>&copy; Atlas Copco 2013</p>
+</footer>
+
+
+<!-- Partials -->
+
+   <!-- This is the Info View-->
+    <script type="text/ng-template" id="partials/info-view.html">
+        <div class="row">
+            <div class="span6">
+                <h3>Front Page</h3>
+            </div>
+        </div>
+        <!-- Input for the front page -->
+        Company Name:
+        <br><input type="text" ng-model="$parent.companyName" placeholder="Enter company name" class>
+        <br>
+        Customer Name:
+        <br><input type="text" ng-model="$parent.customerName" placeholder="Enter customer name" class>
+        <br>
+        Customer Title:
+        <br><input type="text" ng-model="$parent.customerTitle" placeholder="Enter title" class>
+        <br>
+        Quotation prepared by:
+        <br><input type="text" ng-model="$parent.preparedBy" placeholder="Prepared by" class>
+        <br>
+        <br>
+
+        <!-- Adding, importing and editing a cover letter-->
+        <h3>Please choose a cover letter </h3>
+            <span class="nullable">
+                <select ng-model="$parent.selectedLetter" ng-options="letter.title for letter in coverLetters" ng-change="setContent(selectedLetter.content)"><br>
+                    <option value="" ng-model="$parent.selectedLetter" ng-change="setContent()">No letter</option>
+                </select>
+                </span>
+        <br>
+        <input type="file" id="fileToLoad" ng-model="fileToLoad"><button ng-click="loadFileAsText()">Load Selected File</button>
+        <br>
+
+        <!-- This is the where you can save and load letters on the hard drive-->
+        <textarea ng-model="letterText"  rows="10" class="letterArea" ng-change="setContent(letterText)" ng-trim='false'></textarea>
+        <br>
+        <br>
+        <!-- <input type="file" id="fileToLoad"><button ng-click="loadFileAsText()" onclick="loadFileAsText()">Load Selected File</button>  -->
+        <table>
+            <tr>
+                <td>Filename to Save As:</td>
+                <td><input id="inputFileNameToSaveAs" ng-model="saveName"></td>
+                <td><button ng-click="saveTextAsFile()">Save Text to File</button></td>
+            </tr>
+        </table>
+
+        <!-- Notes -->
+        <h3>Notes</h3>
+        <textarea ng-model="notes"  rows="10" class="letterArea" ng-trim='false' placeholder="Notes..." ng-change="setNotes(notes)"></textarea>
+        <!-- Terms and conditions -->
+        <br>
+        <h3>Terms and Conditions</h3>
+        <!-- Add TC here, dropdown menu -->
+        <!-- Product descriptions -->
+        <br>
+        <h3>Product Description </h3>
+        <br>
+        TH60 <input type="checkbox" ng-model="$parent.productDesc" ng-checked="$parent.productDesc"/>
+        <!-- Technical Specifications -->
+        <br>
+        <h3>Technical Specifications </h3>
+        <br>
+        TH60 <input type="checkbox" ng-model="$parent.techSpec" ng-checked="$parent.techSpec"/>
+
+    </script>
+
+
+
+    <!-- This is the Product view -->
+<script type="text/ng-template" id="partials/products-view.html">
+       <div class="span6">
+        <div class="row">
+            <div class="span6">
+
+                <!-- Choose the Base Product
+                Set pump to "" when changing-->
+          <select ng-model="$parent.selectedBase" ng-options="productTitle.Description for productTitle in baseProducts" ng-change="resetAll()">
+              <option value="">Select Base</option>
+          </select>
+            &nbsp&nbsp Base Cost: {{getStdCost(selectedBase)}}
+            </div>
+            <br>
+            <br>
+            <br>
+      </div>
+    <!-- Choose the sub products here. This is for the first pricing summary-->
+    <div class="span6">
+
+            <strong>Pump: </strong><br>
+            <div class="row">
+            <input type="radio" ng-model="$parent.selectedPump"  value="" name="pumpSelect" ng-checked="true"> No Pump <br><br>
+            </div>
+              <div ng-repeat="pump in pumps | filter:{Dep:selectedBase.Part}" class="row">
+            <input type="radio" ng-model="$parent.selectedPump"  value="{{pump.Part}}" name="pumpSelect"> {{pump.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(pump)}}<br><br>
+            </div>
+
+        <br>
+        <br>
+
+        <div class="span6">
+            <table>
+                <tr>
+                    <td><button ng-click="addClick()" class="btn1">Add to Quote</button></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td><button ng-click="addClick2()" class="btn1">Add to Second Quote</button></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+        </div>
+        <!--  </form>  -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+           <!-- This is the first pricing summary-->
+           <h3>Main Pricing Summary</h3>
+           <table class="table table-striped">
+            <tr>
+                <th> Type </th>
+                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+            </tr>
+            <tr ng-repeat="product in products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
+                <!-- Add Strong if it is Base -->
+                <td>{{product.Class}}</td>
+                <td>{{product.Part}}</td>
+                <td>{{product.Description}}</td>
+                <td>{{product.StdCost}}</td>
+                <td><button ng-click="removeClick(product)" class="btn-small">-</button></td>
+            </tr>
+            <tr>
+                <td>Total: </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{TotalSum()}}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+           <!-- This is the second pricing summary-->
+        <br>
+           <h3>Secondary Pricing Summary</h3>
+        <br>
+           <table class="table table-striped">
+               <tr>
+                   <th> Type </th>
+                   <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                   <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+                   <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+               </tr>
+               <tr ng-repeat="product in products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
+                   <!-- Add Strong if it is Base -->
+                   <td>{{product.Class}}</td>
+                   <td>{{product.Part}}</td>
+                   <td>{{product.Description}}</td>
+                   <td>{{product.StdCost}}</td>
+                   <td><button ng-click="removeClick2(product)" class="btn-small">-</button></td>
+               </tr>
+               <tr>
+                   <td>Total: </td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td>{{TotalSum2()}}</td>
+               </tr>
+           </table>
+
+        <br>
+        <br>
+        <br>
+        <div class="row">
+        <div class="span2">
+            <form class="form-search">
+                <input ng-model="query" class="input-medium search-query" type="text" placeholder="Filter…">
+            </form>
+        </div>
+            <div class="span6 ">
+              <table class="table table-striped table-bordered" >
+              <tr>
+                <th>Include</th>
+                <th>Part</th>
+                <th>Description</th>
+                <th>StdCost</th>
+              </tr>
+                  <tr ng-repeat="product in products | filter:query" >
+                      <td><input type="checkbox" ng-checked="product.checked" ng-model="product.checked"></td>
+                      <td>{{product.Part}}</td>
+                      <td>{{product.Description}}</td>
+                      <td>{{product.StdCost}}</td>
+                  </tr>
+              </table>
+        </div>
+    </div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+       </div>
+</script>
+
+
+
+
+
+    <!-- This is the Quotation view -->
+
+<script type="text/ng-template" id="partials/quotation-view.html" >
+
+    <div class="span8">
+        <!-- First the front page is added -->
+        <div id="title">
+            <h2>Atlas Copco Quotation</h2><br>
+                <br>
+                <img src="lib/img/AClogo.jpg" id="logo" width="121">
+                <br>
+
+                <p>Quotation made for {{customerTitle}} {{customerName}} at {{companyName}} </p>
+                <p>Quotation prepared by {{preparedBy}} </p>
+                 <!--<p>{{year}}-{{month()}}-{{day()}}</p>-->
+            </div>
+
+        <!-- Table of Contents -->
+        <div class="pbAfter">
+            <h2>Table of Contents</h2>
+            <br>
+            <br>
+            <table class="tblCont">
+                <tr ng-show="includeLetter()"><td>Cover Letter</td></tr>
+                <tr ng-show="true"><td>Pricing Summary</td></tr>
+                <tr ng-show="secondQuote()"><td>Pricing Summary 2</td></tr>
+                <tr ng-show="includeNotes()"><td>Notes</td></tr>
+                <tr ng-show="includeTC()"><td>Terms and Conditions</td></tr>
+                <tr ng-show="includeDesc()"><td>Product Descriptions</td></tr>
+                <tr ng-show="includeSpec()"><td>Technical Specifications</td></tr>
+            </table>
+        </div>
+
+        <!-- Cover Letter -->
+        <div class="pbAfter" ng-show="includeLetter()">
+            <h2>Cover Page</h2>
+            <br>
+            <p>
+                <!-- Here is the contents of the Cover Letter added -->
+            <pre>{{letterText}}</pre>
+            </p>
+            <br>
+            <br>
+        </div>
+
+        <!-- Pricing Summary -->
+        <div class="pbAfter">
+        <h2>Pricing Summary</h2>
+
+        <table class="table table-striped">
+            <tr>
+                <th> Type </th>
+                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
+                <th>Quantity </th>
+                <th>Cost</th>
+            </tr>
+            <tr ng-repeat="product in products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
+                <!-- Add Strong if it is Base -->
+                <td>{{product.Class}}</td>
+                <td>{{product.Part}}</td>
+                <td>{{product.Description}}</td>
+                <td>{{product.StdCost}}</td>
+                <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
+                <td>{{product.Quantity*product.StdCost}}</td>
+            </tr>
+            <tr>
+                <td>Total: </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{TotalSum()}}</td>
+            </tr>
+            <!--
+        <tr ng-repeat="product in products | filter:isSelected | orderBy:settings.order:settings.reverse ">
+          <td>Extra</td>
+          <td>{{product.Part}}</td>
+          <td>{{product.Description}}</td>
+          <td>{{product.StdCost}}</td>
+            <td></td>
+            <td></td>
+        </tr>
+            <tr>
+                <td>Total: </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{TotalSum()}}</td>
+            </tr>  -->
+        </table>
+        </div>
+
+
+    <br>
+    <br>
+
+        <!-- Second Pricing Summary -->
+        <div ng-show="secondQuote()" class="pbAfter">
+    <p>
+    <h2>Pricing Summary 2</h2>
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th> Type </th>
+            <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+            <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+            <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
+            <th>Quantity </th>
+            <th>Cost</th>
+        </tr>
+        <tr ng-repeat="product in products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
+            <!-- Add Strong if it is Base -->
+            <td>{{product.Class}}</td>
+            <td>{{product.Part}}</td>
+            <td>{{product.Description}}</td>
+            <td>{{product.StdCost}}</td>
+            <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
+            <td>{{product.Quantity2*product.StdCost}}</td>
+        </tr>
+        <tr>
+            <td>Total: </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{TotalSum2()}}</td>
+        </tr>
+    </table>
+        </div>
+
+        <!-- Notes -->
+        <div ng-show="includeNotes()">
+            <h3>Notes</h3>
+            <pre>{{notes}}</pre>
+        </div>
+
+
+        <!-- Adding the product info sheets -->
+         <img src="lib/img/desc/TH60 1.png" ng-show="productDesc">
+         <img src="lib/img/desc/TH60 2.png" ng-show="productDesc">
+         <img src="lib/img/desc/TH60 3.png" ng-show="productDesc">
+         <img src="lib/img/desc/TH60 4.png" ng-show="productDesc">
+
+
+        <!-- Adding the technical specifications info sheets
+        <img src="lib/img/specs/TH60 1.png" ng-show="productDesc">
+        <img src="lib/img/specs/TH60 2.png" ng-show="productDesc">
+        <img src="lib/img/specs/TH60 3.png" ng-show="productDesc">
+        <img src="lib/img/specs/TH60 4.png" ng-show="productDesc">
+          -->
+    </div>
+    <br>
+    <br>
+
+</script>
+
+
+
+<!-- End Partials -->
+
+
+<!-- jQuery -->
+
+<script type="text/javascript" src="lib/js/jquery-1.9.1.js"></script>
+
+
+<!-- Angular -->
+<script src="lib/js/angular.js"></script>
+
+<!-- AngularUI-stuff and Bootstrap -->
+<!-- <script type="text/javascript" src="lib/js/ng-grid-2.0.6.min.js"></script> -->
+
+<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+
+<!-- SaveFiles -->
+<script type="text/javascript" src="lib/js/FileSaver.js"></script>
+    <!-- PDF Generator -->
+    <script type="text/javascript" src="lib/js/jspdf.js"></script>
+    <script type="text/javascript" src="lib/js/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="lib/js/jspdf.plugin.cell.js"></script>
+    <script type="text/javascript" src="lib/js/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="lib/js/jspdf.plugin.standard_fonts_metrics.js"></script>
+
+<!--Application-->
+<script type="text/javascript" src="data/ProductData.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript" src="js/controllers.js"></script>
+
+    <!--
+<script type="text/javascript" src="js/fileHandler.js"></script>
+-->
+
+
+
+
+
+</body>
+</html>
