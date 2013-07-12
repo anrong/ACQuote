@@ -19,14 +19,7 @@ var IndexCtrl = function($rootScope, $scope){
 		var blob = new Blob([JSON.stringify(quotation, undefined, 2)], {type: "text/plain;charset=utf-8"});
         saveAs(blob, "Quotation.json");
 	}
-    $scope.getSomeText = function() {
-        var text;
-        text = $scope.someText;
-        if ($scope.someText == undefined) {
-            return  'There is no text yet'
-        }
-        return text;
-    }
+
     $scope.savePDF = function(){
         var doc = new jsPDF('p','mm', 'a4'),
              margin = 20,
@@ -66,6 +59,7 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         $rootScope.notes=text;
     }
 
+    //Can I do data binding to this?
     tinymce.init({
         selector: "textarea#area1",
         theme: "modern",
@@ -136,6 +130,7 @@ var QuotationCtrl = function($rootScope, $scope){
 
 
     //Date Control
+    //Have to add a number on the month
     var today = new Date();
     $rootScope.day = function() {
         if(today.getDate()<10){
@@ -153,8 +148,8 @@ var QuotationCtrl = function($rootScope, $scope){
 
 
 
-    //Included Parts
-
+    /*Included Parts
+--------------------------*/
 
     //Cover Letter
     $scope.includeLetter = function (){
@@ -204,6 +199,16 @@ var QuotationCtrl = function($rootScope, $scope){
         return true;
     }
 
+    /* Price calculations
+    ----------------------------
+     */
+
+    //Round the subtotals
+    $rootScope.getSubTot = function (product, quantity){
+        var value = product*quantity;
+        return numberWithCommas(Math.round(value*100)/100);
+    }
+
     // Generates the total Amounts
     $rootScope.TotalSum = function(){
         var value = 0;
@@ -212,7 +217,7 @@ var QuotationCtrl = function($rootScope, $scope){
                 value = value + $rootScope.products[i].StdCost*$rootScope.products[i].Quantity;
             }
         }
-        return value;
+        return numberWithCommas(Math.round(value*100)/100);
     }
     $rootScope.TotalSum2 = function(){
         var value = 0;
@@ -221,7 +226,11 @@ var QuotationCtrl = function($rootScope, $scope){
                 value = value + $rootScope.products[i].StdCost*$rootScope.products[i].Quantity2;
             }
         }
-        return value;
+        return Math.round(value*100)/100;
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     $scope.getProductQuantity = function (product){
@@ -292,7 +301,10 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
 
     }
+
+
     $rootScope.addClick2 = function() {
+        //Adds the base
         for (i=0; i < $scope.products.length; i++){
             if($scope.selectedBase.Part==$scope.products[i].Part){
                 $scope.products[i].Quoted2=true;
@@ -300,6 +312,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 // $scope.products[i].checked = true;
             }
         }
+        //Adds the Mud pump
         for (i=0; i < $scope.products.length; i++){
             if($scope.selectedPump==$scope.products[i].Part){
                 $scope.products[i].Quoted2=true;

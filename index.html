@@ -112,12 +112,12 @@
         <br>
         <h3>Product Description </h3>
         <br>
-        TH60 <input type="checkbox" ng-model="$parent.productDesc" ng-checked="$parent.productDesc"/>
+        TH60 (Low res)<input type="checkbox" ng-model="$parent.productDesc" ng-checked="$parent.productDesc"/>
         <!-- Technical Specifications -->
         <br>
         <h3>Technical Specifications </h3>
         <br>
-        TH60 <input type="checkbox" ng-model="$parent.techSpec" ng-checked="$parent.techSpec"/>
+        TW3 (high res) <input type="checkbox" ng-model="$parent.techSpec" ng-checked="$parent.techSpec"/>
 
     </script>
 
@@ -216,7 +216,6 @@
             <br>
             <br>
         </div>
-        <!--  </form>  -->
 
         <br>
         <br>
@@ -382,7 +381,7 @@
                 <td>{{product.Description}}</td>
                 <td>{{product.StdCost}}</td>
                 <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
-                <td>{{product.Quantity*product.StdCost}}</td>
+                <td>{{getSubTot(product.Quantity, product.StdCost)}}</td>
             </tr>
             <tr>
                 <td>Total: </td>
@@ -464,12 +463,13 @@
          <img src="lib/img/desc/TH60 4.png" ng-show="productDesc">
 
 
-        <!-- Adding the technical specifications info sheets
-        <img src="lib/img/specs/TH60 1.png" ng-show="productDesc">
-        <img src="lib/img/specs/TH60 2.png" ng-show="productDesc">
-        <img src="lib/img/specs/TH60 3.png" ng-show="productDesc">
-        <img src="lib/img/specs/TH60 4.png" ng-show="productDesc">
-          -->
+        <!-- Adding the technical specifications info sheets -->
+
+        <img src="lib/img/specs/T3W%201.png" ng-show="techSpec">
+        <img src="lib/img/specs/T3W%202.png" ng-show="techSpec">
+        <img src="lib/img/specs/T3W%203.png" ng-show="techSpec">
+        <img src="lib/img/specs/T3W 4.png" ng-show="techSpec">
+
     </div>
     <br>
     <br>
