@@ -116,6 +116,274 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
 
 
 
+var ProductsCtrl = function ($rootScope, $scope, productFactory) {
+    $rootScope.products = PRODUCTS;
+    $rootScope.baseProducts = productFactory.getBaseProducts();
+    $rootScope.pumps = productFactory.getPumps();
+    $rootScope.selectedColdWeather = [];
+
+    $rootScope.getStdCost = function (baseProduct){
+        if(baseProduct==undefined){
+            return "";
+        }
+        return baseProduct.StdCost;
+    }
+  /*  $scope.checkProduct = function(){
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedBase.Part==$scope.products[i].Part){
+                $scope.products.checked = true;
+            }
+        }
+        return $scope.products;
+    };
+    */
+    $rootScope.removeClick = function (product){
+        product.Quoted=false;
+        product.Quantity=0;
+    }
+    $rootScope.removeClick2 = function (product){
+        product.Quoted2=false;
+        product.Quantity2=0;
+    }
+
+    $rootScope.showOptions = function (productClass){
+
+        if($scope.selectedBase==undefined){
+            return false;
+        }
+        for(i=0 ;i < $rootScope.products.length; i++){
+            if(productClass==$rootScope.products[i].Class){
+                if($rootScope.products[i].Dep==$scope.selectedBase.Part){
+                    return true;
+                }
+            }
+        }
+        return false;
+  }
+
+    /*
+    Add the products to the quote
+    Automate this with some sort of for-loop
+     */
+    $rootScope.addClick = function() {
+
+        /* How to automate this? Doesn't work
+        var selections = ['$scope.selectedPump.Part', '$scope.selectedTruck.Part'];
+
+         for (var key in selections)  {
+             console.log(selections[key]);
+             for (i=0; i < $scope.products.length; i++){
+                 if(selections[key]==$scope.products[i].Part){
+                     console.log("hej");
+                     $scope.products[i].Quoted=true;
+                     $scope.products[i].Quantity=1;
+                 }
+             }
+         }
+        */
+
+        //Adds the base
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedBase.Part==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+
+        //Adds the Truck
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruck==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Truck Options
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruckOption==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Rotation Torque
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTorque==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Drill Pipe Setup
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedDrillPipe==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Air Piping
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedAirPiping==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Water Injection
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedWaterInjection==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Drill Pipe Setup
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedDrillPipe==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Hoists
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedHoist==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Piping Handling
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedPipingHandling==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Mud pump
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedPump==$scope.products[i].Part){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Cold Weather Package
+        for (i=0; i < $scope.products.length; i++){
+            console.log("hej")
+            if($scope.product[i].ColdWeather==true){
+                $scope.products[i].Quoted=true;
+                $scope.products[i].Quantity=1;
+            }
+        }
+    }
+
+
+    $rootScope.addClick2 = function() {
+        //Adds the base
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedBase.Part==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+                // $scope.products[i].checked = true;
+            }
+        }
+        //Adds the Truck
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruck==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Truck Options
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTruckOption==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Rotation Torque
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedTorque==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Drill Pipe Setup
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedDrillPipe==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Air Piping
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedAirPiping==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Water Injection
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedWaterInjection==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Drill Pipe Setup
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedDrillPipe==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Hoists
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedHoist==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Piping Handling
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedPipingHandling==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds the Mud pump
+        for (i=0; i < $scope.products.length; i++){
+            if($scope.selectedPump==$scope.products[i].Part){
+                $scope.products[i].Quoted2=true;
+                $scope.products[i].Quantity2=1;
+            }
+        }
+
+
+    }
+
+
+   //Why doesn't this work??
+   $rootScope.resetAll = function (){
+       $scope.selectedPump="";
+       $scope.selectedPump.value="";
+       return $scope.selectedPump;
+    }
+};
+
+
 var QuotationCtrl = function($rootScope, $scope){
 
     //$rootScope.productDesc.check(false);
@@ -149,7 +417,8 @@ var QuotationCtrl = function($rootScope, $scope){
 
 
     /*Included Parts
---------------------------*/
+     --------------------------
+     */
 
     //Cover Letter
     $scope.includeLetter = function (){
@@ -162,29 +431,29 @@ var QuotationCtrl = function($rootScope, $scope){
 
     //Second Quote
     $scope.secondQuote = function(){
-    for (i=0; i<$rootScope.products.length; i++){
-        if ($rootScope.products[i].Quoted2 == true){
-            return true;
-           }
+        for (i=0; i<$rootScope.products.length; i++){
+            if ($rootScope.products[i].Quoted2 == true){
+                return true;
+            }
         }
         return false;
     }
 
-	$rootScope.settings.order = "Description";
-	$rootScope.settings.reverse = false;
+    $rootScope.settings.order = "Description";
+    $rootScope.settings.reverse = false;
 
-	$rootScope.isSelected = function(product){
-		if(product.checked == true){
-			return true;
-		}
-		return false;
-	}
+    $rootScope.isSelected = function(product){
+        if(product.checked == true){
+            return true;
+        }
+        return false;
+    }
 
 
     //Product Description
     // Doesn't work?
-    $scope.includeDesc = function () {
-        if($rootScope.productDesc.checked===true){
+    $scope.includeDesc = function (productDesc) {
+        if(productDesc==true){
             return true;
         }
         return false;
@@ -200,7 +469,7 @@ var QuotationCtrl = function($rootScope, $scope){
     }
 
     /* Price calculations
-    ----------------------------
+     ----------------------------
      */
 
     //Round the subtotals
@@ -226,7 +495,7 @@ var QuotationCtrl = function($rootScope, $scope){
                 value = value + $rootScope.products[i].StdCost*$rootScope.products[i].Quantity2;
             }
         }
-        return Math.round(value*100)/100;
+        return numberWithCommas(Math.round(value*100)/100);
     }
 
     function numberWithCommas(x) {
@@ -241,103 +510,6 @@ var QuotationCtrl = function($rootScope, $scope){
 
 };
 
-
-
-var ProductsCtrl = function ($rootScope, $scope, productFactory) {
-    $rootScope.products = PRODUCTS;
-    $rootScope.baseProducts = productFactory.getBaseProducts();
-    $rootScope.pumps = productFactory.getPumps();
-
-    $rootScope.getStdCost = function (baseProduct){
-        if(baseProduct==undefined){
-            return "";
-        }
-        return baseProduct.StdCost;
-    }
-  /*  $scope.checkProduct = function(){
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedBase.Part==$scope.products[i].Part){
-                $scope.products.checked = true;
-            }
-        }
-        return $scope.products;
-    };
-    */
-    $rootScope.removeClick = function (product){
-        product.Quoted=false;
-        product.Quantity=0;
-    }
-    $rootScope.removeClick2 = function (product){
-        product.Quoted2=false;
-        product.Quantity2=0;
-    }
-
-    $rootScope.addClick = function() {
-
-        //Adds the base
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedBase.Part==$scope.products[i].Part){
-                $scope.products[i].Quoted=true;
-                $scope.products[i].Quantity=1;
-
-            }
-        }
-
-        //Adds the Mud pump
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedPump==$scope.products[i].Part){
-                $scope.products[i].Quoted=true;
-                $scope.products[i].Quantity=1;
-
-            }
-        }
-
-        //Adds the Truck
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedTruck==$scope.products[i].Part){
-                $scope.products[i].Quoted=true;
-                $scope.products[i].Quantity=1;
-            }
-        }
-
-    }
-
-
-    $rootScope.addClick2 = function() {
-        //Adds the base
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedBase.Part==$scope.products[i].Part){
-                $scope.products[i].Quoted2=true;
-                $scope.products[i].Quantity2=1;
-                // $scope.products[i].checked = true;
-            }
-        }
-        //Adds the Mud pump
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedPump==$scope.products[i].Part){
-                $scope.products[i].Quoted2=true;
-                $scope.products[i].Quantity2=1;
-                //  $scope.products[i].checked = true;
-            }
-        }
-
-        //Adds the Truck
-        for (i=0; i < $scope.products.length; i++){
-            if($scope.selectedTruck==$scope.products[i].Part){
-                $scope.products[i].Quoted2=true;
-                $scope.products[i].Quantity2=1;
-            }
-        }
-        // $scope.selectedBase="";
-    }
-
-   //Why doesn't this work??
-   $rootScope.resetAll = function (){
-       $scope.selectedPump="";
-       $scope.selectedPump.value="";
-       return $scope.selectedPump;
-    }
-};
 
 
 
