@@ -29,8 +29,8 @@
             
           </ul>
           <ul class="nav pull-right">
-            <li><a href="" ng-click="saveState()">Save</a></li>
-            <li><a href="">Load</a></li>
+            <li><a href="" ng-click="saveState()" download="Quotation.json">Save</a></li>
+            <li><input type="file" id="loadState" ng-model="stateFile"><button ng-click="loadState()">Open</button></li>
             <li><a href="" ng-click="savePDF()">Export to PDF</a></li>
           </ul>
         </div>

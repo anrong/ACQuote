@@ -10,10 +10,27 @@ var IndexCtrl = function($rootScope, $scope){
 
 	$scope.saveState = function(){
 
-        //console.log($rootScope);
-		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "text/plain;charset=utf-8"});
+        console.log("1");
+		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "application/x-download;charset=utf-8"});
         saveAs(blob, "Quotation.json");
 	}
+
+    $scope.loadState = function(){
+        var fileToLoad = document.getElementById("loadState").files[0];
+
+        var fileReader = new FileReader();
+        fileReader.onload = function(fileLoadedEvent)
+        {
+            var JsonTextFromFileLoaded = fileLoadedEvent.target.result;
+
+
+            $rootScope.quotation = JSON.parse(JsonTextFromFileLoaded);
+            console.log($rootScope.quotation);
+
+
+        };
+        fileReader.readAsText(fileToLoad, "UTF-8");
+    }
 
     $scope.savePDF = function(){
         var doc = new jsPDF('p','mm', 'a4'),
