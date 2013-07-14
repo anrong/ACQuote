@@ -1,0 +1,2 @@
+<p>This is som edited text.</p>
+<p>Br, and <strong>bold, right?</strong></p>
