@@ -274,7 +274,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         //Adds the Cold Weather Package
         for (i=0; i < $scope.products.length; i++){
             console.log("hej")
-            if($scope.product[i].ColdWeather==true){
+            if($scope.products[i].ColdWeather==true){
                 $scope.products[i].Quoted=true;
                 $scope.products[i].Quantity=1;
             }

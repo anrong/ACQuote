@@ -1,6 +1,6 @@
 
 
-var QuotationApp = angular.module('QuotationApp', []);
+var QuotationApp = angular.module('QuotationApp', ['ngSanitize']);
 
 
 QuotationApp.config(function($routeProvider) {
@@ -112,3 +112,6 @@ QuotationApp.factory('productFactory', function(){
 QuotationApp.factory('customerFactory', function(){
 
 })
+
+
+
