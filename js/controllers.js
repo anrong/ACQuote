@@ -6,13 +6,14 @@ var IndexCtrl = function($rootScope, $scope){
     //$rootScope.selectedLetter = "";
 
     $rootScope.quotation = {};
+    $rootScope.quotation.products = PRODUCTS;
 
 
-	$scope.saveState = function(){
+	$scope.saveState = function(name){
 
         console.log("1");
 		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "application/x-download;charset=utf-8"});
-        saveAs(blob, "Quotation.json");
+        saveAs(blob,name+".json");
 	}
 
     $scope.loadState = function(){
@@ -23,10 +24,9 @@ var IndexCtrl = function($rootScope, $scope){
         {
             var JsonTextFromFileLoaded = fileLoadedEvent.target.result;
 
-
             $rootScope.quotation = JSON.parse(JsonTextFromFileLoaded);
+            $rootScope.$apply(quotation);
             console.log($rootScope.quotation);
-
 
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
@@ -71,43 +71,22 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         $rootScope.quotation.notes=text;
     }
 
-    //Can I do data binding to this?
+    /*Can I do data binding to this?
     tinymce.init({
         selector: "textarea#area1",
         theme: "modern",
         width: 300,
         height: 300
-    });
+    });  */
 
 
     // Load and Save Module
-    $scope.saveTextAsFile = function()
-    {
-        var textToWrite = $scope.quotation.letterText;
-        var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-        var fileNameToSaveAs = $scope.saveName;
 
-        var downloadLink = document.createElement("a");
-        downloadLink.download = fileNameToSaveAs;
-        downloadLink.innerHTML = "Download File";
-        if (window.webkitURL != null)
-        {
-            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-        }
-        else
-        {
-            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-            downloadLink.onclick = destroyClickedElement;
-            downloadLink.style.display = "none";
-            document.body.appendChild(downloadLink);
-        }
 
-        downloadLink.click();
-    }
-
-    function destroyClickedElement(event)
-    {
-        document.body.removeChild(event.target);
+    $scope.saveTextAsFile = function(name){
+        console.log("1");
+        var blob = new Blob([JSON.stringify($rootScope.quotation.letterText, undefined, 2)], {type: "application/x-download;charset=utf-8"});
+        saveAs(blob,name+".txt");
     }
 
     $scope.loadFileAsText = function()
@@ -123,15 +102,31 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         fileReader.readAsText(fileToLoad, "UTF-8");
     }
 
+    $rootScope.quotation.terms = {Title: 'Standard Terms', Content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt' +
+        ' ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+        'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum' +
+        ' dolore eu fugiat nulla pariatur. Excepteur sint occaecat ' +
+        'cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'};
+
+    $scope.terms = function(selectedTerms){
+        if (selectedTerms=='Standard Terms'){
+            return $rootScope.quotation.terms.Content;
+        }
+        return "";
+    }
+
 };
 
 
 
 
 var ProductsCtrl = function ($rootScope, $scope, productFactory) {
-    $rootScope.quotation.products = PRODUCTS;
+/*    if ($rootScope.quotation.products == undefined){
+        $rootScope.quotation.products = PRODUCTS;
+    } */
+
+
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
-    $rootScope.quotation.pumps = productFactory.getPumps();
     $rootScope.quotation.selectedColdWeather = [];
 
     $rootScope.getStdCost = function (baseProduct){
@@ -285,8 +280,23 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
         //Adds the Cold Weather Package
         for (i=0; i < $rootScope.quotation.products.length; i++){
-            console.log("hej")
             if($rootScope.quotation.products[i].ColdWeather==true){
+                $rootScope.quotation.products[i].Quoted=true;
+                $rootScope.quotation.products[i].Quantity=1;
+            }
+        }
+
+        //Adds the Miscellaneous
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].Miscellaneous==true){
+                $rootScope.quotation.products[i].Quoted=true;
+                $rootScope.quotation.products[i].Quantity=1;
+            }
+        }
+
+        //Adds Accessories
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].Accessories==true){
                 $rootScope.quotation.products[i].Quoted=true;
                 $rootScope.quotation.products[i].Quantity=1;
             }
@@ -383,7 +393,29 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             }
         }
 
+        //Adds the Cold Weather Package
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].ColdWeather==true){
+                $rootScope.quotation.products[i].Quoted2=true;
+                $rootScope.quotation.products[i].Quantity2=1;
+            }
+        }
 
+        //Adds the Miscellaneous
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].Miscellaneous==true){
+                $rootScope.quotation.products[i].Quoted2=true;
+                $rootScope.quotation.products[i].Quantity2=1;
+            }
+        }
+
+        //Adds Accessories
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].Accessories==true){
+                $rootScope.quotation.products[i].Quoted2=true;
+                $rootScope.quotation.products[i].Quantity2=1;
+            }
+        }
     }
 
 
@@ -419,10 +451,12 @@ var QuotationCtrl = function($rootScope, $scope){
         return today.getDate().toString();
     }
     $rootScope.month = function() {
-        if(today.getMonth()<10){
-            return "0"+today.getMonth().toString();
+        var month = today.getMonth();
+        month = month + 1;
+        if(month<10){
+            return "0"+month.toString();
         }
-        return today.getMonth().toString();
+        return month.toString();
     }
     $rootScope.year = today.getFullYear();
 
@@ -463,7 +497,6 @@ var QuotationCtrl = function($rootScope, $scope){
 
 
     //Product Description
-    // Doesn't work?
     $scope.includeDesc = function (productDesc) {
         if(productDesc==true){
             return true;
@@ -475,6 +508,14 @@ var QuotationCtrl = function($rootScope, $scope){
     //Notes
     $scope.includeNotes = function () {
         if($rootScope.quotation.notes==undefined || $rootScope.quotation.notes==""){
+            return false;
+        }
+        return true;
+    }
+
+    //Terms and conditions
+    $scope.includeTerms = function () {
+        if($rootScope.quotation.selectedTerms==undefined || $rootScope.quotation.selectedTerms=="" ){
             return false;
         }
         return true;
@@ -536,19 +577,3 @@ function Ctrl($scope) {
 
   */
 
-/*
-function CoverLetterCtrl($scope, coverLetterFactory) {
-      //Dessa ska hämtas från någon typ av fil
-
-    $scope.coverLetters = coverLetterFactory.getCoverLetters();
-
-    $scope.selectedLetter = $scope.coverLetters[0];
-     */
-     /*
-    if ($scope.selectedLetter.title=="Letter 1"){
-        $scope.coverLetter.letterContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut " +
-            "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea " +
-            "commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " +
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-    }
-       */

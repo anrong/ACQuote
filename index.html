@@ -29,9 +29,9 @@
             
           </ul>
           <ul class="nav pull-right">
-            <li><a href="" ng-click="saveState()" download="Quotation.json">Save</a></li>
-            <li><input type="file" id="loadState" ng-model="stateFile"><button ng-click="loadState()">Open</button></li>
-            <li><a href="" ng-click="savePDF()">Export to PDF</a></li>
+            <li><button ng-click="saveState(quotation.companyName)" class="btn">Save</button></li>
+            <li><button ng-click="loadState()" class="btn">Load</button><input type="file" id="loadState" ng-model="stateFile" class="input-mini"></li>
+           <!-- <li><a href="" ng-click="savePDF()">Export to PDF</a></li>-->
           </ul>
         </div>
       </div>
@@ -72,6 +72,9 @@
         <br><input type="text" ng-model="$parent.quotation.preparedBy" placeholder="Prepared by" class>
         <br>
         <br>
+        Include date: <input type="checkbox" ng-model="$parent.quotation.date" class> &nbsp; <div ng-controller="QuotationCtrl">{{year}}-{{month()}}-{{day()}}</div>
+        <br>
+        <br>
 
         <!-- Adding, importing and editing a cover letter-->
         <h3>Please choose a cover letter </h3>
@@ -85,11 +88,9 @@
         <br>
 
         <!-- This is the where you can save and load letters on the hard drive-->
-        <textarea ng-model="quotation.letterText" ui-tinymce  rows="15" class="letterArea" ng-change="setContent(quotation.letterText)" ng-trim='false'></textarea>
+        <textarea ng-model="quotation.letterText" ui-tinymce contenteditable="true" spellcheck="true" lang="en" rows="15" class="letterArea" ng-change="setContent(quotation.letterText)" ng-trim='false'></textarea>
         <br>
-      <!--  <form method="post">
-            <textarea id="area1"></textarea>
-        </form> -->
+
 
         <br>
         <!-- <input type="file" id="fileToLoad"><button ng-click="loadFileAsText()" onclick="loadFileAsText()">Load Selected File</button>  -->
@@ -97,17 +98,26 @@
             <tr>
                 <td>Filename to Save As:</td>
                 <td><input id="inputFileNameToSaveAs" ng-model="saveName"></td>
-                <td><button ng-click="saveTextAsFile()">Save Text to File</button></td>
+                <td><button ng-click="saveTextAsFile(saveName)">Save Text to File</button></td>
             </tr>
         </table>
 
         <!-- Notes -->
         <h3>Notes</h3>
-        <textarea ng-model="notes"  rows="10" class="letterArea" ng-trim='false' placeholder="Notes..." ng-change="setNotes(notes)"></textarea>
+        <textarea ng-model="quotation.notes"  ui-tinymce rows="10" class="letterArea"  ng-change="setNotes(quotation.notes)" ng-trim='false'></textarea>
         <!-- Terms and conditions -->
         <br>
         <h3>Terms and Conditions</h3>
         <!-- Add TC here, dropdown menu -->
+        <span class="nullable">
+            <select ng-model="quotation.selectedTerms"><br>
+                <option value="" ng-model="quotation.selectedTerms">No Terms and Conditions</option>
+                <option value="Standard Terms" ng-model="quotation.selectedTerms">Standard Terms and Conditions</option>
+            </select>
+       </span>
+        <br>
+        {{terms(quotation.selectedTerms)}}
+
         <!-- Product descriptions -->
         <br>
         <h3>Product Description </h3>
@@ -117,7 +127,7 @@
         <br>
         <h3>Technical Specifications </h3>
         <br>
-        TW3 (high res) <input type="checkbox" ng-model="$parent.quotation.techSpec" ng-checked="$parent.quotation.techSpec"/>
+        TH60 (No data) <input type="checkbox" ng-model="$parent.quotation.techSpec" ng-checked="$parent.quotation.techSpec"/>
 
     </script>
 
@@ -281,7 +291,7 @@
             <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Pump'}" class="row">
                 <input type="radio" ng-model="$parent.selectedPump"  value="{{product.Part}}" name="pumpSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
             </div>
-            {{selectedPump}}
+
             <br>
             <br>
        </div>
@@ -294,13 +304,30 @@
             <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'ColdWeather'}" class="row">
                 <input type="checkbox" ng-model="product.ColdWeather"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
             </div>
-            <br>  {{product.ColdWeather}}
+            <br>
             <br>
         </div>
 
         <!-- Miscellaneous -->
 
+        <div ng-show="showOptions('Miscellaneous')">
+            <strong> Miscellaneous: </strong><br>
+            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Miscellaneous'}" class="row">
+                <input type="checkbox" ng-model="product.Miscellaneous"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+            </div>
+            <br>
+            <br>
+        </div>
+
         <!-- Accessories -->
+        <div ng-show="showOptions('Accessories')">
+            <strong> Accessories: </strong><br>
+            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
+                <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+            </div>
+            <br>
+            <br>
+        </div>
 
 
 
@@ -389,12 +416,15 @@
         <br>
         <br>
         <div class="row">
+            <div class="span6"><h3>Custom add products</h3></div>
         <div class="span2">
+
             <form class="form-search">
-                <input ng-model="query" class="input-medium search-query" type="text" placeholder="Filter…">
+                <input ng-model="query" class="input-medium search-query" type="text" placeholder="Search…">
             </form>
         </div>
             <div class="span6 ">
+
               <table class="table table-striped table-bordered" >
               <tr>
                 <th>Include</th>
@@ -440,6 +470,7 @@
                 <p>For the attention of <br>{{quotation.customerTitle}} {{quotation.customerName}} </p>
                 <p>Quotation prepared by {{quotation.preparedBy}} </p>
                 <p>Of Atlas Copco</p>
+                    <p>{{year}}-{{month()}}-{{day()}}</p>
                 </strong>
                  <!--<p>{{year}}-{{month()}}-{{day()}}</p>-->
             </div>
@@ -454,7 +485,7 @@
                 <tr ng-show="true"><td>Pricing Summary</td></tr>
                 <tr ng-show="secondQuote()"><td>Pricing Summary 2</td></tr>
                 <tr ng-show="includeNotes()"><td>Notes</td></tr>
-                <tr ng-show="includeTC()"><td>Terms and Conditions</td></tr>
+                <tr ng-show="includeTerms()"><td>Terms and Conditions</td></tr>
                 <tr ng-show="includeDesc(productDesc)"><td>Product Descriptions</td></tr>
                 <tr ng-show="includeSpec()"><td>Technical Specifications</td></tr>
             </table>
@@ -466,7 +497,7 @@
             <br>
             <p>
                 <!-- Here is the contents of the Cover Letter added -->
-                <!-- Doesn't work... WORKING NOW =) -->
+
             <span ng-bind-html="quotation.letterText"></span>
 
             </p>
@@ -505,9 +536,9 @@
                 <td></td>
                 <td>{{TotalSum()}}</td>
             </tr>
-            <!--
-        <tr ng-repeat="product in products | filter:isSelected | orderBy:settings.order:settings.reverse ">
-          <td>Extra</td>
+
+        <tr ng-repeat="product in quotation.products | filter:isSelected | orderBy:settings.order:settings.reverse ">
+          <td>{{product.Class}}</td>
           <td>{{product.Part}}</td>
           <td>{{product.Description}}</td>
           <td>{{product.StdCost}}</td>
@@ -521,7 +552,7 @@
                 <td></td>
                 <td></td>
                 <td>{{TotalSum()}}</td>
-            </tr>  -->
+            </tr>
         </table>
         </div>
 
@@ -564,10 +595,16 @@
             </div>
 
             <!-- Notes -->
-            <div ng-show="includeNotes()">
+            <div ng-show="includeNotes()" class="pbAfter">
                 <h3>Notes</h3>
-                <pre>{{notes}}</pre>
+                <span ng-bind-html="quotation.notes"></span>
             </div>
+
+        <!-- Terms and Conditions -->
+        <div ng-show="includeTerms()" class="pbAfter">
+            <h3>Terms and Conditions</h3>
+            <span ng-bind-html="quotation.terms.Content"></span>
+        </div>
 
 
         <!-- Adding the product info sheets -->
