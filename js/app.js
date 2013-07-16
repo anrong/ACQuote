@@ -109,8 +109,17 @@ QuotationApp.factory('productFactory', function(){
     } */
 })
 
-QuotationApp.factory('customerFactory', function(){
-
+QuotationApp.factory('descriptionFactory', function(){
+    var descriptions = DESCRIPTIONS;
+    descriptions.imgsrc = [];
+    var factory = {};
+    factory.getDescriptions = function () {
+        for(key in descriptions){
+            for (i=1; i < descriptions[key].imageCount; i++){
+                descriptions[key].imgsrc = i;
+            }
+        }
+    }
 })
 
 

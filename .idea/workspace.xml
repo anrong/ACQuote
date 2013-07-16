@@ -2,45 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="added TinyMCE">
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\Quotation.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\cl.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\file.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\file.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\info.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\app.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\icons\128.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\icons\16.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\icons\32.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\icons\64.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\rainbowsky.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\data\content\style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\img\specs\T3W-2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\swf\opensave.swf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\tinytest.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/ProductDescription.js" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\desc\TH60 1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\desc\TH60 2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\desc\TH60 3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\desc\TH60 4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\specs\T3W 1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\specs\T3W 2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\specs\T3W 3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\specs\T3W 4.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/directive.js" afterPath="$PROJECT_DIR$/lib/tinymce/directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373777137545" ignored="false" />
-    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373889468957" ignored="false" />
-    <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373889363594" ignored="false" />
+    <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373958584793" ignored="false" />
+    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373970116177" ignored="false" />
+    <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373970230280" ignored="false" />
     <file path="/info.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372919983514" ignored="false" />
     <file path="/pdfgen.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372311800745" ignored="false" />
     <file path="/ProductDataN.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372746934108" ignored="false" />
     <file path="/ProductData.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372747153068" ignored="false" />
     <file path="/Test.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372758732185" ignored="false" />
     <file path="/bootstrap.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372835936532" ignored="false" />
-    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373871997711" ignored="false" />
+    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373949575657" ignored="false" />
     <file path="/dummy.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372998083107" ignored="false" />
     <file path="/fileHandler.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373273245359" ignored="false" />
     <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373859093497" ignored="false" />
     <file path="/file.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373539327077" ignored="false" />
     <file path="/directive.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373783898339" ignored="false" />
+    <file path="/ProductDescription.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373957541454" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +98,35 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="603" column="53" selection-start="24485" selection-end="24485" vertical-scroll-proportion="0.35199004">
-              <folding />
+            <state line="636" column="55" selection-start="26182" selection-end="26182" vertical-scroll-proportion="0.4079602">
+              <folding>
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#span#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#table#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#span#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#5;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#6;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#7;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#8;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#10;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#11;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#5;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#6;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,19 +134,61 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="517" column="101" selection-start="17696" selection-end="17696" vertical-scroll-proportion="0.0">
+            <state line="614" column="3" selection-start="20817" selection-end="20817" vertical-scroll-proportion="-11.92">
+              <folding>
+                <element signature="e#5520#5585#0" expanded="false" />
+                <element signature="e#5634#5701#0" expanded="false" />
+                <element signature="e#6516#11640#0" expanded="false" />
+                <element signature="e#11681#16305#0" expanded="false" />
+                <element signature="e#11771#12070#0" expanded="false" />
+                <element signature="e#12160#12387#0" expanded="false" />
+                <element signature="e#12486#12719#0" expanded="false" />
+                <element signature="e#12820#13048#0" expanded="false" />
+                <element signature="e#13150#13381#0" expanded="false" />
+                <element signature="e#13477#13708#0" expanded="false" />
+                <element signature="e#13800#14036#0" expanded="false" />
+                <element signature="e#14138#14369#0" expanded="false" />
+                <element signature="e#14461#14688#0" expanded="false" />
+                <element signature="e#14789#15025#0" expanded="false" />
+                <element signature="e#15119#15345#0" expanded="false" />
+                <element signature="e#15451#15669#0" expanded="false" />
+                <element signature="e#15768#15988#0" expanded="false" />
+                <element signature="e#16081#16299#0" expanded="false" />
+                <element signature="e#16895#17038#0" expanded="false" />
+                <element signature="e#17073#17251#0" expanded="false" />
+                <element signature="e#17160#17212#0" expanded="false" />
+                <element signature="e#17430#17531#0" expanded="false" />
+                <element signature="e#17654#17774#0" expanded="false" />
+                <element signature="e#17831#18044#0" expanded="false" />
+                <element signature="e#18098#18247#0" expanded="false" />
+                <element signature="e#18314#18480#0" expanded="false" />
+                <element signature="e#18632#18699#0" expanded="false" />
+                <element signature="e#18752#18820#0" expanded="false" />
+                <element signature="e#18893#19215#0" expanded="false" />
+                <element signature="e#19253#19577#0" expanded="false" />
+                <element signature="e#19612#19686#0" expanded="false" />
+                <element signature="e#19738#19809#0" expanded="false" />
+                <element signature="e#19851#20022#0" expanded="false" />
+                <element signature="e#20073#20500#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDescription.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ProductDescription.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="112" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileSaver.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/js/FileSaver.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="14" selection-start="8138" selection-end="8138" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="112" column="0" selection-start="3734" selection-end="4038" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,10 +202,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
+      <file leaf-file-name="ProductData.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ProductData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="51" selection-start="943" selection-end="1442" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,7 +214,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="27" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,8 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/productInfo.html" />
-        <option value="$PROJECT_DIR$/lib/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/js/css/styles.css" />
         <option value="$PROJECT_DIR$/js/filters.js" />
         <option value="$PROJECT_DIR$/js/info.html" />
@@ -187,11 +248,13 @@
         <option value="$PROJECT_DIR$/lib/js/angular_sanitize.js" />
         <option value="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js" />
         <option value="$PROJECT_DIR$/lib/tinymce/directive.js" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template_src.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/js/controllers.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/controllers.js" />
+        <option value="$PROJECT_DIR$/data/ProductDescription.js" />
+        <option value="$PROJECT_DIR$/data/desc/TechnicalSpecifications.js" />
       </list>
     </option>
   </component>
@@ -276,7 +339,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="desc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TH60" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,6 +422,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\lib" />
       <recent name="C:\Users\MHNes\Documents\Quotation system\Atlas Copco\js\data" />
       <recent name="C:\Users\MHNes\Documents\Quotation system\Atlas Copco" />
     </key>
@@ -449,7 +553,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24173807" sideWeight="0.98619103" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.50053364" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.50053364" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.4994664" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -529,25 +633,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/plugins/spellchecker/editor_plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/plugins/spellchecker/editor_plugin_src.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/js/angular_sanitize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="534" column="27" selection-start="19284" selection-end="19284" vertical-scroll-proportion="0.8979592" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="126" selection-start="3174" selection-end="3211" vertical-scroll-proportion="0.45382166" />
@@ -572,32 +661,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tinymce/directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/fileHandler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/js/FileSaver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="14" selection-start="8138" selection-end="8138" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="27" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -616,24 +682,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/FileSaver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="14" selection-start="8138" selection-end="8138" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="51" selection-start="943" selection-end="1442" vertical-scroll-proportion="0.0">
+        <state line="112" column="0" selection-start="3734" selection-end="4038" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tinymce/directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ProductDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="112" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="517" column="101" selection-start="17696" selection-end="17696" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="614" column="3" selection-start="20817" selection-end="20817" vertical-scroll-proportion="-11.92">
+          <folding>
+            <element signature="e#5520#5585#0" expanded="false" />
+            <element signature="e#5634#5701#0" expanded="false" />
+            <element signature="e#6516#11640#0" expanded="false" />
+            <element signature="e#11681#16305#0" expanded="false" />
+            <element signature="e#11771#12070#0" expanded="false" />
+            <element signature="e#12160#12387#0" expanded="false" />
+            <element signature="e#12486#12719#0" expanded="false" />
+            <element signature="e#12820#13048#0" expanded="false" />
+            <element signature="e#13150#13381#0" expanded="false" />
+            <element signature="e#13477#13708#0" expanded="false" />
+            <element signature="e#13800#14036#0" expanded="false" />
+            <element signature="e#14138#14369#0" expanded="false" />
+            <element signature="e#14461#14688#0" expanded="false" />
+            <element signature="e#14789#15025#0" expanded="false" />
+            <element signature="e#15119#15345#0" expanded="false" />
+            <element signature="e#15451#15669#0" expanded="false" />
+            <element signature="e#15768#15988#0" expanded="false" />
+            <element signature="e#16081#16299#0" expanded="false" />
+            <element signature="e#16895#17038#0" expanded="false" />
+            <element signature="e#17073#17251#0" expanded="false" />
+            <element signature="e#17160#17212#0" expanded="false" />
+            <element signature="e#17430#17531#0" expanded="false" />
+            <element signature="e#17654#17774#0" expanded="false" />
+            <element signature="e#17831#18044#0" expanded="false" />
+            <element signature="e#18098#18247#0" expanded="false" />
+            <element signature="e#18314#18480#0" expanded="false" />
+            <element signature="e#18632#18699#0" expanded="false" />
+            <element signature="e#18752#18820#0" expanded="false" />
+            <element signature="e#18893#19215#0" expanded="false" />
+            <element signature="e#19253#19577#0" expanded="false" />
+            <element signature="e#19612#19686#0" expanded="false" />
+            <element signature="e#19738#19809#0" expanded="false" />
+            <element signature="e#19851#20022#0" expanded="false" />
+            <element signature="e#20073#20500#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="603" column="53" selection-start="24485" selection-end="24485" vertical-scroll-proportion="0.35199004">
-          <folding />
+        <state line="636" column="55" selection-start="26182" selection-end="26182" vertical-scroll-proportion="0.4079602">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#table#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#7;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#8;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#10;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#11;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#0;tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

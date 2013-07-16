@@ -25,8 +25,7 @@ var IndexCtrl = function($rootScope, $scope){
             var JsonTextFromFileLoaded = fileLoadedEvent.target.result;
 
             $rootScope.quotation = JSON.parse(JsonTextFromFileLoaded);
-            $rootScope.$apply(quotation);
-            console.log($rootScope.quotation);
+            $rootScope.$apply($rootScope.quotation);
 
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
@@ -52,10 +51,8 @@ var IndexCtrl = function($rootScope, $scope){
 
         doc.output('dataurlnewwindow', {});
 
-
     }
 }
-
 
 
 var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
@@ -84,7 +81,6 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
 
 
     $scope.saveTextAsFile = function(name){
-        console.log("1");
         var blob = new Blob([JSON.stringify($rootScope.quotation.letterText, undefined, 2)], {type: "application/x-download;charset=utf-8"});
         saveAs(blob,name+".txt");
     }
@@ -115,6 +111,25 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         return "";
     }
 
+    /*Product Description
+    $rootScope.includeDesc = function (productDesc, included) {
+        if (included==true){
+            console.log('Included desc')
+            for(key in $rootScope.quotation.productDescriptions){
+                if ($rootScope.quotation.productDescriptions[key].Name == productDesc.Name){
+                    $rootScope.quotation.productDescriptions[key].Included = true;
+                }
+            }
+        } else{
+       /* for(key in $rootScope.quotation.productDescriptions){
+            if ($rootScope.quotation.productDescriptions[key].Name == productDesc.Name){
+                $rootScope.quotation.productDescriptions[key].Included = false;
+            }
+        }
+        }
+    }
+
+    */
 };
 
 
@@ -172,6 +187,17 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     Add the products to the quote
     Automate this with some sort of for-loop
      */
+
+    $rootScope.addCustom = function (product){
+        product.Quoted=true;
+        product.Quantity=1;
+    }
+
+    $rootScope.addCustom2 = function (product){
+        product.Quoted2=true;
+        product.Quantity2=1;
+    }
+
     $rootScope.addClick = function() {
 
         /* How to automate this? Doesn't work
@@ -440,7 +466,6 @@ var QuotationCtrl = function($rootScope, $scope){
         $rootScope.quotation.products = new Array()
     }
 
-
     //Date Control
     //Have to add a number on the month
     var today = new Date();
@@ -459,6 +484,16 @@ var QuotationCtrl = function($rootScope, $scope){
         return month.toString();
     }
     $rootScope.year = today.getFullYear();
+
+    $rootScope.settings.order = "Description";
+    $rootScope.settings.reverse = false;
+
+    $rootScope.isSelected = function(product){
+        if(product.checked == true){
+            return true;
+        }
+        return false;
+    }
 
 
 
@@ -485,24 +520,6 @@ var QuotationCtrl = function($rootScope, $scope){
         return false;
     }
 
-    $rootScope.settings.order = "Description";
-    $rootScope.settings.reverse = false;
-
-    $rootScope.isSelected = function(product){
-        if(product.checked == true){
-            return true;
-        }
-        return false;
-    }
-
-
-    //Product Description
-    $scope.includeDesc = function (productDesc) {
-        if(productDesc==true){
-            return true;
-        }
-        return false;
-    }
 
 
     //Notes
@@ -528,7 +545,11 @@ var QuotationCtrl = function($rootScope, $scope){
     //Round the subtotals
     $rootScope.getSubTot = function (product, quantity){
         var value = product*quantity;
-        return numberWithCommas(Math.round(value*100)/100);
+        return value;
+    }
+
+    $rootScope.numberWithCommas = function (number){
+        return numberWithCommas(Math.round(number*100)/100);
     }
 
     // Generates the total Amounts
@@ -539,7 +560,7 @@ var QuotationCtrl = function($rootScope, $scope){
                 value = value + $rootScope.quotation.products[i].StdCost*$rootScope.quotation.products[i].Quantity;
             }
         }
-        return numberWithCommas(Math.round(value*100)/100);
+        return value;
     }
     $rootScope.TotalSum2 = function(){
         var value = 0;
@@ -548,7 +569,7 @@ var QuotationCtrl = function($rootScope, $scope){
                 value = value + $rootScope.quotation.products[i].StdCost*$rootScope.quotation.products[i].Quantity2;
             }
         }
-        return numberWithCommas(Math.round(value*100)/100);
+        return value;
     }
 
     function numberWithCommas(x) {
@@ -560,6 +581,60 @@ var QuotationCtrl = function($rootScope, $scope){
             return 0;
         }
     }
+
+    $scope.getDiscount = function (rate){
+        var amount;
+        if (rate==""||rate==undefined){
+            return 0;
+        }
+        amount = $rootScope.TotalSum()*rate/100;
+        return amount;
+    }
+
+    $rootScope.includeDiscount = function (quote){
+
+        if(quote==1){
+            if($rootScope.quotation.Discount=="" || $rootScope.quotation.Discount==0 || $rootScope.quotation.Discount==undefined){
+                return false;
+            }
+            return true;
+        }
+        if($rootScope.quotation.Discount2=="" || $rootScope.quotation.Discount2==0 || $rootScope.quotation.Discount2==undefined){
+            return false;
+        }
+        return true;
+    }
+
+    var descriptions = DESCRIPTIONS;
+    getDescriptions = function () {
+        for(key in descriptions){
+            descriptions[key].imgsrc = [];
+            j=1;
+            for (i=0; i < descriptions[key].ImageCount; i++){
+                descriptions[key].imgsrc[i] = descriptions[key].Name+" "+j+".png";
+                j++;
+            }
+                //descriptions[key].Included = false;
+        }
+        return descriptions;
+    }
+
+    $rootScope.quotation.productDescriptions = getDescriptions();
+
+
+    $scope.descIsIncluded = function(descName){
+        for(key in $rootScope.quotation.productDescriptions){
+            if ($rootScope.quotation.productDescriptions[key].included!= undefined){
+                if ($rootScope.quotation.productDescriptions[key].Name == descName){
+                    if ($rootScope.quotation.productDescriptions[key].included == true){
+                        return true
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
 
 };
 

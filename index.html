@@ -122,9 +122,11 @@
         <br>
         <h3>Product Description </h3>
         <br>
-        TH60 (Low res)<input type="checkbox" ng-model="$parent.quotation.productDesc" ng-checked="$parent.quotation.productDesc"/>
+        <div ng-repeat="desc in quotation.productDescriptions">
+        {{desc.Name}} <input type="checkbox" ng-model="desc.included" ng-checked="desc.included" ng-change="includeDesc(desc, desc.included)"/>
         <!-- Technical Specifications -->
         <br>
+        </div>
         <h3>Technical Specifications </h3>
         <br>
         TH60 (No data) <input type="checkbox" ng-model="$parent.quotation.techSpec" ng-checked="$parent.quotation.techSpec"/>
@@ -135,8 +137,8 @@
 
     <!-- This is the Product view -->
 <script type="text/ng-template" id="partials/products-view.html">
-       <div class="span6">
-        <div class="row">
+       <div class="span8">
+
             <div class="span6">
 
                 <!-- Choose the Base Product
@@ -145,7 +147,7 @@
               <option value="">Select Base</option>
           </select>
             &nbsp;&nbsp; Base Cost: {{getStdCost(selectedBase)}}
-            </div>
+
             <br>
             <br>
             <br>
@@ -155,7 +157,6 @@
 
            <!-- This should be automated, ng-repeat??-->
     <div class="span6">
-
 
         <!-- Truck -->
         <!-- Need to be changed to the correct filter -->
@@ -337,7 +338,7 @@
          </div>      -->
 
 
-        <div class="span6">
+
             <table>
                 <tr>
                     <td><button ng-click="addClick()" class="btn1">Add to Quote</button></td>
@@ -347,14 +348,22 @@
             </table>
             <br>
             <br>
-        </div>
+
 
         <br>
+        <br>
+        <h3>Discount</h3>
+        <br>
+        <strong> Add a percentage discount on the summary </strong>
+        <br>
+        Main Pricing summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
+        Second Pricing summary:&nbsp; <input type="number" ng-model="quotation.Discount2" class="discountInput" value="0" min="0"/> % <br>
         <br>
         <br>
         <br>
     </div>
            <!-- This is the first pricing summary-->
+        <div class="span6">
            <h3>Main Pricing Summary</h3>
            <table class="table table-striped">
             <tr>
@@ -411,12 +420,13 @@
                    <td>{{TotalSum2()}}</td>
                </tr>
            </table>
+        </div>
 
         <br>
         <br>
         <br>
-        <div class="row">
-            <div class="span6"><h3>Custom add products</h3></div>
+
+            <div class="span8"><h3>Custom add products</h3></div>
         <div class="span2">
 
             <form class="form-search">
@@ -427,19 +437,21 @@
 
               <table class="table table-striped table-bordered" >
               <tr>
-                <th>Include</th>
+                <th>Add Main</th>
+                <th>Add Second</th>
                 <th>Part</th>
                 <th>Description</th>
                 <th>StdCost</th>
               </tr>
                   <tr ng-repeat="product in quotation.products | filter:query" >
-                      <td><input type="checkbox" ng-checked="product.checked" ng-model="product.checked"></td>
+                      <td><button ng-click="addCustom(product)">Main</button></td>
+                      <td><button ng-click="addCustom2(product)">Second</button></td>
                       <td>{{product.Part}}</td>
                       <td>{{product.Description}}</td>
                       <td>{{product.StdCost}}</td>
                   </tr>
               </table>
-        </div>
+
     </div>
            <br>
            <br>
@@ -470,7 +482,7 @@
                 <p>For the attention of <br>{{quotation.customerTitle}} {{quotation.customerName}} </p>
                 <p>Quotation prepared by {{quotation.preparedBy}} </p>
                 <p>Of Atlas Copco</p>
-                    <p>{{year}}-{{month()}}-{{day()}}</p>
+                    <p ng-show="quotation.Date">{{year}}-{{month()}}-{{day()}}</p>
                 </strong>
                  <!--<p>{{year}}-{{month()}}-{{day()}}</p>-->
             </div>
@@ -526,37 +538,39 @@
                 <td>{{product.Description}}</td>
                 <td>{{product.StdCost}}</td>
                 <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
-                <td>{{getSubTot(product.Quantity, product.StdCost)}}</td>
+                <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
             </tr>
-            <tr>
-                <td>Total: </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>{{TotalSum()}}</td>
-            </tr>
+
 
         <tr ng-repeat="product in quotation.products | filter:isSelected | orderBy:settings.order:settings.reverse ">
           <td>{{product.Class}}</td>
           <td>{{product.Part}}</td>
           <td>{{product.Description}}</td>
           <td>{{product.StdCost}}</td>
-            <td></td>
-            <td></td>
+          <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
+          <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
+
         </tr>
+            <tr ng-show="includeDiscount(1)">
+                <td>Discount: </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{quotation.Discount}} %</td>
+                <td> - {{numberWithCommas(getDiscount(quotation.Discount))}}</td>
+            </tr>
             <tr>
+                <strong>
                 <td>Total: </td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>{{TotalSum()}}</td>
+                <td>{{numberWithCommas(TotalSum()-getDiscount(quotation.Discount))}}</td>
+                </strong>
             </tr>
         </table>
         </div>
-
-
     <br>
     <br>
 
@@ -583,13 +597,23 @@
                 <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
                 <td>{{getSubTot(product.Quantity2, product.StdCost)}}</td>
             </tr>
+            <tr ng-show="includeDiscount(2)">
+                <td>Discount: </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{quotation.Discount2}} %</td>
+                <td> - {{numberWithCommas(getDiscount(quotation.Discount2))}}</td>
+            </tr>
             <tr>
-                <td>Total: </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>{{TotalSum2()}}</td>
+                <strong>
+                    <td>Total: </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{numberWithCommas(TotalSum2()-getDiscount(quotation.Discount2))}}</td>
+                </strong>
             </tr>
         </table>
             </div>
@@ -609,10 +633,11 @@
 
         <!-- Adding the product info sheets -->
         <!-- Add ng-src -->
-         <img src="lib/img/desc/TH60 1.png" ng-show="quotation.productDesc">
-         <img src="lib/img/desc/TH60 2.png" ng-show="quotation.productDesc">
-         <img src="lib/img/desc/TH60 3.png" ng-show="quotation.productDesc">
-         <img src="lib/img/desc/TH60 4.png" ng-show="quotation.productDesc">
+        <div ng-repeat="prodDesc in quotation.productDescriptions">
+            <div ng-repeat="imgsrc in prodDesc.imgsrc">
+                <img ng-src="data/desc/{{prodDesc.Name}}/{{imgsrc}}" ng-show="descIsIncluded(prodDesc.Name)">
+            </div>
+        </div>
 
 
         <!-- Adding the technical specifications info sheets -->
@@ -673,6 +698,8 @@
     <script type="text/javascript" src="lib/js/angular_sanitize.js"></script>
 
     <script type="text/javascript" src="data/ProductData.js"></script>
+
+    <script type="text/javascript" src="data/ProductDescription.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
 
