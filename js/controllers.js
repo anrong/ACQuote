@@ -635,6 +635,35 @@ var QuotationCtrl = function($rootScope, $scope){
         return false;
     }
 
+    var specifications = SPECIFICATIONS;
+    getSpecifications = function () {
+        for(key in specifications){
+            specifications[key].imgsrc = [];
+            j=1;
+            for (i=0; i < specifications[key].ImageCount; i++){
+                specifications[key].imgsrc[i] = specifications[key].Name+" "+j+".png";
+                j++;
+            }
+            //descriptions[key].Included = false;
+        }
+        return specifications;
+    }
+
+    $rootScope.quotation.technicalSpecifications = getSpecifications();
+
+    $scope.specIsIncluded = function(specName){
+        for(key in $rootScope.quotation.technicalSpecifications){
+            if ($rootScope.quotation.technicalSpecifications[key].included!= undefined){
+                if ($rootScope.quotation.technicalSpecifications[key].Name == specName){
+                    if ($rootScope.quotation.technicalSpecifications[key].included == true){
+                        return true
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
 
 };
 

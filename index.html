@@ -124,12 +124,19 @@
         <br>
         <div ng-repeat="desc in quotation.productDescriptions">
         {{desc.Name}} <input type="checkbox" ng-model="desc.included" ng-checked="desc.included" ng-change="includeDesc(desc, desc.included)"/>
-        <!-- Technical Specifications -->
+
         <br>
         </div>
+
+        <!-- Technical Specifications -->
         <h3>Technical Specifications </h3>
         <br>
-        TH60 (No data) <input type="checkbox" ng-model="$parent.quotation.techSpec" ng-checked="$parent.quotation.techSpec"/>
+        <div ng-repeat="spec in quotation.technicalSpecifications">
+            {{spec.Name}} <input type="checkbox" ng-model="spec.included" ng-checked="spec.included" ng-change="includeSpec(spec, spec.included)"/>
+
+            <br>
+            </div>
+
 
     </script>
 
@@ -641,6 +648,13 @@
 
 
         <!-- Adding the technical specifications info sheets -->
+        <div ng-repeat="techSpec in quotation.technicalSpecifications">
+            <div ng-repeat="imgsrc in techSpec.imgsrc">
+                {{imgsrc}}
+                <img ng-src="data/spec/{{techSpec.Name}}/{{imgsrc}}" ng-show="specIsIncluded(techSpec.Name)">
+            </div>
+        </div>
+
         <!--
         <img src="lib/img/specs/T3W%201.png" ng-show="techSpec">
         <img src="lib/img/specs/T3W%202.png" ng-show="techSpec">
@@ -699,7 +713,9 @@
 
     <script type="text/javascript" src="data/ProductData.js"></script>
 
-    <script type="text/javascript" src="data/ProductDescription.js"></script>
+    <script type="text/javascript" src="data/desc/ProductDescriptions.js"></script>
+
+    <script type="text/javascript" src="data/spec/TechnicalSpecifications.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
 
