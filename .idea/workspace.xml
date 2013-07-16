@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="added TinyMCE" />
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373777137545" ignored="false" />
     <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373783111984" ignored="false" />
     <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373729282375" ignored="false" />
+=======
+    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\ProductDescription.js" afterPath="$PROJECT_DIR$/data/desc/ProductDescriptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="Quotation System.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373958584793" ignored="false" />
+    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373973500867" ignored="false" />
+    <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373973418687" ignored="false" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
     <file path="/info.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372919983514" ignored="false" />
     <file path="/pdfgen.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372311800745" ignored="false" />
     <file path="/ProductDataN.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372746934108" ignored="false" />
     <file path="/ProductData.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372747153068" ignored="false" />
     <file path="/Test.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372758732185" ignored="false" />
     <file path="/bootstrap.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372835936532" ignored="false" />
+<<<<<<< HEAD
     <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373447360760" ignored="false" />
     <file path="/dummy.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372998083107" ignored="false" />
     <file path="/fileHandler.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373273245359" ignored="false" />
     <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373785520911" ignored="false" />
+=======
+    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373949575657" ignored="false" />
+    <file path="/dummy.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372998083107" ignored="false" />
+    <file path="/fileHandler.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373273245359" ignored="false" />
+    <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373973569461" ignored="false" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
     <file path="/file.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373539327077" ignored="false" />
     <file path="/directive.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373783898339" ignored="false" />
+    <file path="/ProductDescription.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373957541454" ignored="false" />
+    <file path="/TechnicalSpecifications.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373972496134" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +103,51 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="479" column="44" selection-start="19673" selection-end="19673" vertical-scroll-proportion="0.09569378">
+=======
+            <state line="734" column="66" selection-start="29195" selection-end="29195" vertical-scroll-proportion="0.87281793">
+              <folding>
+                <element signature="tag#div#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#span#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#table#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#span#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#5;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#6;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#7;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#8;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#10;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#11;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="634" column="65" selection-start="21507" selection-end="21507" vertical-scroll-proportion="-5.44">
+              <folding>
+                <element signature="e#6516#11640#0" expanded="false" />
+                <element signature="e#11681#16305#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnicalSpecifications.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/spec/TechnicalSpecifications.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="52" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
               <folding />
             </state>
           </provider>
@@ -91,14 +156,23 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="115" column="0" selection-start="3736" selection-end="3736" vertical-scroll-proportion="0.0">
+=======
+            <state line="112" column="0" selection-start="3734" selection-end="4038" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="angular_sanitize.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/js/angular_sanitize.js">
+=======
+      <file leaf-file-name="directive.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tinymce/directive.js">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <provider selected="true" editor-type-id="text-editor">
             <state line="534" column="27" selection-start="19284" selection-end="19284" vertical-scroll-proportion="0.0">
               <folding />
@@ -106,10 +180,17 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="1" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+=======
+      <file leaf-file-name="ProductData.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
               <folding />
             </state>
           </provider>
@@ -118,7 +199,11 @@
       <file leaf-file-name="ProductData.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ProductData.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="7" column="115" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+=======
+            <state line="11" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
               <folding />
             </state>
           </provider>
@@ -143,21 +228,35 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/js/Test.js" />
         <option value="$PROJECT_DIR$/js/productInfo.html" />
         <option value="$PROJECT_DIR$/lib/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/js/css/styles.css" />
+=======
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
         <option value="$PROJECT_DIR$/js/filters.js" />
         <option value="$PROJECT_DIR$/js/info.html" />
         <option value="$PROJECT_DIR$/js/fileHandler.js" />
         <option value="$PROJECT_DIR$/file.html" />
         <option value="$PROJECT_DIR$/data/ProductData.js" />
         <option value="$PROJECT_DIR$/lib/js/angular_sanitize.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/lib/tinymce/directive.js" />
         <option value="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js" />
+=======
+        <option value="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js" />
+        <option value="$PROJECT_DIR$/lib/tinymce/directive.js" />
+        <option value="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template_src.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/data/desc/TechnicalSpecifications.js" />
+        <option value="$PROJECT_DIR$/data/ProductDescription.js" />
+        <option value="$PROJECT_DIR$/data/TechnicalSpecifications.js" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
         <option value="$PROJECT_DIR$/js/controllers.js" />
       </list>
     </option>
@@ -194,6 +293,10 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -223,13 +326,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="desc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="desc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TH60" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,9 +409,21 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\data\desc" />
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\data\desc\TH60" />
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\data\spec" />
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\lib" />
+      <recent name="C:\Users\MHNes\Documents\Quotation system\Atlas Copco\js\data" />
+    </key>
+  </component>
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -285,6 +461,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -306,13 +489,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <list size="0" />
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -329,10 +505,61 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="38" y="22" width="1215" height="812" extended-state="0" />
+=======
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="" />
+      <created>1372133602825</created>
+      <updated>1372133602825</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit 2">
+      <created>1373542800832</created>
+      <updated>1373542800832</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit 2">
+      <created>1373543013825</created>
+      <updated>1373543013825</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added specs image folder">
+      <created>1373602030285</created>
+      <updated>1373602030285</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added dynamic Technical Specifications">
+      <created>1373973577610</created>
+      <updated>1373973577610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.49957228" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -343,14 +570,26 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.021864211" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24893071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23866552" sideWeight="0.982659" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24479803" sideWeight="0.98619103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.50053364" order="7" side_tool="true" content_ui="tabs" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -396,7 +635,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added TinyMCE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dynamic Technical Specifications" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -413,13 +652,15 @@
     <MESSAGE value="Commit 2" />
     <MESSAGE value="Added specs image folder" />
     <MESSAGE value="added TinyMCE" />
+    <MESSAGE value="Added dynamic Technical Specifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/img/AClogo.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -430,22 +671,35 @@
         <state line="9" column="41" selection-start="256513" selection-end="256513" vertical-scroll-proportion="0.18478261">
           <folding />
         </state>
+=======
+    <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="126" selection-start="3174" selection-end="3211" vertical-scroll-proportion="0.45382166" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Atlas Copco.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ProductData.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="7" column="115" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/js/FileSaver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -456,13 +710,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/plugins/spellchecker/editor_plugin.js">
+=======
+    <entry file="file://$PROJECT_DIR$/lib/js/fileHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_src.js">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template_src.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="474" selection-end="474" vertical-scroll-proportion="-0.43179122" />
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/plugins/spellchecker/editor_plugin_src.js">
+=======
+    <entry file="file://$PROJECT_DIR$/lib/js/FileSaver.js">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -471,39 +740,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/angular_sanitize.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="534" column="27" selection-start="19284" selection-end="19284" vertical-scroll-proportion="0.0">
+=======
+        <state line="11" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="115" column="0" selection-start="3736" selection-end="3736" vertical-scroll-proportion="0.0">
+=======
+        <state line="112" column="0" selection-start="3734" selection-end="4038" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="1" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="126" selection-start="3174" selection-end="3211" vertical-scroll-proportion="0.45382166">
+=======
+    <entry file="file://$PROJECT_DIR$/lib/tinymce/directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/tinymce/directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/data/spec/TechnicalSpecifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="52" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_src.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -512,12 +808,21 @@
             <marker date="1339830670000" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1339830670000" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1339830670000" expanded="false" signature="-1:-1" placeholder="..." />
+=======
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="634" column="65" selection-start="21507" selection-end="21507" vertical-scroll-proportion="-5.44">
+          <folding>
+            <element signature="e#6516#11640#0" expanded="false" />
+            <element signature="e#11681#16305#0" expanded="false" />
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="97" column="70" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.17050691">
           <folding>
             <marker date="1373947714000" expanded="true" signature="-1:-1" placeholder="{...}" />
@@ -531,6 +836,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="479" column="44" selection-start="19673" selection-end="19673" vertical-scroll-proportion="0.09569378">
           <folding />
+=======
+        <state line="734" column="66" selection-start="29195" selection-end="29195" vertical-scroll-proportion="0.87281793">
+          <folding>
+            <element signature="tag#div#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#table#0;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#7;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#8;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#10;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#11;tag#div#1;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#0;tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+>>>>>>> e7dd56be7ae1a8b42c8e47ae62324a4264e7d94f
         </state>
       </provider>
     </entry>

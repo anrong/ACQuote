@@ -7,6 +7,11 @@ body{
     width: 25px;
 }
 
+.discountInput {
+    text-align: right;
+    width: 30px;
+}
+
 .letterArea {
     width: 800px;
 }
