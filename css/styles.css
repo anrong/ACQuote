@@ -11,9 +11,8 @@ body{
     width: 800px;
 }
 
-.wp_themeSkin table.mceToolbar {
-    margin: 0 6px 2px; // this is by default
-display: inline-table; // this is extra I've added to keep them in single line
+.inputArea {
+    width: 10px;
 }
 
 pre {
@@ -41,4 +40,9 @@ pre {
     margin-left: 100px;
     margin-top: 10px;
     margin-bottom: 100px;
+}
+
+@media print {
+    @page {margin-left: 15px}
+    header, footer, .navbar {display: none}
 }

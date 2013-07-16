@@ -1,0 +1,386 @@
+{
+  "products": [
+    {
+      "Part": 57554461,
+      "Description": "FAMILY,T3W",
+      "StdCost": 358145.42,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "007",
+      "Quoted": true,
+      "Quantity": 1
+    },
+    {
+      "Part": 54539457,
+      "Description": "WARRANTY,STANDARD,T3W",
+      "StdCost": 0,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "009",
+      "Quoted": true,
+      "Quantity": 1
+    },
+    {
+      "Part": 57155541,
+      "Description": "DECALS,SAFETY-T3W",
+      "StdCost": 145.06,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00B"
+    },
+    {
+      "Part": 57425811,
+      "Description": "LINE,1 PART/18K WINCH",
+      "StdCost": 1023.29,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00D"
+    },
+    {
+      "Part": 57436164,
+      "Description": "LINE,2 PART/18K WINCH",
+      "StdCost": 1564.24,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00F"
+    },
+    {
+      "Part": 57557001,
+      "Description": "DECALS,T3W",
+      "StdCost": 467.6,
+      "Dep": 57554461,
+      "Class": "ColdWeather",
+      "$$hashKey": "00H"
+    },
+    {
+      "Part": 57594947,
+      "Description": "PLATFORM INSTL,T3W",
+      "StdCost": 1414.56,
+      "Dep": 57554461,
+      "Class": "ColdWeather",
+      "$$hashKey": "00J",
+      "ColdWeather": true,
+      "Quoted": true,
+      "Quantity": 1
+    },
+    {
+      "Part": 57612020,
+      "Description": "INSTL,PLATFORM,STEEL,T3W",
+      "StdCost": 2368.33,
+      "Dep": 57554461,
+      "Class": "ColdWeather",
+      "$$hashKey": "00L",
+      "ColdWeather": true,
+      "Quoted": true,
+      "Quantity": 1
+    },
+    {
+      "Part": 57617896,
+      "Description": "PAINT,SPECIAL",
+      "StdCost": 0,
+      "Dep": 57554461,
+      "Class": "Tower",
+      "$$hashKey": "00N"
+    },
+    {
+      "Part": 57699654,
+      "Description": "SUB,SPINDLE,4.5",
+      "StdCost": 2602.95,
+      "Dep": 57554461,
+      "Class": "Tower",
+      "$$hashKey": "00P"
+    },
+    {
+      "Part": 57699712,
+      "Description": "SWIVEL ASSY,T3W/TH60",
+      "StdCost": 8328.97,
+      "Dep": 57554461,
+      "Class": "Other",
+      "$$hashKey": "00R"
+    },
+    {
+      "Part": 57701179,
+      "Description": "LOADER INSTL,ROD,5.5X4.5",
+      "StdCost": 5443.09,
+      "Dep": 57554461,
+      "Class": "Other",
+      "$$hashKey": "00T"
+    },
+    {
+      "Part": 57706004,
+      "Description": "OPERATION MANUAL,T3W",
+      "StdCost": 3547.5,
+      "Dep": 57554461,
+      "Class": "Other",
+      "$$hashKey": "00V"
+    },
+    {
+      "Part": 57724395,
+      "Description": "LOADER,SINGLE ROD,4.5",
+      "StdCost": 3840.2,
+      "Dep": 57554461,
+      "Class": "Other",
+      "$$hashKey": "00X"
+    },
+    {
+      "Part": 57726812,
+      "Description": "ODOMETER,HUB,INSTL",
+      "StdCost": 249.45,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "00Z"
+    },
+    {
+      "Part": 57727224,
+      "Description": "PIPING,MUD,W/O HYD,T3W",
+      "StdCost": 3724.15,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "$$hashKey": "011"
+    },
+    {
+      "Part": 57735227,
+      "Description": "SPINDLE,SUB,FLOAT,4.5",
+      "StdCost": 10163.92,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "$$hashKey": "013"
+    },
+    {
+      "Part": 57752388,
+      "Description": "LUBE,DHD,7GAL INSTL",
+      "StdCost": 1740.1,
+      "Dep": 57726812,
+      "Class": "Warranty",
+      "$$hashKey": "015"
+    },
+    {
+      "Part": 57844391,
+      "Description": "CAROUSEL,4.5",
+      "StdCost": 13043.61,
+      "Dep": 57726812,
+      "Class": "Truck",
+      "$$hashKey": "017"
+    },
+    {
+      "Part": 57844409,
+      "Description": "CAROUSEL,3.5",
+      "StdCost": 11606.25,
+      "Dep": 57726812,
+      "Class": "Tower",
+      "$$hashKey": "019"
+    },
+    {
+      "Part": 57844581,
+      "Description": "CAROUSEL,4.5",
+      "StdCost": 13653.13,
+      "Dep": 57726812,
+      "Class": "Tower",
+      "$$hashKey": "01B"
+    },
+    {
+      "Part": 57844599,
+      "Description": "CAROUSEL,3.5",
+      "StdCost": 13935.56,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "01D",
+      "Quoted2": true,
+      "Quantity2": 1
+    },
+    {
+      "Part": 57844649,
+      "Description": "CONSOLE INSTLN T3W",
+      "StdCost": 6603.2,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "$$hashKey": "01F"
+    },
+    {
+      "Part": 57846180,
+      "Description": "ROD BOX,INSTL,4.5",
+      "StdCost": 4316.89,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "$$hashKey": "01H",
+      "Quoted2": true,
+      "Quantity2": 1
+    },
+    {
+      "Part": 57860223,
+      "Description": "WATER INJ,INST,BEAN 18",
+      "StdCost": 3651.27,
+      "Dep": 57844599,
+      "Class": "Warranty",
+      "$$hashKey": "01J"
+    },
+    {
+      "Part": 57860314,
+      "Description": "WATER INJ,INST,BEAN 35",
+      "StdCost": 5385.41,
+      "Dep": 57844599,
+      "Class": "Tower",
+      "$$hashKey": "01L"
+    },
+    {
+      "Part": 57860389,
+      "Description": "WATER INJ,INST,BEAN 25",
+      "StdCost": 3704.8,
+      "Dep": 57844599,
+      "Class": "Tower",
+      "$$hashKey": "01N"
+    },
+    {
+      "Part": 57860991,
+      "Description": "AUX JIB CONTROL INSTAL",
+      "StdCost": 671.82,
+      "Dep": 57844599,
+      "Class": "Tower",
+      "$$hashKey": "01P"
+    },
+    {
+      "Part": 57861213,
+      "Description": "WATER INJ,INST,CAT 12",
+      "StdCost": 3491.35,
+      "Dep": 57844599,
+      "Class": "Warranty",
+      "$$hashKey": "01R"
+    },
+    {
+      "Part": 57861221,
+      "Description": "WATER INJ,INST,CAT 25",
+      "StdCost": 5827.23,
+      "Dep": 57844599,
+      "Class": "Warranty",
+      "$$hashKey": "01T"
+    },
+    {
+      "Part": 57862266,
+      "Description": "SANDREEL INSTALL,T3W",
+      "StdCost": 9686.31,
+      "Dep": 57844599,
+      "Class": "Other",
+      "$$hashKey": "01V"
+    },
+    {
+      "Part": 57866253,
+      "Description": "ROD SPINNER INSTA,3-1/2",
+      "StdCost": 4590.98,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "01X"
+    }
+  ],
+  "productDesc": false,
+  "companyName": "India Coal",
+  "customerName": "Erik",
+  "customerTitle": "Mr.",
+  "preparedBy": "John",
+  "letterText": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\n<p>&nbsp;</p>\n<p><strong>This is.</strong></p>",
+  "notes": "Some note",
+  "baseProducts": [
+    {
+      "Part": 57554461,
+      "Description": "FAMILY,T3W",
+      "StdCost": 358145.42,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "005"
+    },
+    {
+      "Part": 57726812,
+      "Description": "ODOMETER,HUB,INSTL",
+      "StdCost": 249.45,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "00X"
+    },
+    {
+      "Part": 57844599,
+      "Description": "CAROUSEL,3.5",
+      "StdCost": 13935.56,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "01B"
+    },
+    {
+      "Part": 57866253,
+      "Description": "ROD SPINNER INSTA,3-1/2",
+      "StdCost": 4590.98,
+      "Dep": null,
+      "Class": "Base",
+      "$$hashKey": "01V"
+    }
+  ],
+  "pumps": [
+    {
+      "Part": 54539457,
+      "Description": "WARRANTY,STANDARD,T3W",
+      "StdCost": 0,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "009",
+      "Quoted": true,
+      "Quantity": 1
+    },
+    {
+      "Part": 57155541,
+      "Description": "DECALS,SAFETY-T3W",
+      "StdCost": 145.06,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00B"
+    },
+    {
+      "Part": 57425811,
+      "Description": "LINE,1 PART/18K WINCH",
+      "StdCost": 1023.29,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00D"
+    },
+    {
+      "Part": 57436164,
+      "Description": "LINE,2 PART/18K WINCH",
+      "StdCost": 1564.24,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "$$hashKey": "00F"
+    },
+    {
+      "Part": 57727224,
+      "Description": "PIPING,MUD,W/O HYD,T3W",
+      "StdCost": 3724.15,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "$$hashKey": "011"
+    },
+    {
+      "Part": 57735227,
+      "Description": "SPINDLE,SUB,FLOAT,4.5",
+      "StdCost": 10163.92,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "$$hashKey": "013"
+    },
+    {
+      "Part": 57844649,
+      "Description": "CONSOLE INSTLN T3W",
+      "StdCost": 6603.2,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "$$hashKey": "01F"
+    },
+    {
+      "Part": 57846180,
+      "Description": "ROD BOX,INSTL,4.5",
+      "StdCost": 4316.89,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "$$hashKey": "01H",
+      "Quoted2": true,
+      "Quantity2": 1
+    }
+  ],
+  "selectedColdWeather": []
+}
