@@ -84,7 +84,7 @@
                 </select>
                 </span>
         <br>
-        <input type="file" id="fileToLoad" ng-model="fileToLoad"><button ng-click="loadFileAsText()">Load Selected File</button>
+        <input type="file" id="fileToLoad" ng-model="fileToLoad"><button ng-click="loadFileAsText()" class="btn">Load Selected File</button>
         <br>
 
         <!-- This is the where you can save and load letters on the hard drive-->
@@ -98,7 +98,7 @@
             <tr>
                 <td>Filename to Save As:</td>
                 <td><input id="inputFileNameToSaveAs" ng-model="saveName"></td>
-                <td><button ng-click="saveTextAsFile(saveName)">Save Text to File</button></td>
+                <td><button ng-click="saveTextAsFile(saveName)" class="btn">Save Text to File</button></td>
             </tr>
         </table>
 
@@ -123,7 +123,12 @@
         <h3>Product Description </h3>
         <br>
         <div ng-repeat="desc in quotation.productDescriptions">
-        {{desc.Name}} <input type="checkbox" ng-model="desc.included" ng-checked="desc.included" ng-change="includeDesc(desc, desc.included)"/>
+            <table>
+                <tr>
+                    <td>{{desc.Name}} </td>
+                    <td><input type="checkbox" ng-model="desc.included" ng-checked="desc.included" ng-change="includeDesc(desc, desc.included)"/></td>
+                </tr>
+            </table>
 
         <br>
         </div>
@@ -132,7 +137,12 @@
         <h3>Technical Specifications </h3>
         <br>
         <div ng-repeat="spec in quotation.technicalSpecifications">
-            {{spec.Name}} <input type="checkbox" ng-model="spec.included" ng-checked="spec.included" ng-change="includeSpec(spec, spec.included)"/>
+            <table>
+                <tr>
+                    <td>{{spec.Name}}</td>
+                    <td><input type="checkbox" ng-model="spec.included" ng-checked="spec.included" ng-change="includeSpec(spec, spec.included)"/></td>
+                </tr>
+            </table>
 
             <br>
             </div>
@@ -162,27 +172,43 @@
 
            <!-- Choose the sub products here. This is for the first pricing summary-->
 
-           <!-- This should be automated, ng-repeat??-->
-    <div class="span6">
+           <!-- This should be automated, ng-repeat??
+         <div ng-repeat="object in catProd" class="span6">
 
-        <!-- Truck -->
+           <div ng-show="showOptions(object.class)">
+                 <strong>{{object.class}}: </strong><br>
+
+                 <div class="row">
+                     <input type="radio" ng-model=object.selected value="" ng-checked="true" name=object.class> No {{object.class}} <br><br>
+                 </div>
+                 <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}" class="row">
+                     <input type="radio" ng-model=object.selected value="{{product.Part}}" name=object.class> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                 </div>
+
+                 <br>
+                 <br>
+             </div>
+           </div>  -->
+
+               <!-- Truck -->
         <!-- Need to be changed to the correct filter -->
+       <div class="span6">
+       <div ng-show="showOptions('Truck')">
 
-        <div ng-show="showOptions('Truck')">
-
-        <strong> Truck: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedTruck"  value="" ng-checked="true" name="truckSelect"> No Truck <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Truck'}" class="row">
-                <input type="radio" ng-model="$parent.selectedTruck"  value="{{product.Part}}" name="truckSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-        </div>
+       <strong> Truck: </strong><br>
+           <div class="row">
+               <input type="radio" ng-model="$parent.selectedTruck"  value="" ng-checked="true" name="truckSelect"> No Truck <br><br>
+           </div>
+           <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Truck'}" class="row">
+               <input type="radio" ng-model="$parent.selectedTruck"  value="{{product.Part}}" name="truckSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+           </div>
+           <br>
+           <br>
+       </div>
 
 
-        <!-- Truck Options -->
+
+       <!-- Truck Options -->
         <div ng-show="showOptions('TruckOption')">
             <strong> Truck Options: </strong><br>
             <div class="row">
@@ -198,20 +224,20 @@
 
         <!-- Rotation Torque -->
 
-        <div ng-show="showOptions('Torque')">
-            <strong> Rotation Torque: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedTorque"  value="" ng-checked="true" name="torqueSelect"> No Rotation Torque <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Torque'}" class="row">
-                <input type="radio" ng-model="$parent.selectedTorque"  value="{{product.Part}}" name="torqueSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
+    <div ng-show="showOptions('Torque')">
+        <strong> Rotation Torque: </strong><br>
+        <div class="row">
+            <input type="radio" ng-model="$parent.selectedTorque"  value="" ng-checked="true" name="torqueSelect"> No Rotation Torque <br><br>
+        </div>
+        <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Torque'}" class="row">
+            <input type="radio" ng-model="$parent.selectedTorque"  value="{{product.Part}}" name="torqueSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+        </div>
+        <br>
+        <br>
+   </div>
 
 
-        <!-- Drill Pipe Setup -->
+    <!-- Drill Pipe Setup -->
 
         <div ng-show="showOptions('DrillPipe')">
             <strong> Drill Pipe Setup: </strong><br>
@@ -348,11 +374,13 @@
 
             <table>
                 <tr>
-                    <td><button ng-click="addClick()" class="btn1">Add to Quote</button></td>
+                    <td><button ng-click="addClick()" class="btn">Add to Quote</button></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><button ng-click="addClick2()" class="btn1">Add to Second Quote</button></td>
+                    <td><button ng-click="addClick2()" class="btn">Add to Second Quote</button></td>
                 </tr>
             </table>
+
+
             <br>
             <br>
 
@@ -451,8 +479,8 @@
                 <th>StdCost</th>
               </tr>
                   <tr ng-repeat="product in quotation.products | filter:query" >
-                      <td><button ng-click="addCustom(product)">Main</button></td>
-                      <td><button ng-click="addCustom2(product)">Second</button></td>
+                      <td><button ng-click="addCustom(product)" class="btn">Main</button></td>
+                      <td><button ng-click="addCustom2(product)" class="btn">Second</button></td>
                       <td>{{product.Part}}</td>
                       <td>{{product.Description}}</td>
                       <td>{{product.StdCost}}</td>
@@ -474,7 +502,6 @@
 
 
     <!-- This is the Quotation view -->
-
 <script type="text/ng-template" id="partials/quotation-view.html" >
 
     <div class="span8">
@@ -512,7 +539,7 @@
 
         <!-- Cover Letter -->
         <div class="pbAfter" ng-show="includeLetter()">
-            <h2>Cover Page</h2>
+            <h2>Cover Letter</h2>
             <br>
             <p>
                 <!-- Here is the contents of the Cover Letter added -->
@@ -625,11 +652,11 @@
         </table>
             </div>
 
-            <!-- Notes -->
-            <div ng-show="includeNotes()" class="pbAfter">
-                <h3>Notes</h3>
-                <span ng-bind-html="quotation.notes"></span>
-            </div>
+        <!-- Notes -->
+        <div ng-show="includeNotes()" class="pbAfter">
+            <h3>Notes</h3>
+            <span ng-bind-html="quotation.notes"></span>
+        </div>
 
         <!-- Terms and Conditions -->
         <div ng-show="includeTerms()" class="pbAfter">
@@ -650,16 +677,9 @@
         <!-- Adding the technical specifications info sheets -->
         <div ng-repeat="techSpec in quotation.technicalSpecifications">
             <div ng-repeat="imgsrc in techSpec.imgsrc">
-                {{imgsrc}}
                 <img ng-src="data/spec/{{techSpec.Name}}/{{imgsrc}}" ng-show="specIsIncluded(techSpec.Name)">
             </div>
         </div>
-
-        <!--
-        <img src="lib/img/specs/T3W%201.png" ng-show="techSpec">
-        <img src="lib/img/specs/T3W%202.png" ng-show="techSpec">
-        <img src="lib/img/specs/T3W%203.png" ng-show="techSpec">
-        <img src="lib/img/specs/T3W 4.png" ng-show="techSpec">  -->
 
     </div>
     <br>
@@ -713,9 +733,14 @@
 
     <script type="text/javascript" src="data/ProductData.js"></script>
 
+    <script type="text/javascript" src="data/TermConditions.js"></script>
+
+    <script type="text/javascript" src="data/CoverLetters.js"></script>
+
     <script type="text/javascript" src="data/desc/ProductDescriptions.js"></script>
 
     <script type="text/javascript" src="data/spec/TechnicalSpecifications.js"></script>
+
 
     <script type="text/javascript" src="js/app.js"></script>
 

@@ -31,7 +31,7 @@ var IndexCtrl = function($rootScope, $scope){
         fileReader.readAsText(fileToLoad, "UTF-8");
     }
 
-    $scope.savePDF = function(){
+  /*  $scope.savePDF = function(){
         var doc = new jsPDF('p','mm', 'a4'),
              margin = 20,
             verticalOffset = margin;
@@ -51,12 +51,12 @@ var IndexCtrl = function($rootScope, $scope){
 
         doc.output('dataurlnewwindow', {});
 
-    }
+    }  */
 }
 
 
-var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
-    $rootScope.coverLetters = coverLetterFactory.getCoverLetters();
+var InfoCtrl = function ($rootScope,$scope) {
+    $rootScope.coverLetters = LETTERS;
 
     $rootScope.quotation.productDesc=false;
 
@@ -68,13 +68,6 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         $rootScope.quotation.notes=text;
     }
 
-    /*Can I do data binding to this?
-    tinymce.init({
-        selector: "textarea#area1",
-        theme: "modern",
-        width: 300,
-        height: 300
-    });  */
 
 
     // Load and Save Module
@@ -94,15 +87,14 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         {
             var textFromFileLoaded = fileLoadedEvent.target.result;
             $scope.setContent(textFromFileLoaded);
+            $rootScope.$apply($rootScope.length);
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
+
+
     }
 
-    $rootScope.quotation.terms = {Title: 'Standard Terms', Content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt' +
-        ' ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
-        'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum' +
-        ' dolore eu fugiat nulla pariatur. Excepteur sint occaecat ' +
-        'cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'};
+    $rootScope.quotation.terms = TERMS;
 
     $scope.terms = function(selectedTerms){
         if (selectedTerms=='Standard Terms'){
@@ -110,6 +102,10 @@ var InfoCtrl = function ($rootScope,$scope, coverLetterFactory) {
         }
         return "";
     }
+
+    //$rootScope.categories = getCategories();
+
+
 
     /*Product Description
     $rootScope.includeDesc = function (productDesc, included) {
@@ -141,8 +137,10 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     } */
 
 
+
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
     $rootScope.quotation.selectedColdWeather = [];
+
 
     $rootScope.getStdCost = function (baseProduct){
         if(baseProduct==undefined){
@@ -182,6 +180,50 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
         return false;
   }
+
+    $scope.getCategories = function(){
+        cat = [];
+        for(i=0; i < $rootScope.quotation.products.length; i++){
+            if($rootScope.quotation.products[i].Class!='Base'){
+                cat.push($rootScope.quotation.products[i].Class)
+            }
+        }
+        return eliminateDuplicates(cat);
+    }
+
+    function eliminateDuplicates(cat) {
+        var i,
+            len=cat.length,
+            out=[],
+            obj={};
+
+        for (i=0;i<len;i++) {
+            obj[cat[i]]=0;
+        }
+        for (i in obj) {
+            out.push(i);
+        }
+        return out;
+    }
+
+    $scope.categorizedProducts = function (){
+        var cat = [];
+        cat = $scope.getCategories();
+        items = [];
+        for (j = 0; j < cat.length; j++){
+            items[j]= {class: cat[j], products: []};
+            for (i = 0; i < $rootScope.quotation.products.length; i++){
+                if (cat[j]== $rootScope.quotation.products[i].Class){
+                    items[j].products.push($rootScope.quotation.products[i])
+
+                }
+            }
+        }
+        return items;
+    }
+
+    $scope.catProd = $scope.categorizedProducts();
+    console.log($scope.categorizedProducts());
 
     /*
     Add the products to the quote
@@ -451,6 +493,15 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
        $scope.selectedPump.value="";
        return $scope.selectedPump;
     }
+
+   /* var setSelected = function(){
+        var selected = [];
+        for(i=0; i < $scope.catProd.length; i++){
+            selected[i]=false;
+        }
+        return selected;
+    }
+    $rootScope.selected = setSelected(); */
 };
 
 
