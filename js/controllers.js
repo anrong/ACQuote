@@ -136,8 +136,6 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         $rootScope.quotation.products = PRODUCTS;
     } */
 
-
-
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
     $rootScope.quotation.selectedColdWeather = [];
 
@@ -157,13 +155,16 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         return $rootScope.quotation.products;
     };
     */
-    $rootScope.removeClick = function (product){
-        product.Quoted=false;
-        product.Quantity=0;
-    }
-    $rootScope.removeClick2 = function (product){
-        product.Quoted2=false;
-        product.Quantity2=0;
+    $rootScope.removeClick = function (product, quote){
+        if(quote=='Main'){
+            product.Quoted=false;
+            product.Quantity=0;
+        }
+        if(quote=='Second'){
+            product.Quoted2=false;
+            product.Quantity2=0;
+
+        }
     }
 
     $rootScope.showOptions = function (productClass){
@@ -181,10 +182,10 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         return false;
   }
 
-    $scope.getCategories = function(){
+    $scope.getCategories = function(BoxType){
         cat = [];
         for(i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Class!='Base'){
+            if($rootScope.quotation.products[i].Class!='Base' && $rootScope.quotation.products[i].BoxType==BoxType){
                 cat.push($rootScope.quotation.products[i].Class)
             }
         }
@@ -206,24 +207,42 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         return out;
     }
 
-    $scope.categorizedProducts = function (){
+    $scope.categorizedProducts = function (BoxType){
         var cat = [];
-        cat = $scope.getCategories();
+        cat = $scope.getCategories(BoxType);
         items = [];
+        if(BoxType=='Radio'){
+            for (j = 0; j < cat.length; j++){
+                items[j]= {class: cat[j], products: []};
+                for (i = 0; i < $rootScope.quotation.products.length; i++){
+                    if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Radio'){
+                        items[j].products.push($rootScope.quotation.products[i])
+                        items[j].selected="";
+
+                    }
+                }
+            }
+            return items;
+        }
+        if(BoxType=='Check'){
         for (j = 0; j < cat.length; j++){
             items[j]= {class: cat[j], products: []};
             for (i = 0; i < $rootScope.quotation.products.length; i++){
-                if (cat[j]== $rootScope.quotation.products[i].Class){
+                if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Check'){
                     items[j].products.push($rootScope.quotation.products[i])
-
                 }
             }
         }
         return items;
+        }
     }
 
-    $scope.catProd = $scope.categorizedProducts();
-    console.log($scope.categorizedProducts());
+    var remove
+
+
+    $scope.catProdRadio = $scope.categorizedProducts('Radio');
+    $scope.catProdCheck = $scope.categorizedProducts('Check');
+    console.log($scope.categorizedProducts('Radio'));
 
     /*
     Add the products to the quote
@@ -242,8 +261,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
     $rootScope.addClick = function() {
 
-        /* How to automate this? Doesn't work
-        var selections = ['$scope.selectedPump.Part', '$scope.selectedTruck.Part'];
+        /*
 
          for (var key in selections)  {
              console.log(selections[key]);
@@ -259,13 +277,14 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
         //Adds the base
         for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
+            console.log($scope.object[0].selected);
+            if($scope.object[0].selected.Part==$rootScope.quotation.products[i].Part){
                 $rootScope.quotation.products[i].Quoted=true;
                 $rootScope.quotation.products[i].Quantity=1;
             }
         }
 
-
+       /*
         //Adds the Truck
         for (i=0; i < $rootScope.quotation.products.length; i++){
             if($scope.selectedTruck==$rootScope.quotation.products[i].Part){
@@ -368,7 +387,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 $rootScope.quotation.products[i].Quoted=true;
                 $rootScope.quotation.products[i].Quantity=1;
             }
-        }
+        }*/
     }
 
 

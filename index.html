@@ -1,6 +1,9 @@
 <!doctype html>
-<html lang="en" ng-app="QuotationApp">
+<html lang="en" ng-app="QuotationApp" id="ng-app">
 <head>
+    <!--[if lte IE 8]>
+    <script src="/lib/js/json2.js"></script>
+    <![endif]-->
   <meta charset="utf-8">
   <title></title>
 
@@ -172,206 +175,240 @@
 
            <!-- Choose the sub products here. This is for the first pricing summary-->
 
-           <!-- This should be automated, ng-repeat??
-         <div ng-repeat="object in catProd" class="span6">
+           <!-- This should be automated, ng-repeat??   -->
 
-           <div ng-show="showOptions(object.class)">
-                 <strong>{{object.class}}: </strong><br>
+            <div ng-repeat="object in catProdRadio" class="span6">
+                <div ng-show="showOptions(object.class)">
+                    <strong>{{object.class}}: </strong><br>
+                    <div class="row">
+                        <!-- Put ng-model back in input and do object.product.selected as model-->
+                        <form ng-model=$parent.object.selected>
+                            {{object[$index].selected}}
+                            <input type="radio"  value="" ng-checked="true" name=object.class> No {{object.class}} <br><br>
 
-                 <div class="row">
-                     <input type="radio" ng-model=object.selected value="" ng-checked="true" name=object.class> No {{object.class}} <br><br>
-                 </div>
-                 <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}" class="row">
-                     <input type="radio" ng-model=object.selected value="{{product.Part}}" name=object.class> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                 </div>
+                            <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                                <input type="radio"  value="{{product.Part}}" name=object.class> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                            </div>
+                        </form>
+                        {{object[2].selected}}
+                        {{selections[object]}}
+                        {{selections[1]}}
+                        {{getSelections()}}
+                    </div>
 
-                 <br>
-                 <br>
-             </div>
-           </div>  -->
+                    <br>
+                    <br>
+                </div>
+            </div>
+            {{object}}
 
-               <!-- Truck -->
+            <div ng-repeat="object in catProdCheck" class="span6">
+                <div ng-show="showOptions(object.class)">
+                    <strong>{{object.class}}: </strong><br>
+                    <div class="row">
+                        {{object.selected}}
+                        <form ng-model= object.selected>
+                            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}">
+                                <input type="checkbox"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <!--      <div ng-show="showOptions('Accessories')">
+           <strong> Accessories: </strong><br>
+           <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
+               <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+           </div>
+           <br>
+           <br>
+       </div>
+
+
+
+     <!-- Truck -->
         <!-- Need to be changed to the correct filter -->
-       <div class="span6">
-       <div ng-show="showOptions('Truck')">
+            <!--  <div class="span6">
+              <div ng-show="showOptions('Truck')">
 
-       <strong> Truck: </strong><br>
-           <div class="row">
-               <input type="radio" ng-model="$parent.selectedTruck"  value="" ng-checked="true" name="truckSelect"> No Truck <br><br>
+              <strong> Truck: </strong><br>
+                  <div class="row">
+                      <input type="radio" ng-model="$parent.selectedTruck"  value="" ng-checked="true" name="truckSelect"> No Truck <br><br>
+                  </div>
+                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Truck'}" class="row">
+                      <input type="radio" ng-model="$parent.selectedTruck"  value="{{product.Part}}" name="truckSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                  </div>
+                  <br>
+                  <br>
+              </div>
+
+
+
+              <!-- Truck Options -->
+            <!--    <div ng-show="showOptions('TruckOption')">
+                    <strong> Truck Options: </strong><br>
+                    <div class="row">
+                        <input type="radio" ng-model="$parent.selectedTruckOption"  value="" ng-checked="true" name="truckOptionSelect"> No Truck Options <br><br>
+                    </div>
+                    <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'TruckOption'}" class="row">
+                        <input type="radio" ng-model="$parent.selectedTruckOption"  value="{{product.Part}}" name="truckOptionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+
+                <!-- Rotation Torque -->
+
+            <!--   <div ng-show="showOptions('Torque')">
+                   <strong> Rotation Torque: </strong><br>
+                   <div class="row">
+                       <input type="radio" ng-model="$parent.selectedTorque"  value="" ng-checked="true" name="torqueSelect"> No Rotation Torque <br><br>
+                   </div>
+                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Torque'}" class="row">
+                       <input type="radio" ng-model="$parent.selectedTorque"  value="{{product.Part}}" name="torqueSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                   </div>
+                   <br>
+                   <br>
+              </div>
+
+
+               <!-- Drill Pipe Setup -->
+
+            <!--     <div ng-show="showOptions('DrillPipe')">
+                     <strong> Drill Pipe Setup: </strong><br>
+                     <div class="row">
+                     <input type="radio" ng-model="$parent.selectedDrillPipe"  value="" ng-checked="true" name="DrillPipeSelect"> No Drill Pipe <br><br>
+                     </div>
+                     <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'DrilPipe'}" class="row">
+                         <input type="radio" ng-model="$parent.selectedDrillPipe"  value="{{product.Part}}" name="DrillPipeSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                     </div>
+                     <br>
+                     <br>
+                </div>
+
+
+                 <!-- Air Piping -->
+
+            <!--   <div ng-show="showOptions('AirPiping')">
+               <strong> Air Piping: </strong><br>
+                   <div class="row">
+                       <input type="radio" ng-model="$parent.selectedAirPiping"  value="" ng-checked="true" name="airPipingSelect"> No Air Piping <br><br>
+                   </div>
+                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'AirPiping'}" class="row">
+                       <input type="radio" ng-model="$parent.selectedAirPiping"  value="{{product.Part}}" name="airPipingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                   </div>
+                   <br>
+                   <br>
+              </div>
+
+
+               <!-- Water Injection -->
+
+            <!--  <div ng-show="showOptions('WaterInjection')">
+              <strong> Water Injection: </strong><br>
+                  <div class="row">
+                      <input type="radio" ng-model="$parent.selectedWaterInjection"  value="" ng-checked="true" name="waterInjectionSelect"> No Water Injection <br><br>
+                  </div>
+                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'WaterInjection'}" class="row">
+                      <input type="radio" ng-model="$parent.selectedWaterInjection"  value="{{product.Part}}" name="waterInjectionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                  </div>
+                  <br>
+                  <br>
+             </div>
+
+
+
+              <!-- Hoists -->
+
+            <!--  <div ng-show="showOptions('Hoist')">
+                  <strong> Hoists: </strong><br>
+                  <div class="row">
+                      <input type="radio" ng-model="$parent.selectedHoist"  value="" ng-checked="true" name="hoistSelect"> No Hoists <br><br>
+                  </div>
+                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Hoist'}" class="row">
+                      <input type="radio" ng-model="$parent.selectedHoist"  value="{{product.Part}}" name="hoistSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                  </div>
+                  <br>
+                  <br>
+             </div>
+
+
+
+              <!-- Piping Handling -->
+
+            <!--   <div ng-show="showOptions('PipingHandling')">
+                   <strong> Piping Handling: </strong><br>
+                   <div class="row">
+                       <input type="radio" ng-model="$parent.selectedPipingHandling"  value="" ng-checked="true" name="pipingHandlingSelect"> No Piping Handling <br><br>
+                   </div>
+                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'PipingHandling'}" class="row">
+                       <input type="radio" ng-model="$parent.selectedPipingHandling"  value="{{product.Part}}" name="pipingHandlingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                   </div>
+                   <br>
+                   <br>
+              </div>
+
+
+
+               <!-- Mud Pump -->
+
+            <!--    <div ng-show="showOptions('Pump')">
+                <strong> Mud Pump: </strong><br>
+                    <div class="row">
+                    <input type="radio" ng-model="$parent.selectedPump"  value="" name="pumpSelect" ng-checked="true"> No Pump <br><br>
+                    </div>
+                    <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Pump'}" class="row">
+                        <input type="radio" ng-model="$parent.selectedPump"  value="{{product.Part}}" name="pumpSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                    </div>
+
+                    <br>
+                    <br>
+               </div>
+
+
+                <!-- Cold Weather Package -->
+            <!--
+           <div ng-show="showOptions('ColdWeather')">
+               <strong> Cold Weather: </strong><br>
+               <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'ColdWeather'}" class="row">
+                   <input type="checkbox" ng-model="product.ColdWeather"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+               </div>
+               <br>
+               <br>
            </div>
-           <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Truck'}" class="row">
-               <input type="radio" ng-model="$parent.selectedTruck"  value="{{product.Part}}" name="truckSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-           </div>
-           <br>
-           <br>
-       </div>
+
+           <!-- Miscellaneous -->
+
+            <!--       <div ng-show="showOptions('Miscellaneous')">
+                      <strong> Miscellaneous: </strong><br>
+                      <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Miscellaneous'}" class="row">
+                          <input type="checkbox" ng-model="product.Miscellaneous"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                      </div>
+                      <br>
+                      <br>
+                  </div>
+
+                  <!-- Accessories -->
+            <!--      <div ng-show="showOptions('Accessories')">
+                     <strong> Accessories: </strong><br>
+                     <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
+                         <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                     </div>
+                     <br>
+                     <br>
+                 </div>
 
 
 
-       <!-- Truck Options -->
-        <div ng-show="showOptions('TruckOption')">
-            <strong> Truck Options: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedTruckOption"  value="" ng-checked="true" name="truckOptionSelect"> No Truck Options <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'TruckOption'}" class="row">
-                <input type="radio" ng-model="$parent.selectedTruckOption"  value="{{product.Part}}" name="truckOptionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-        </div>
-
-
-        <!-- Rotation Torque -->
-
-    <div ng-show="showOptions('Torque')">
-        <strong> Rotation Torque: </strong><br>
-        <div class="row">
-            <input type="radio" ng-model="$parent.selectedTorque"  value="" ng-checked="true" name="torqueSelect"> No Rotation Torque <br><br>
-        </div>
-        <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Torque'}" class="row">
-            <input type="radio" ng-model="$parent.selectedTorque"  value="{{product.Part}}" name="torqueSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-        </div>
-        <br>
-        <br>
-   </div>
-
-
-    <!-- Drill Pipe Setup -->
-
-        <div ng-show="showOptions('DrillPipe')">
-            <strong> Drill Pipe Setup: </strong><br>
-            <div class="row">
-            <input type="radio" ng-model="$parent.selectedDrillPipe"  value="" ng-checked="true" name="DrillPipeSelect"> No Drill Pipe <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'DrilPipe'}" class="row">
-                <input type="radio" ng-model="$parent.selectedDrillPipe"  value="{{product.Part}}" name="DrillPipeSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
-
-
-        <!-- Air Piping -->
-
-        <div ng-show="showOptions('AirPiping')">
-        <strong> Air Piping: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedAirPiping"  value="" ng-checked="true" name="airPipingSelect"> No Air Piping <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'AirPiping'}" class="row">
-                <input type="radio" ng-model="$parent.selectedAirPiping"  value="{{product.Part}}" name="airPipingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
-
-
-        <!-- Water Injection -->
-
-        <div ng-show="showOptions('WaterInjection')">
-        <strong> Water Injection: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedWaterInjection"  value="" ng-checked="true" name="waterInjectionSelect"> No Water Injection <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'WaterInjection'}" class="row">
-                <input type="radio" ng-model="$parent.selectedWaterInjection"  value="{{product.Part}}" name="waterInjectionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
-
-
-
-        <!-- Hoists -->
-
-        <div ng-show="showOptions('Hoist')">
-            <strong> Hoists: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedHoist"  value="" ng-checked="true" name="hoistSelect"> No Hoists <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Hoist'}" class="row">
-                <input type="radio" ng-model="$parent.selectedHoist"  value="{{product.Part}}" name="hoistSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
-
-
-
-        <!-- Piping Handling -->
-
-        <div ng-show="showOptions('PipingHandling')">
-            <strong> Piping Handling: </strong><br>
-            <div class="row">
-                <input type="radio" ng-model="$parent.selectedPipingHandling"  value="" ng-checked="true" name="pipingHandlingSelect"> No Piping Handling <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'PipingHandling'}" class="row">
-                <input type="radio" ng-model="$parent.selectedPipingHandling"  value="{{product.Part}}" name="pipingHandlingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-       </div>
-
-
-
-        <!-- Mud Pump -->
-
-        <div ng-show="showOptions('Pump')">
-        <strong> Mud Pump: </strong><br>
-            <div class="row">
-            <input type="radio" ng-model="$parent.selectedPump"  value="" name="pumpSelect" ng-checked="true"> No Pump <br><br>
-            </div>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Pump'}" class="row">
-                <input type="radio" ng-model="$parent.selectedPump"  value="{{product.Part}}" name="pumpSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-
-            <br>
-            <br>
-       </div>
-
-
-        <!-- Cold Weather Package -->
-
-        <div ng-show="showOptions('ColdWeather')">
-            <strong> Cold Weather: </strong><br>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'ColdWeather'}" class="row">
-                <input type="checkbox" ng-model="product.ColdWeather"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-        </div>
-
-        <!-- Miscellaneous -->
-
-        <div ng-show="showOptions('Miscellaneous')">
-            <strong> Miscellaneous: </strong><br>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Miscellaneous'}" class="row">
-                <input type="checkbox" ng-model="product.Miscellaneous"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-        </div>
-
-        <!-- Accessories -->
-        <div ng-show="showOptions('Accessories')">
-            <strong> Accessories: </strong><br>
-            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
-                <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-            </div>
-            <br>
-            <br>
-        </div>
-
-
-
-        <!-- Trying to Automate it -->
+                 <!-- Trying to Automate it -->
         <!-- <div class="span6" ng-repeat="product.Class in products">
              {{product.Class}}
          </div>      -->
 
-
-
+          <div class="span6">
             <table>
                 <tr>
                     <td><button ng-click="addClick()" class="btn">Add to Quote</button></td>
@@ -394,9 +431,10 @@
         Main Pricing summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
         Second Pricing summary:&nbsp; <input type="number" ng-model="quotation.Discount2" class="discountInput" value="0" min="0"/> % <br>
         <br>
+          </div>
         <br>
         <br>
-    </div>
+
            <!-- This is the first pricing summary-->
         <div class="span6">
            <h3>Main Pricing Summary</h3>
@@ -414,7 +452,7 @@
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
                 <td>{{product.StdCost}}</td>
-                <td><button ng-click="removeClick(product)" class="btn-small">-</button></td>
+                <td><button ng-click="removeClick(product, 'Main')" class="btn-small">-</button></td>
             </tr>
             <tr>
                 <td>Total: </td>
@@ -445,7 +483,7 @@
                    <td>{{product.Part}}</td>
                    <td>{{product.Description}}</td>
                    <td>{{product.StdCost}}</td>
-                   <td><button ng-click="removeClick2(product)" class="btn-small">-</button></td>
+                   <td><button ng-click="removeClick(product, 'Second')" class="btn-small">-</button></td>
                </tr>
                <tr>
                    <td>Total: </td>
@@ -495,6 +533,8 @@
            <br>
            <br>
        </div>
+
+
 </script>
 
 
