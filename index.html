@@ -177,59 +177,49 @@
 
            <!-- This should be automated, ng-repeat??   -->
 
-            <div ng-repeat="object in catProdRadio" class="span6">
+            <div ng-repeat="object in radioBoxCategories" class="span6">
                 <div ng-show="showOptions(object.class)">
                     <strong>{{object.class}}: </strong><br>
                     <div class="row">
-                        <!-- Put ng-model back in input and do object.product.selected as model-->
-                        <form ng-model=$parent.object.selected>
-                            {{object[$index].selected}}
-                            <input type="radio"  value="" ng-checked="true" name=object.class> No {{object.class}} <br><br>
+                          <input type="radio" ng-model=selectedRadio[$index]  value="" ng-checked="true" > No {{object.class}} <br><br>
 
-                            <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
-                                <input type="radio"  value="{{product.Part}}" name=object.class> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                            </div>
-                        </form>
-                        {{object[2].selected}}
-                        {{selections[object]}}
-                        {{selections[1]}}
-                        {{getSelections()}}
-                    </div>
+                          <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                              <input type="radio" ng-model=selectedRadio[$parent.$index] value="{{product.Part}}" > {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                          </div>
+                      </div>
 
-                    <br>
-                    <br>
-                </div>
-            </div>
-            {{object}}
+                      <br>
+                      <br>
+                  </div>
+              </div>
 
-            <div ng-repeat="object in catProdCheck" class="span6">
-                <div ng-show="showOptions(object.class)">
-                    <strong>{{object.class}}: </strong><br>
-                    <div class="row">
-                        {{object.selected}}
-                        <form ng-model= object.selected>
-                            <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}">
-                                <input type="checkbox"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                            </div>
-                        </form>
-                    </div>
-                    <br>
-                    <br>
-                </div>
-            </div>
-            <!--      <div ng-show="showOptions('Accessories')">
-           <strong> Accessories: </strong><br>
-           <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
-               <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-           </div>
-           <br>
-           <br>
-       </div>
+              <div ng-repeat="object in checkBoxCategories" class="span6">
+                  <div ng-show="showOptions(object.class)">
+                      <strong>{{object.class}}: </strong><br>
+                      <div class="row">
+                              <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                                  <input type="checkbox" ng-model="product.checked" value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+                              </div>
+                      </div>
+
+                      <br>
+                      <br>
+                  </div>
+              </div>
+
+              <!--      <div ng-show="showOptions('Accessories')">
+             <strong> Accessories: </strong><br>
+             <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
+                 <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
+             </div>
+             <br>
+             <br>
+         </div>
 
 
 
-     <!-- Truck -->
-        <!-- Need to be changed to the correct filter -->
+       <!-- Truck
+        <!-- Need to be changed to the correct filter
             <!--  <div class="span6">
               <div ng-show="showOptions('Truck')">
 
@@ -246,7 +236,7 @@
 
 
 
-              <!-- Truck Options -->
+              <!-- Truck Options
             <!--    <div ng-show="showOptions('TruckOption')">
                     <strong> Truck Options: </strong><br>
                     <div class="row">
@@ -260,7 +250,7 @@
                 </div>
 
 
-                <!-- Rotation Torque -->
+                <!-- Rotation Torque
 
             <!--   <div ng-show="showOptions('Torque')">
                    <strong> Rotation Torque: </strong><br>
@@ -275,7 +265,7 @@
               </div>
 
 
-               <!-- Drill Pipe Setup -->
+               <!-- Drill Pipe Setup
 
             <!--     <div ng-show="showOptions('DrillPipe')">
                      <strong> Drill Pipe Setup: </strong><br>
@@ -290,7 +280,7 @@
                 </div>
 
 
-                 <!-- Air Piping -->
+                 <!-- Air Piping
 
             <!--   <div ng-show="showOptions('AirPiping')">
                <strong> Air Piping: </strong><br>
@@ -305,7 +295,7 @@
               </div>
 
 
-               <!-- Water Injection -->
+               <!-- Water Injection
 
             <!--  <div ng-show="showOptions('WaterInjection')">
               <strong> Water Injection: </strong><br>
@@ -321,7 +311,7 @@
 
 
 
-              <!-- Hoists -->
+              <!-- Hoists
 
             <!--  <div ng-show="showOptions('Hoist')">
                   <strong> Hoists: </strong><br>
@@ -337,7 +327,7 @@
 
 
 
-              <!-- Piping Handling -->
+              <!-- Piping Handling
 
             <!--   <div ng-show="showOptions('PipingHandling')">
                    <strong> Piping Handling: </strong><br>
@@ -353,7 +343,7 @@
 
 
 
-               <!-- Mud Pump -->
+               <!-- Mud Pump
 
             <!--    <div ng-show="showOptions('Pump')">
                 <strong> Mud Pump: </strong><br>
@@ -369,7 +359,7 @@
                </div>
 
 
-                <!-- Cold Weather Package -->
+                <!-- Cold Weather Package
             <!--
            <div ng-show="showOptions('ColdWeather')">
                <strong> Cold Weather: </strong><br>
@@ -380,7 +370,7 @@
                <br>
            </div>
 
-           <!-- Miscellaneous -->
+           <!-- Miscellaneous
 
             <!--       <div ng-show="showOptions('Miscellaneous')">
                       <strong> Miscellaneous: </strong><br>
@@ -391,7 +381,7 @@
                       <br>
                   </div>
 
-                  <!-- Accessories -->
+                  <!-- Accessories
             <!--      <div ng-show="showOptions('Accessories')">
                      <strong> Accessories: </strong><br>
                      <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
@@ -403,7 +393,7 @@
 
 
 
-                 <!-- Trying to Automate it -->
+                 <!-- Trying to Automate it
         <!-- <div class="span6" ng-repeat="product.Class in products">
              {{product.Class}}
          </div>      -->
@@ -411,9 +401,9 @@
           <div class="span6">
             <table>
                 <tr>
-                    <td><button ng-click="addClick()" class="btn">Add to Quote</button></td>
+                    <td><button ng-click="addClick(1)" class="btn">Add to Quote</button></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><button ng-click="addClick2()" class="btn">Add to Second Quote</button></td>
+                    <td><button ng-click="addClick(2)" class="btn">Add to Second Quote</button></td>
                 </tr>
             </table>
 

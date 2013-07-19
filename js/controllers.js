@@ -237,17 +237,12 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
     }
 
-    var remove
 
 
-    $scope.catProdRadio = $scope.categorizedProducts('Radio');
-    $scope.catProdCheck = $scope.categorizedProducts('Check');
-    console.log($scope.categorizedProducts('Radio'));
+    $scope.radioBoxCategories = $scope.categorizedProducts('Radio');
+    $scope.checkBoxCategories = $scope.categorizedProducts('Check');
 
-    /*
-    Add the products to the quote
-    Automate this with some sort of for-loop
-     */
+
 
     $rootScope.addCustom = function (product){
         product.Quoted=true;
@@ -259,30 +254,76 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         product.Quantity2=1;
     }
 
-    $rootScope.addClick = function() {
+    $scope.selectedRadio = [];
+    var cat= new Array();
+    $scope.selectedCheck = [cat,[]];
 
-        /*
+    $rootScope.addClick = function(value) {
 
-         for (var key in selections)  {
-             console.log(selections[key]);
-             for (i=0; i < $rootScope.quotation.products.length; i++){
-                 if(selections[key]==$rootScope.quotation.products[i].Part){
-                     console.log("hej");
-                     $rootScope.quotation.products[i].Quoted=true;
-                     $rootScope.quotation.products[i].Quantity=1;
-                 }
-             }
-         }
-        */
+        if(value=='1'){
 
-        //Adds the base
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            console.log($scope.object[0].selected);
-            if($scope.object[0].selected.Part==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
+                    $rootScope.quotation.products[i].Quoted=true;
+                    $rootScope.quotation.products[i].Quantity=1;
+                }
+            }
+
+            //Adds the radio values
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                for(j=0; j < $scope.selectedRadio.length; j++){
+                    if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
+                        $rootScope.quotation.products[i].Quoted=true;
+                        $rootScope.quotation.products[i].Quantity=1;
+                      //  $scope.selectedRadio[j]="";
+                    }
+                }
+            }
+
+            //Adds the checked values
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                for(j=0; j < $scope.checkBoxCategories.length; j++){
+                    for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
+                        if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
+                            $rootScope.quotation.products[i].Quoted=true;
+                            $rootScope.quotation.products[i].Quantity=1;
+                          //  $scope.checkBoxCategories[j].products[k].checked=false;
+                        }
+                    }
+                }
             }
         }
+
+        if(value=='2') {
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
+                    $rootScope.quotation.products[i].Quoted2=true;
+                    $rootScope.quotation.products[i].Quantity2=1;
+                }
+            }
+
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                for(j=0; j < $scope.selectedRadio.length; j++){
+                    if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
+                        $rootScope.quotation.products[i].Quoted2=true;
+                        $rootScope.quotation.products[i].Quantity2=1;
+                       // $scope.selectedRadio[j]="";
+                    }
+                }
+            }
+            for (i=0; i < $rootScope.quotation.products.length; i++){
+                for(j=0; j < $scope.checkBoxCategories.length; j++){
+                    for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
+                        if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
+                            $rootScope.quotation.products[i].Quoted2=true;
+                            $rootScope.quotation.products[i].Quantity2=1;
+                           // $scope.checkBoxCategories[j].products[k].checked=false;
+                        }
+                    }
+                }
+            }
+        }
+
 
        /*
         //Adds the Truck
@@ -387,7 +428,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 $rootScope.quotation.products[i].Quoted=true;
                 $rootScope.quotation.products[i].Quantity=1;
             }
-        }*/
+        }
     }
 
 
@@ -502,25 +543,22 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 $rootScope.quotation.products[i].Quoted2=true;
                 $rootScope.quotation.products[i].Quantity2=1;
             }
-        }
+        } */
     }
-
-
-   //Why doesn't this work??
    $rootScope.resetAll = function (){
-       $scope.selectedPump="";
-       $scope.selectedPump.value="";
-       return $scope.selectedPump;
-    }
-
-   /* var setSelected = function(){
-        var selected = [];
-        for(i=0; i < $scope.catProd.length; i++){
-            selected[i]=false;
-        }
-        return selected;
-    }
-    $rootScope.selected = setSelected(); */
+       for (i=0; i < $rootScope.quotation.products.length; i++){
+           for(j=0; j < $scope.selectedRadio.length; j++){
+               $scope.selectedRadio[j]="";
+           }
+       }
+       for (i=0; i < $rootScope.quotation.products.length; i++){
+           for(j=0; j < $scope.checkBoxCategories.length; j++){
+               for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
+                       $scope.checkBoxCategories[j].products[k].checked=false;
+                   }
+               }
+           }
+       }
 };
 
 
@@ -583,7 +621,7 @@ var QuotationCtrl = function($rootScope, $scope){
     //Second Quote
     $scope.secondQuote = function(){
         for (i=0; i<$rootScope.quotation.products.length; i++){
-            if ($rootScope.quotation.products[i].Quoted2 == true){
+            if ($rootScope.quotation.products[i].Quoted == true){
                 return true;
             }
         }
