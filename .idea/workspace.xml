@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
+    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="Automated View and Controller">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/img/Sustainable.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373023575762" ignored="false" />
-    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374218821454" ignored="false" />
+    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374753272760" ignored="false" />
     <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374219812362" ignored="false" />
     <file path="/info.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372919983514" ignored="false" />
     <file path="/pdfgen.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372311800745" ignored="false" />
@@ -17,10 +19,10 @@
     <file path="/ProductData.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372747153068" ignored="false" />
     <file path="/Test.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372758732185" ignored="false" />
     <file path="/bootstrap.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372835936532" ignored="false" />
-    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373447360760" ignored="false" />
+    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374755794196" ignored="false" />
     <file path="/dummy.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372998083107" ignored="false" />
     <file path="/fileHandler.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373273245359" ignored="false" />
-    <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374152925312" ignored="false" />
+    <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374756693516" ignored="false" />
     <file path="/file.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373539327077" ignored="false" />
     <file path="/test.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374140368840" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,21 +88,24 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="55" selection-start="6535" selection-end="6535" vertical-scroll-proportion="-8.961538">
-              <folding />
+            <state line="588" column="12" selection-start="25016" selection-end="25016" vertical-scroll-proportion="-44.96154">
+              <folding>
+                <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="e#8172#18036#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="278" column="14" selection-start="8712" selection-end="8712" vertical-scroll-proportion="0.5865504">
+            <state line="608" column="34" selection-start="21624" selection-end="21624" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#5606#5943#0" expanded="false" />
                 <element signature="e#5983#6221#0" expanded="false" />
                 <element signature="e#11066#19939#0" expanded="false" />
-                <element signature="e#20574#26601#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+            <state line="68" column="24" selection-start="850" selection-end="850" vertical-scroll-proportion="0.37485173">
               <folding />
             </state>
           </provider>
@@ -128,9 +133,7 @@
         <entry file="file://$PROJECT_DIR$/data/ProductData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="31" column="5" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1374147366338" expanded="true" signature="14:4062" placeholder="[...]" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,12 +176,12 @@
         <option value="$PROJECT_DIR$/js/info.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/fileHandler.js" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/file.html" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/data/ProductData.js" />
         <option value="$PROJECT_DIR$/js/controllers.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -233,7 +236,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,8 +254,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -270,8 +305,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -316,6 +351,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -335,13 +377,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -386,7 +421,11 @@
       <created>1374152938360</created>
       <updated>1374152938360</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Automated View and Controller">
+      <created>1374220470831</created>
+      <updated>1374220470831</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -415,21 +454,21 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.021864211" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24893071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24357405" sideWeight="0.67128026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24663402" sideWeight="0.67128026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -476,7 +515,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Automated the radio and checkboxes in index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automated View and Controller" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -494,6 +533,7 @@
     <MESSAGE value="Added specs image folder" />
     <MESSAGE value="Added more product classes" />
     <MESSAGE value="Automated the radio and checkboxes in index" />
+    <MESSAGE value="Automated View and Controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,12 +541,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/ProductData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="115" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1374147366338" expanded="true" signature="14:4062" placeholder="[...]" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -558,16 +603,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/tinymce.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="41" selection-start="256513" selection-end="256513" vertical-scroll-proportion="0.18478261" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="5" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
@@ -577,31 +622,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0">
+        <state line="608" column="34" selection-start="21624" selection-end="21624" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1374147366338" expanded="true" signature="14:4062" placeholder="[...]" />
+            <element signature="e#5606#5943#0" expanded="false" />
+            <element signature="e#5983#6221#0" expanded="false" />
+            <element signature="e#11066#19939#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="55" selection-start="6535" selection-end="6535" vertical-scroll-proportion="-8.961538">
-          <folding />
+        <state line="588" column="12" selection-start="25016" selection-end="25016" vertical-scroll-proportion="-44.96154">
+          <folding>
+            <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="e#8172#18036#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="14" selection-start="8712" selection-end="8712" vertical-scroll-proportion="0.5865504">
-          <folding>
-            <element signature="e#5606#5943#0" expanded="false" />
-            <element signature="e#5983#6221#0" expanded="false" />
-            <element signature="e#11066#19939#0" expanded="false" />
-            <element signature="e#20574#26601#0" expanded="false" />
-          </folding>
+        <state line="68" column="24" selection-start="850" selection-end="850" vertical-scroll-proportion="0.37485173">
+          <folding />
         </state>
       </provider>
     </entry>

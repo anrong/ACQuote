@@ -621,7 +621,7 @@ var QuotationCtrl = function($rootScope, $scope){
     //Second Quote
     $scope.secondQuote = function(){
         for (i=0; i<$rootScope.quotation.products.length; i++){
-            if ($rootScope.quotation.products[i].Quoted == true){
+            if ($rootScope.quotation.products[i].Quoted2 == true){
                 return true;
             }
         }

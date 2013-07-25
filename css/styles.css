@@ -37,8 +37,13 @@ pre {
 }
 
 #logo {
-    text-align: center;
+    width: 32mm;
 }
+#promise {
+    width: 64mm;
+    visibility: hidden;
+}
+
 
 .tblCont {
     font-size: 18px;
@@ -47,7 +52,46 @@ pre {
     margin-bottom: 100px;
 }
 
+
 @media print {
-    @page {margin-left: 15px}
-    header, footer, .navbar {display: none}
+
+    @page {
+        margin-left: 10mm;
+        margin-right: 10mm;
+        margin-bottom: 19mm;
+        margin-top: 10mm;
+    }
+
+    @bottom-center { content: counter(page) }
+
+
+    footer, .navbar {display: none}
+
+
+    #logo {
+        position: absolute;
+        left: 168mm;
+        top: 263mm;
+        width: 32mm;
+    }
+
+    #promise {
+        position: absolute;
+        left: 10mm;
+        top: 278mm;
+        width: 64mm;
+        visibility: visible;
+    }
+
+    #title {
+        text-align: center;
+        margin-bottom: -20mm;
+        page-break-after: always;
+    }
+    .summary {
+
+        margin-left: 0mm;
+        page-break-after: always;
+    }
+
 }

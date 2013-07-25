@@ -529,8 +529,6 @@
 
 
 
-
-
     <!-- This is the Quotation view -->
 <script type="text/ng-template" id="partials/quotation-view.html" >
 
@@ -538,18 +536,24 @@
         <!-- First the front page is added -->
         <div id="title">
             <h2>Atlas Copco Quotation</h2><br>
-                <br>
-                <img src="lib/img/AClogo.jpg" id="logo" width="121">
-                <br>
-                <strong>
-                <p>Quotation prepared for <br> {{quotation.companyName}} </p>
-                <p>For the attention of <br>{{quotation.customerTitle}} {{quotation.customerName}} </p>
-                <p>Quotation prepared by {{quotation.preparedBy}} </p>
-                <p>Of Atlas Copco</p>
-                    <p ng-show="quotation.Date">{{year}}-{{month()}}-{{day()}}</p>
-                </strong>
-                 <!--<p>{{year}}-{{month()}}-{{day()}}</p>-->
-            </div>
+            <br>
+            <br>
+            <br>
+            <img src="lib/img/AClogo.jpg" id="logo">
+            <br>
+            <img src="lib/img/Sustainable.png" id="promise">
+            <br>
+            <br>
+            <br>
+            <strong>
+            <p>Quotation prepared for <br> {{quotation.companyName}} </p>
+            <p>For the attention of <br>{{quotation.customerTitle}} {{quotation.customerName}} </p>
+            <p>Quotation prepared by {{quotation.preparedBy}} </p>
+            <p>Of Atlas Copco</p>
+                <p ng-show="quotation.Date">{{year}}-{{month()}}-{{day()}}</p>
+            </strong>
+             <!--<p>{{year}}-{{month()}}-{{day()}}</p>-->
+        </div>
 
         <!-- Table of Contents -->
         <div class="pbAfter">
@@ -582,7 +586,7 @@
         </div>
 
         <!-- Pricing Summary -->
-        <div class="pbAfter">
+        <div class="summary">
         <h2>Pricing Summary</h2>
 
         <table class="table table-striped">
@@ -605,16 +609,6 @@
                 <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
             </tr>
 
-
-        <tr ng-repeat="product in quotation.products | filter:isSelected | orderBy:settings.order:settings.reverse ">
-          <td>{{product.Class}}</td>
-          <td>{{product.Part}}</td>
-          <td>{{product.Description}}</td>
-          <td>{{product.StdCost}}</td>
-          <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
-          <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
-
-        </tr>
             <tr ng-show="includeDiscount(1)">
                 <td>Discount: </td>
                 <td></td>
@@ -634,15 +628,14 @@
                 </strong>
             </tr>
         </table>
+            <br>
+            <br>
         </div>
-    <br>
-    <br>
+
 
         <!-- Second Pricing Summary -->
     <div ng-show="secondQuote()" class="pbAfter">
-        <p>
         <h2>Pricing Summary 2</h2>
-        </p>
         <table class="table table-striped">
             <tr>
                 <th> Type </th>
