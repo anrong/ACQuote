@@ -11,5 +11,4 @@ var LETTERS = [{title: 'Letter 1', content: 'Lorem ipsum dolor sit amet, consect
         "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? " +
         "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas " +
         "nulla pariatur?"},
-    {title: 'Letter 3', content:"<strong>This is the third letter</strong>"},
-{title: 'Letter 4', content:"<strong>This is the fourth letter</strong>"}];
+    {title: 'Letter 3', content:"<strong>This is the third letter</strong>"}];

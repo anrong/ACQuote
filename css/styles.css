@@ -1,8 +1,5 @@
 body{
 	margin-top: 60px;
-    margin-left: 0mm;
-    margin-bottom: 0mm;
-    margin-right: 0mm;
 }
 
 .quantityInput {
@@ -42,20 +39,6 @@ pre {
 #logo {
     width: 32mm;
 }
-
-#currency {
-    width: 100px;
-}
-
-.costInput {
-    width: 70px;
-}
-
-#logoHead {
-    width: 32mm;
-    visibility: hidden;
-}
-
 #promise {
     width: 64mm;
     visibility: hidden;
@@ -70,3 +53,45 @@ pre {
 }
 
 
+@media print {
+
+    @page {
+        margin-left: 10mm;
+        margin-right: 10mm;
+        margin-bottom: 19mm;
+        margin-top: 10mm;
+    }
+
+    @bottom-center { content: counter(page) }
+
+
+    footer, .navbar {display: none}
+
+
+    #logo {
+        position: absolute;
+        left: 168mm;
+        top: 263mm;
+        width: 32mm;
+    }
+
+    #promise {
+        position: absolute;
+        left: 10mm;
+        top: 278mm;
+        width: 64mm;
+        visibility: visible;
+    }
+
+    #title {
+        text-align: center;
+        margin-bottom: -20mm;
+        page-break-after: always;
+    }
+    .summary {
+
+        margin-left: 0mm;
+        page-break-after: always;
+    }
+
+}
