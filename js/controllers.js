@@ -7,13 +7,17 @@ var IndexCtrl = function($rootScope, $scope){
 
     $rootScope.quotation = {};
     $rootScope.quotation.products = PRODUCTS;
+    for (i=0; i < $rootScope.quotation.products.length; i++){
+        $rootScope.quotation.products[i].StdCost2=$rootScope.quotation.products[i].StdCost;
+    }
 
 
-	$scope.saveState = function(name){
+
+    $scope.saveState = function(name){
 
         console.log("1");
 		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "application/x-download;charset=utf-8"});
-        saveAs(blob,name+".json");
+        saveAs(blob,name+$rootScope.year+$rootScope.month+$rootScope.day +".json");
 	}
 
     $scope.loadState = function(){
@@ -58,6 +62,10 @@ var IndexCtrl = function($rootScope, $scope){
 var InfoCtrl = function ($rootScope,$scope) {
     $rootScope.coverLetters = LETTERS;
 
+    $rootScope.quotation.terms = TERMS;
+
+    console.log($rootScope.quotation.terms);
+
     $rootScope.quotation.productDesc=false;
 
     $rootScope.setContent = function(text){
@@ -66,6 +74,10 @@ var InfoCtrl = function ($rootScope,$scope) {
 
     $rootScope.setNotes = function(text){
         $rootScope.quotation.notes=text;
+    }
+
+    $rootScope.setTerms = function(text){
+        $rootScope.quotation.termsText=text;
     }
 
 
@@ -91,11 +103,24 @@ var InfoCtrl = function ($rootScope,$scope) {
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
 
+    }
+    $scope.loadNoteAsText = function()
+    {
+        var noteToLoad = document.getElementById("noteToLoad").files[0];
+
+        var fileReader = new FileReader();
+        fileReader.onload = function(fileLoadedEvent)
+        {
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            $scope.setNotes(textFromFileLoaded);
+            $rootScope.$apply($rootScope.length);
+        };
+        fileReader.readAsText(noteToLoad, "UTF-8");
 
     }
 
-    $rootScope.quotation.terms = TERMS;
 
+     /*
     $scope.terms = function(selectedTerms){
         if (selectedTerms=='Standard Terms'){
             return $rootScope.quotation.terms.Content;
@@ -137,7 +162,6 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     } */
 
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
-    $rootScope.quotation.selectedColdWeather = [];
 
 
     $rootScope.getStdCost = function (baseProduct){
@@ -146,6 +170,9 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
         return baseProduct.StdCost;
     }
+
+
+
   /*  $scope.checkProduct = function(){
         for (i=0; i < $rootScope.quotation.products.length; i++){
             if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
@@ -583,6 +610,7 @@ var QuotationCtrl = function($rootScope, $scope){
         }
         return today.getDate().toString();
     }
+
     $rootScope.month = function() {
         var month = today.getMonth();
         month = month + 1;
@@ -674,7 +702,7 @@ var QuotationCtrl = function($rootScope, $scope){
         var value = 0;
         for (i=0; i<$rootScope.quotation.products.length; i++){
             if ($rootScope.quotation.products[i].Quoted2 == true){
-                value = value + $rootScope.quotation.products[i].StdCost*$rootScope.quotation.products[i].Quantity2;
+                value = value + $rootScope.quotation.products[i].StdCost2*$rootScope.quotation.products[i].Quantity2;
             }
         }
         return value;
@@ -690,12 +718,16 @@ var QuotationCtrl = function($rootScope, $scope){
         }
     }
 
-    $scope.getDiscount = function (rate){
+    $scope.getDiscount = function (rate, quote){
         var amount;
         if (rate==""||rate==undefined){
             return 0;
         }
-        amount = $rootScope.TotalSum()*rate/100;
+        if (quote=='1'){
+            amount = $rootScope.TotalSum()*rate/100;
+        }
+        amount = $rootScope.TotalSum2()*rate/100;
+
         return amount;
     }
 
