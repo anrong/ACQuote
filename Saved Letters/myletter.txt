@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-"<p>This is the <em>fourth</em> letter.</p>\n<p>&nbsp;</p>\n<p>I added <span style=\"text-decoration: underline;\">this</span></p>\n<p><strong>With some formatting.&nbsp;</strong></p>"
-=======
-"<p>We can make a new letter.</p>\n<p>&nbsp;</p>\n<p>With bold tex</p>"
->>>>>>> 3f04b7ddb0c7d9a42dd85c0b36ab0762e1ed454a
