@@ -1,0 +1,334 @@
+{
+  "products": [
+    {
+      "Part": 57554461,
+      "Description": "FAMILY,T3W",
+      "StdCost": 358145.42,
+      "Dep": null,
+      "Class": "Base",
+      "BoxType": "",
+      "StdCost2": 358145.42
+    },
+    {
+      "Part": 54539457,
+      "Description": "WARRANTY,STANDARD,T3W",
+      "StdCost": 0,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 0
+    },
+    {
+      "Part": 57155541,
+      "Description": "DECALS,SAFETY-T3W",
+      "StdCost": 145.06,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 145.06
+    },
+    {
+      "Part": 57425811,
+      "Description": "LINE,1 PART/18K WINCH",
+      "StdCost": 1023.29,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 1023.29
+    },
+    {
+      "Part": 57436164,
+      "Description": "LINE,2 PART/18K WINCH",
+      "StdCost": 1564.24,
+      "Dep": 57554461,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 1564.24
+    },
+    {
+      "Part": 57557001,
+      "Description": "DECALS,T3W",
+      "StdCost": 467.6,
+      "Dep": 57554461,
+      "Class": "Truck",
+      "BoxType": "Radio",
+      "StdCost2": 467.6
+    },
+    {
+      "Part": 57594947,
+      "Description": "PLATFORM INSTL,T3W",
+      "StdCost": 1414.56,
+      "Dep": 57554461,
+      "Class": "Truck",
+      "BoxType": "Radio",
+      "StdCost2": 1414.56
+    },
+    {
+      "Part": 57612020,
+      "Description": "INSTL,PLATFORM,STEEL,T3W",
+      "StdCost": 2368.33,
+      "Dep": 57554461,
+      "Class": "Truck",
+      "BoxType": "Radio",
+      "StdCost2": 2368.33
+    },
+    {
+      "Part": 57617896,
+      "Description": "PAINT,SPECIAL",
+      "StdCost": 0,
+      "Dep": 57554461,
+      "Class": "DrillPipe",
+      "BoxType": "Radio",
+      "StdCost2": 0
+    },
+    {
+      "Part": 57699654,
+      "Description": "SUB,SPINDLE,4.5",
+      "StdCost": 2602.95,
+      "Dep": 57554461,
+      "Class": "DrillPipe",
+      "BoxType": "Radio",
+      "StdCost2": 2602.95
+    },
+    {
+      "Part": 57699712,
+      "Description": "SWIVEL ASSY,T3W/TH60",
+      "StdCost": 8328.97,
+      "Dep": 57554461,
+      "Class": "Accessories",
+      "BoxType": "Check",
+      "StdCost2": 8328.97
+    },
+    {
+      "Part": 57701179,
+      "Description": "LOADER INSTL,ROD,5.5X4.5",
+      "StdCost": 5443.09,
+      "Dep": 57554461,
+      "Class": "Accessories",
+      "BoxType": "Check",
+      "StdCost2": 5443.09
+    },
+    {
+      "Part": 57706004,
+      "Description": "OPERATION MANUAL,T3W",
+      "StdCost": 3547.5,
+      "Dep": 57554461,
+      "Class": "Accessories",
+      "BoxType": "Check",
+      "StdCost2": 3547.5
+    },
+    {
+      "Part": 57724395,
+      "Description": "LOADER,SINGLE ROD,4.5",
+      "StdCost": 3840.2,
+      "Dep": 57554461,
+      "Class": "Miscellaneous",
+      "BoxType": "Check",
+      "StdCost2": 3840.2
+    },
+    {
+      "Part": 57726812,
+      "Description": "ODOMETER,HUB,INSTL",
+      "StdCost": 249.45,
+      "Dep": null,
+      "Class": "Base",
+      "BoxType": "",
+      "StdCost2": 249.45
+    },
+    {
+      "Part": 57727224,
+      "Description": "PIPING,MUD,W/O HYD,T3W",
+      "StdCost": 3724.15,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 3724.15
+    },
+    {
+      "Part": 57735227,
+      "Description": "SPINDLE,SUB,FLOAT,4.5",
+      "StdCost": 10163.92,
+      "Dep": 57726812,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 10163.92
+    },
+    {
+      "Part": 57752388,
+      "Description": "LUBE,DHD,7GAL INSTL",
+      "StdCost": 1740.1,
+      "Dep": 57726812,
+      "Class": "Miscellaneous",
+      "BoxType": "Check",
+      "StdCost2": 1740.1
+    },
+    {
+      "Part": 57844391,
+      "Description": "CAROUSEL,4.5",
+      "StdCost": 13043.61,
+      "Dep": 57726812,
+      "Class": "Miscellaneous",
+      "BoxType": "Check",
+      "StdCost2": 13043.61
+    },
+    {
+      "Part": 57844409,
+      "Description": "CAROUSEL,3.5",
+      "StdCost": 11606.25,
+      "Dep": 57726812,
+      "Class": "Miscellaneous",
+      "BoxType": "Check",
+      "StdCost2": 11606.25
+    },
+    {
+      "Part": 57844581,
+      "Description": "CAROUSEL,4.5",
+      "StdCost": 13653.13,
+      "Dep": 57726812,
+      "Class": "Miscellaneous",
+      "BoxType": "Check",
+      "StdCost2": 13653.13
+    },
+    {
+      "Part": 57844599,
+      "Description": "CAROUSEL,3.5",
+      "StdCost": 13935.56,
+      "Dep": null,
+      "Class": "Base",
+      "BoxType": "",
+      "StdCost2": 13935.56
+    },
+    {
+      "Part": 57844649,
+      "Description": "CONSOLE INSTLN T3W",
+      "StdCost": 6603.2,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 6603.2
+    },
+    {
+      "Part": 57846180,
+      "Description": "ROD BOX,INSTL,4.5",
+      "StdCost": 4316.89,
+      "Dep": 57844599,
+      "Class": "Pump",
+      "BoxType": "Radio",
+      "StdCost2": 4316.89
+    },
+    {
+      "Part": 57860223,
+      "Description": "WATER INJ,INST,BEAN 18",
+      "StdCost": 3651.27,
+      "Dep": 57844599,
+      "Class": "DrillPipe",
+      "BoxType": "Radio",
+      "StdCost2": 3651.27
+    },
+    {
+      "Part": 57860314,
+      "Description": "WATER INJ,INST,BEAN 35",
+      "StdCost": 5385.41,
+      "Dep": 57844599,
+      "Class": "Hoist",
+      "BoxType": "Radio",
+      "StdCost2": 5385.41
+    },
+    {
+      "Part": 57860389,
+      "Description": "WATER INJ,INST,BEAN 25",
+      "StdCost": 3704.8,
+      "Dep": 57844599,
+      "Class": "Hoist",
+      "BoxType": "Radio",
+      "StdCost2": 3704.8
+    },
+    {
+      "Part": 57860991,
+      "Description": "AUX JIB CONTROL INSTAL",
+      "StdCost": 671.82,
+      "Dep": 57844599,
+      "Class": "Hoist",
+      "BoxType": "Radio",
+      "StdCost2": 671.82
+    },
+    {
+      "Part": 57861213,
+      "Description": "WATER INJ,INST,CAT 12",
+      "StdCost": 3491.35,
+      "Dep": 57844599,
+      "Class": "ColdWeather",
+      "BoxType": "Check",
+      "StdCost2": 3491.35
+    },
+    {
+      "Part": 57861221,
+      "Description": "WATER INJ,INST,CAT 25",
+      "StdCost": 5827.23,
+      "Dep": 57844599,
+      "Class": "ColdWeather",
+      "BoxType": "Check",
+      "StdCost2": 5827.23
+    },
+    {
+      "Part": 57862266,
+      "Description": "SANDREEL INSTALL,T3W",
+      "StdCost": 9686.31,
+      "Dep": 57844599,
+      "Class": "ColdWeather",
+      "BoxType": "Check",
+      "StdCost2": 9686.31
+    },
+    {
+      "Part": 57866253,
+      "Description": "ROD SPINNER INSTA,3-1/2",
+      "StdCost": 4590.98,
+      "Dep": null,
+      "Class": "Base",
+      "BoxType": "",
+      "StdCost2": 4590.98
+    }
+  ],
+  "productDescriptions": [
+    {
+      "Name": "TH60",
+      "ImageCount": 4,
+      "imgsrc": [
+        "TH60 1.png",
+        "TH60 2.png",
+        "TH60 3.png",
+        "TH60 4.png"
+      ],
+      "$$hashKey": "005"
+    }
+  ],
+  "technicalSpecifications": [
+    {
+      "Name": "TW3",
+      "ImageCount": 4,
+      "imgsrc": [
+        "TW3 1.png",
+        "TW3 2.png",
+        "TW3 3.png",
+        "TW3 4.png"
+      ],
+      "$$hashKey": "007"
+    }
+  ],
+  "terms": [
+    {
+      "title": "Standard Terms",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
+  "productDesc": false,
+  "companyName": "ABB",
+  "companyAddress": "Nashik, India",
+  "customerFirst": "Adam",
+  "customerLast": "Svensson",
+  "customerTitle": "Mr.",
+  "greeting": "Dear",
+  "preparedBy": "Erik Sparre",
+  "date": true,
+  "letterText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+}
