@@ -1,3 +1,4 @@
+<!-- Softer-->
 <!doctype html>
 <html lang="en" ng-app="QuotationApp" id="ng-app">
 <head>
@@ -60,7 +61,7 @@
     <script type="text/ng-template" id="partials/info-view.html">
         <div class="row">
             <div class="span6">
-                <h3>Front Page</h3>
+                <h3>Basic Information</h3>
             </div>
         </div>
         <!-- Input for the front page -->
@@ -112,7 +113,7 @@
             <tr>
                 <td>Filename to Save As:</td>
                 <td><input id="inputFileNameToSaveAs" ng-model="saveName"></td>
-                <td><button ng-click="saveTextAsFile(saveName)" class="btn">Save Text to File</button></td>
+                <td><button ng-click="saveTextAsFile(saveName)" class="btn">Save to File</button></td>
             </tr>
         </table>
 
@@ -412,9 +413,9 @@
           <div class="span6">
             <table>
                 <tr>
-                    <td><button ng-click="addClick(1)" class="btn">Add to Quote</button></td>
+                    <td><button ng-click="addClick(1)" class="btn">Add to Price Summary</button></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><button ng-click="addClick(2)" class="btn">Add to Second Quote</button></td>
+                    <td><button ng-click="addClick(2)" class="btn">Add to Price Summary 2</button></td>
                 </tr>
             </table>
 
@@ -429,7 +430,7 @@
             <br>
             <strong> Add a percentage discount on the summary </strong>
             <br>
-            Main Pricing summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
+            First Pricing summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
             Second Pricing summary:&nbsp; <input type="number" ng-model="quotation.Discount2" class="discountInput" value="0" min="0"/> % <br>
             <br>
 

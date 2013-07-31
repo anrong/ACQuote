@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="Automated View and Controller" />
+    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="Automated View and Controller">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373023575762" ignored="false" />
-    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375179458311" ignored="false" />
+    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375268173202" ignored="false" />
     <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375179300129" ignored="false" />
     <file path="/info.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372919983514" ignored="false" />
     <file path="/pdfgen.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372311800745" ignored="false" />
@@ -83,8 +85,10 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="100" selection-start="4355" selection-end="4355" vertical-scroll-proportion="0.07109005">
-              <folding />
+            <state line="22" column="29" selection-start="728" selection-end="728" vertical-scroll-proportion="0.521327">
+              <folding>
+                <element signature="e#8794#18658#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -677,8 +681,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="100" selection-start="4355" selection-end="4355" vertical-scroll-proportion="0.07109005">
-          <folding />
+        <state line="22" column="29" selection-start="728" selection-end="728" vertical-scroll-proportion="0.521327">
+          <folding>
+            <element signature="e#8794#18658#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
