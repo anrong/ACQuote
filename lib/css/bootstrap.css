@@ -171,10 +171,11 @@ textarea {
 
 @media print {
   * {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
+      -webkit-print-color-adjust: exact;
+      /*color: #000!important;*/
+      /*text-shadow: none!important;
+      background: transparent!important;
+      box-shadow: none!important;*/
   }
   a,
   a:visited {

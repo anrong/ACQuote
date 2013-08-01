@@ -1,4 +1,12 @@
-
+/*
+<!-- QuickQuote-->
+<!-- Copyright Atlas Copco & Erik Sparre 2013-->
+<!-- For use within the Atlas Copco Group only-->
+<!-- Developed by: Erik Sparre -->
+<!-- Contact: erik.sparre@gmail.com -->
+<!-- Developed using AngularJS Framework -->
+<!-- User manual and tutorial can be found in User Manual.docx -->
+*/
 
 
 var IndexCtrl = function($rootScope, $scope){
@@ -15,7 +23,7 @@ var IndexCtrl = function($rootScope, $scope){
 
     $scope.saveState = function(name){
 
-        console.log("1");
+
 		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "application/x-download;charset=utf-8"});
         saveAs(blob,name+$rootScope.year+$rootScope.month+$rootScope.day +".json");
 	}
@@ -64,7 +72,6 @@ var InfoCtrl = function ($rootScope,$scope) {
 
     $rootScope.quotation.terms = TERMS;
 
-    console.log($rootScope.quotation.terms);
 
     $rootScope.quotation.productDesc=false;
 
@@ -98,6 +105,10 @@ var InfoCtrl = function ($rootScope,$scope) {
         fileReader.onload = function(fileLoadedEvent)
         {
             var textFromFileLoaded = fileLoadedEvent.target.result;
+            if(textFromFileLoaded.charAt(0) === '"')
+                textFromFileLoaded = textFromFileLoaded.substr(1);
+            textFromFileLoaded = textFromFileLoaded.replace(/"([^"]*)$/,'$1');
+            textFromFileLoaded = textFromFileLoaded.replace(/\\n/g, "");
             $scope.setContent(textFromFileLoaded);
             $rootScope.$apply($rootScope.length);
         };
@@ -112,6 +123,10 @@ var InfoCtrl = function ($rootScope,$scope) {
         fileReader.onload = function(fileLoadedEvent)
         {
             var textFromFileLoaded = fileLoadedEvent.target.result;
+            if(textFromFileLoaded.charAt(0) === '"')
+                textFromFileLoaded = textFromFileLoaded.substr(1);
+            textFromFileLoaded = textFromFileLoaded.replace(/"([^"]*)$/,'$1');
+            textFromFileLoaded = textFromFileLoaded.replace(/\\n/g, "");
             $scope.setNotes(textFromFileLoaded);
             $rootScope.$apply($rootScope.length);
         };
@@ -172,16 +187,6 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     }
 
 
-
-  /*  $scope.checkProduct = function(){
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products.checked = true;
-            }
-        }
-        return $rootScope.quotation.products;
-    };
-    */
     $rootScope.removeClick = function (product, quote){
         if(quote=='Main'){
             product.Quoted=false;
@@ -591,7 +596,6 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 
 var QuotationCtrl = function($rootScope, $scope){
 
-    //$rootScope.productDesc.check(false);
 
     if($rootScope.settings == undefined){
         $rootScope.settings = {};
@@ -602,7 +606,7 @@ var QuotationCtrl = function($rootScope, $scope){
     }
 
     //Date Control
-    //Have to add a number on the month
+
     var today = new Date();
     $rootScope.day = function() {
         if(today.getDate()<10){
@@ -770,6 +774,24 @@ var QuotationCtrl = function($rootScope, $scope){
                         return true
                     }
                 }
+            }
+        }
+        return false;
+    }
+
+    $scope.includeDesc = function () {
+        for(key in $rootScope.quotation.productDescriptions){
+            if ($rootScope.quotation.productDescriptions[key].included == true){
+                return true
+            }
+        }
+        return false;
+    }
+
+    $scope.includeSpec = function () {
+        for(key in $rootScope.quotation.technicalSpecifications){
+            if ($rootScope.quotation.technicalSpecifications[key].included == true){
+                return true
             }
         }
         return false;

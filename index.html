@@ -1,4 +1,11 @@
-<!-- Softer-->
+<!-- QuickQuote-->
+<!-- Copyright Atlas Copco & Erik Sparre 2013-->
+<!-- For use within the Atlas Copco Group only-->
+<!-- Developed by: Erik Sparre -->
+<!-- Contact: erik.sparre@gmail.com -->
+<!-- Developed using AngularJS Framework -->
+<!-- User manual and tutorial can be found in User Manual.docx -->
+
 <!doctype html>
 <html lang="en" ng-app="QuotationApp" id="ng-app">
 <head>
@@ -25,7 +32,7 @@
 	<div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="#">Atlas Copco</a>
+        <a class="brand" href="#">QuickQuote</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
 
@@ -430,8 +437,8 @@
             <br>
             <strong> Add a percentage discount on the summary </strong>
             <br>
-            First Pricing summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
-            Second Pricing summary:&nbsp; <input type="number" ng-model="quotation.Discount2" class="discountInput" value="0" min="0"/> % <br>
+            First Price summary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="quotation.Discount" value="0" min="0" class="discountInput"/> % <br>
+            Second Price summary:&nbsp; <input type="number" ng-model="quotation.Discount2" class="discountInput" value="0" min="0"/> % <br>
             <br>
 
             <br>
@@ -571,13 +578,20 @@
             <h2>Table of Contents</h2>
             <br>
             <br>
+            <br>
             <table class="tblCont">
                 <tr ng-show="includeLetter()"><td>Cover Letter</td></tr>
-                <tr ng-show="true"><td>Pricing Summary</td></tr>
-                <tr ng-show="secondQuote()"><td>Pricing Summary 2</td></tr>
+                <tr>
+                <tr ng-show="true"><td>Price Summary</td></tr>
+                <tr>
+                <tr ng-show="secondQuote()"><td>Price Summary 2</td></tr>
+                <tr>
                 <tr ng-show="includeNotes()"><td>Notes</td></tr>
+                <tr>
                 <tr ng-show="includeTerms()"><td>Terms and Conditions</td></tr>
-                <tr ng-show="includeDesc(productDesc)"><td>Product Descriptions</td></tr>
+                <tr>
+                <tr ng-show="includeDesc()"><td>Product Descriptions</td></tr>
+                <tr>
                 <tr ng-show="includeSpec()"><td>Technical Specifications</td></tr>
             </table>
         </div>
@@ -612,8 +626,8 @@
 
         <table class="table table-striped">
             <tr>
-                <th> Type </th>
-                <th> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type</a> </th>
+                <th> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                 <th> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
                 <th>Quantity </th>
@@ -668,8 +682,8 @@
         <em>Prices given in {{quotation.currency}}</em>
         <table class="table table-striped">
             <tr>
-                <th> Type </th>
-                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type</a></th>
+                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                 <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
                 <th>Quantity </th>
