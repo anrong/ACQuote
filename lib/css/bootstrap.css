@@ -168,14 +168,14 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
-
+/*
 @media print {
   * {
       -webkit-print-color-adjust: exact;
       /*color: #000!important;*/
       /*text-shadow: none!important;
       background: transparent!important;
-      box-shadow: none!important;*/
+      box-shadow: none!important;
   }
   a,
   a:visited {
@@ -221,7 +221,7 @@ textarea {
     page-break-after: avoid;
   }
 }
-
+  */
 body {
   margin: 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

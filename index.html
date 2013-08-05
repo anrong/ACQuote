@@ -462,6 +462,7 @@
                 <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                 <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+                <th> Quantity </th>
                 <th> </th>
             </tr>
             <tr ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
@@ -469,7 +470,9 @@
                 <td>{{product.Class}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
+
                 <td><input type="text" ng-model="product.StdCost" class="costInput"></td>
+                <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
                 <td><button ng-click="removeClick(product, 'Main')" class="btn-small">-</button></td>
             </tr>
         </table>
@@ -485,6 +488,7 @@
                    <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                    <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                    <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+                   <th> Quantity </th>
                    <th> </th>
 
                </tr>
@@ -494,6 +498,7 @@
                    <td>{{product.Part}}</td>
                    <td>{{product.Description}}</td>
                    <td><input type="text" ng-model="product.StdCost2" class="costInput"></td>
+                   <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
                    <td><button ng-click="removeClick(product, 'Second')" class="btn-small">-</button></td>
                </tr>
            </table>
@@ -683,7 +688,7 @@
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
                 <td>{{numberWithCommas(product.StdCost)}}</td>
-                <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
+                <td>{{product.Quantity}}</td>
                 <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
             </tr>
             <tr ng-show="includeDiscount(1)">
@@ -701,7 +706,7 @@
                 <td></td>
                 <td></td>
                 <td>{{numberWithCommas(quotation.Discount)}} %</td>
-                <td> - {{numberWithCommas(getDiscount(quotation.Discount), 1)}}</td>
+                <td> - {{numberWithCommas(getDiscount(quotation.Discount, 1))}}</td>
             </tr>
             <tr>
                 <strong>
@@ -723,22 +728,22 @@
     <div ng-show="secondQuote()" class="standardMargin">
         <h2>Price Summary 2</h2>
         <em>Prices given in {{quotation.currency}}</em>
-        <table class="table table-striped">
-            <tr>
-                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type</font></a></th>
-                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
-                <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
-                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
-                <th><font color="white">Quantity</font></th>
-                <th><font color="white">Cost ({{quotation.currency}})</font></th>
+        <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
+            <tr style="background-color:#0099cc;">
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type </font></a> </th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
+                <th class="tableHeaderColor"><font color="white">Quantity</font></th>
+                <th class="tableHeaderColor"><font color="white">Cost ({{quotation.currency}})</font></th>
             </tr>
-            <tr ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
+            <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
                 <!-- Add Strong if it is Base -->
                 <td>{{product.Class}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
                 <td>{{numberWithCommas(product.StdCost2)}}</td>
-                <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
+                <td>{{product.Quantity2}}</td>
                 <td>{{numberWithCommas(getSubTot(product.Quantity2, product.StdCost2))}}</td>
             </tr>
             <tr ng-show="includeDiscount(2)">
@@ -764,7 +769,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>{{numberWithCommas(TotalSum2()-getDiscount(quotation.Discount2))}}</td>
+                    <td>{{numberWithCommas(TotalSum2()-getDiscount(quotation.Discount2, 2))}}</td>
                 </strong>
             </tr>
         </table>

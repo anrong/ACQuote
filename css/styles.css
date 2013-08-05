@@ -6,12 +6,10 @@ body{
 }
 
 .quantityInput {
-    text-align: right;
     width: 25px;
 }
 
 .discountInput {
-    text-align: right;
     width: 30px;
 }
 
@@ -21,6 +19,10 @@ body{
 
 .inputArea {
     width: 10px;
+}
+
+.quantity {
+    float: right;
 }
 
 pre {
