@@ -6,16 +6,19 @@
         margin-bottom: 0mm;
         margin-top: 10mm;
     }
-
-
+    
     footer, .navbar {display: none}
-
-
+    
     #logo {
-        position: absolute;
+        /*position: absolute;
         top: 233mm;
         right: 10mm;
+        width: 32mm;*/
+        position: absolute;
+        top: 200mm;
+        right: 10mm;
         width: 32mm;
+        bottom: 19mm;
     }
 
     #logoHead {
@@ -27,15 +30,21 @@
     }
 
     #promise {
-        position: absolute;
+        /*position: absolute;
         left: 10mm;
         top: 248mm;
+        width: 64mm;
+        visibility: visible;*/
+        position: absolute;
+        left: 10mm;
+        top: 220mm;
         width: 64mm;
         visibility: visible;
     }
 
     #title {
-        text-align: center;
+        /*text-align: center;*/
+        text-align: left;
         page-break-after: always;
     }
     .standardMargin {
@@ -50,5 +59,48 @@
         margin-right: 10mm;
         page-break-after: always;
     }
+        #tableOfContent {
+        background-color: #0099cc;
+        color: white;
+    }
 
+    #gradient {
+        background-color: #0099cc;
+        background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#fff));
+    }
+
+    .coverPageBar {
+        border-style:none;
+        border-color:white;
+        background: linear-gradient(to left, #2f97ff, #ffffff);
+        height:30px;
+    }
+
+    .CoverLetterFooter {
+        font-family: Arial;
+        font-size: 8px;
+        color: black;
+        width:100%;
+    }
+
+    .coverLetterFooterText {
+        width:25%;
+        border:thick;
+    }
+
+    .tableHeaderColor {
+        background-color:#0099cc;
+        color:white;
+        font-family:Arial;
+    }
+
+    .tableRowStyle {
+        height:20px;        
+    }
+
+    .margin {
+        margin-right:10mm;
+        margin-bottom:19mm;
+        width:32mm;
+    }
 }

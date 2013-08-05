@@ -552,14 +552,18 @@
             <h2>Atlas Copco Quotation</h2><br>
             <br>
             <br>
-
+            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #0099cc, #ffffff);height:30px;"/>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #ffffff, #0099cc);height:30px;"/>
             <br>
             <img src="lib/img/AClogo.jpg" id="logo">
             <br>
             <img src="lib/img/Promise.png" id="promise">
             <br>
 
-            <br>
             <br>
             <strong>
             <p>Quotation prepared for <br> {{quotation.companyName}}</p>
@@ -574,7 +578,7 @@
         </div>
 
         <!-- Table of Contents -->
-        <div class="standardMargin">
+        <div class="standardMargin" id="tableOfContent" style="background-color:#0099cc; color:white; width=100%; height=100%;">
             <h2>Table of Contents</h2>
             <br>
             <br>
@@ -598,7 +602,8 @@
 
         <!-- Cover Letter -->
         <div class="coverLetter" ng-show="includeLetter()">
-
+            <table>
+                <tr>
             <p>{{quotation.customerTitle}} {{quotation.customerFirst}} {{quotation.customerLast}}
             <br>
             {{quotation.companyName}}
@@ -617,6 +622,43 @@
             </p>
             <br>
             <br>
+                </tr>
+                <tr>
+                    <!--<footer>-->
+
+
+                    <table width="100%">
+                <tr>
+                    <td colspan="4;">
+                    <h6>Atlas Copco Group Centre</h6>
+                    <hr height="1px" style= "border:solid;"/>
+                    </td>
+                </tr>
+                <tr>
+                <tr class="CoverLetterFooter">
+                    <td class="coverLetterFooterText">Atlas Copco AB</td>
+                    <td class="coverLetterFooterText">Visitors' address:</td>
+                    <td class="coverLetterFooterText">Telephone: + 46(0)87438000</td>
+                    <td class="coverLetterFooterText">A Public Company (publ)</td>
+                </tr>
+
+                <tr class="CoverLetterFooter">
+                    <td class="coverLetterFooterText">SE-10523 Stockholm</td>
+                    <td class="coverLetterFooterText">Sickla Industrivag 3</td>
+                    <td class="coverLetterFooterText">Fax: + 46(0)86449045</td>
+                    <td class="coverLetterFooterText">Reg. No: 556014-2720</td>
+                </tr>
+
+                <tr class="CoverLetterFooter">
+                    <td class="coverLetterFooterText">Sweden</td>
+                    <td class="coverLetterFooterText">Nacka</td>
+                    <td class="coverLetterFooterText">www.atlascopco.com</td>
+                    <td class="coverLetterFooterText">Reg. Office Nacka</td>
+                </tr>
+            </table>
+            </tr>
+            <!--</footer>-->
+            </table>
         </div>
 
         <!-- Pricing Summary -->
@@ -624,16 +666,17 @@
         <h2>Price Summary</h2>
             <em>Prices given in {{quotation.currency}}</em>
 
-        <table class="table table-striped">
-            <tr>
-                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type</a> </th>
-                <th> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
-                <th> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
-                <th> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
-                <th>Quantity </th>
-                <th>Cost ({{quotation.currency}})</th>
-            </tr>
-            <tr ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
+            <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
+                <tr style="background-color:#0099cc;">
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type </font></a> </th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
+                    <th class="tableHeaderColor"><font color="white">Quantity</font></th>
+                    <th class="tableHeaderColor"><font color="white">Cost ({{quotation.currency}})</font></th>
+                </tr>
+
+                <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
 
                 <!-- Add Strong if it is Base... -->
                 <td>{{product.Class}}</td>
@@ -682,12 +725,12 @@
         <em>Prices given in {{quotation.currency}}</em>
         <table class="table table-striped">
             <tr>
-                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type</a></th>
-                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
-                <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
-                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
-                <th>Quantity </th>
-                <th>Cost ({{quotation.currency}})</th>
+                <th> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type</font></a></th>
+                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
+                <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
+                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
+                <th><font color="white">Quantity</font></th>
+                <th><font color="white">Cost ({{quotation.currency}})</font></th>
             </tr>
             <tr ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
                 <!-- Add Strong if it is Base -->

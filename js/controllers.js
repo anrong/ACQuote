@@ -830,16 +830,3 @@ var QuotationCtrl = function($rootScope, $scope){
 };
 
 
-
-
-
-    //$rootScope.selectedLetter = $rootScope.coverLetters[0];
-    //s=$scope.letterText;
-
-/*
-function Ctrl($scope) {
-    $scope.form = {selectedPump: "WARRANTY,STANDARD,T3W"};
-}
-
-  */
-
