@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Maintanance.docx" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Quote3.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\ABB.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\ABB2 .json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\Erik.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\Gerald Wanjohi.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\Categories.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\Data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\test.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\data\wordtext.doc" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ExchangeRate.js" afterPath="$PROJECT_DIR$/data/ExchangeRate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ProductDescriptions.js" afterPath="$PROJECT_DIR$/data/ProductDescriptions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,10 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="781" column="51" selection-start="34572" selection-end="34572" vertical-scroll-proportion="0.41335046">
+            <state line="781" column="51" selection-start="34572" selection-end="34572" vertical-scroll-proportion="-4.9411764">
               <folding>
                 <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="e#9041#18905#0" expanded="false" />
@@ -110,10 +98,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="824" column="122" selection-start="28296" selection-end="28296" vertical-scroll-proportion="0.63975906">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ProductDescriptions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ProductDescriptions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,15 +129,6 @@
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="54" column="12" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="19" selection-start="5664" selection-end="5671" vertical-scroll-proportion="-10.72">
               <folding />
             </state>
           </provider>
@@ -309,6 +297,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Atlas Copco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACQuote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -712,25 +714,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ProductDescriptions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="19" selection-start="5664" selection-end="5671" vertical-scroll-proportion="-10.72">
+        <state line="6" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="781" column="51" selection-start="34572" selection-end="34572" vertical-scroll-proportion="0.41335046">
+        <state line="781" column="51" selection-start="34572" selection-end="34572" vertical-scroll-proportion="-4.9411764">
           <folding>
             <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
             <element signature="e#9041#18905#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="824" column="122" selection-start="28296" selection-end="28296" vertical-scroll-proportion="0.63975906">
+          <folding />
         </state>
       </provider>
     </entry>
