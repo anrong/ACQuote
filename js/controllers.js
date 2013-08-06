@@ -728,11 +728,16 @@ var QuotationCtrl = function($rootScope, $scope){
             return 0;
         }
         if (quote=='1'){
+            console.log("discount one");
             amount = $rootScope.TotalSum()*rate/100;
+            return amount;
         }
-        amount = $rootScope.TotalSum2()*rate/100;
+        else if (quote =='2'){
+            amount = $rootScope.TotalSum2()*rate/100;
+            console.log("discount two");
+            return amount;
+        }
 
-        return amount;
     }
 
     $rootScope.includeDiscount = function (quote){
@@ -829,17 +834,4 @@ var QuotationCtrl = function($rootScope, $scope){
 
 };
 
-
-
-
-
-    //$rootScope.selectedLetter = $rootScope.coverLetters[0];
-    //s=$scope.letterText;
-
-/*
-function Ctrl($scope) {
-    $scope.form = {selectedPump: "WARRANTY,STANDARD,T3W"};
-}
-
-  */
 
