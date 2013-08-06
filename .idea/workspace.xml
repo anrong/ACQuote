@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\ABB.json" afterPath="" />
     </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +85,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="46" selection-start="9022" selection-end="9022" vertical-scroll-proportion="0.82814616">
+            <state line="59" column="45" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.27604872">
               <folding>
                 <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="e#9084#18948#0" expanded="false" />
@@ -729,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="46" selection-start="9022" selection-end="9022" vertical-scroll-proportion="0.82814616">
+        <state line="59" column="45" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.27604872">
           <folding>
             <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="e#9084#18948#0" expanded="false" />
