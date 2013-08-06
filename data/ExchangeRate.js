@@ -1,5 +1,5 @@
 /**
- Put the different currencies that are to be available for the quote
+ Put the different currencies that are to be available for the quote in this file
  Name: Three letter abbreviation for the currency
  Rate: The exchange rate to the rate in the raw data file
  */

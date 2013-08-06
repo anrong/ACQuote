@@ -752,13 +752,13 @@ var QuotationCtrl = function($rootScope, $scope){
             return 0;
         }
         if (quote=='1'){
-            console.log("discount one");
+
             amount = $rootScope.TotalSum()*rate/100;
             return amount;
         }
         else if (quote =='2'){
             amount = $rootScope.TotalSum2()*rate/100;
-            console.log("discount two");
+
             return amount;
         }
 
