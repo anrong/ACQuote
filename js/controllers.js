@@ -752,13 +752,13 @@ var QuotationCtrl = function($rootScope, $scope){
             return 0;
         }
         if (quote=='1'){
-            console.log("discount one");
+
             amount = $rootScope.TotalSum()*rate/100;
             return amount;
         }
         else if (quote =='2'){
             amount = $rootScope.TotalSum2()*rate/100;
-            console.log("discount two");
+
             return amount;
         }
 
@@ -784,7 +784,7 @@ var QuotationCtrl = function($rootScope, $scope){
             descriptions[key].imgsrc = [];
             j=1;
             for (i=0; i < descriptions[key].ImageCount; i++){
-                descriptions[key].imgsrc[i] = descriptions[key].Name+" "+j+".png";
+                descriptions[key].imgsrc[i] = descriptions[key].Name+" "+j+".jpg";
                 j++;
             }
                 //descriptions[key].Included = false;
@@ -832,7 +832,7 @@ var QuotationCtrl = function($rootScope, $scope){
             specifications[key].imgsrc = [];
             j=1;
             for (i=0; i < specifications[key].ImageCount; i++){
-                specifications[key].imgsrc[i] = specifications[key].Name+" "+j+".png";
+                specifications[key].imgsrc[i] = specifications[key].Name+" "+j+".jpg";
                 j++;
             }
             //descriptions[key].Included = false;

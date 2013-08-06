@@ -133,8 +133,8 @@
         <h3>Terms and Conditions</h3>
         <br>
         <span class="nullable">
-            <select ng-model="$parent.selectedTerms" ng-options="term.title for term in quotation.terms" ng-change="setTerms(selectedTerms.content)"><br>
-                <option value="" ng-model="$parent.selectedTerms" ng-change="setTerms()">No Terms and Conditions</option>
+            <select ng-model="quotation.selectedTerms" ng-options="term.title for term in quotation.terms" ng-change="setTerms(quotation.selectedTerms.content)"><br>
+                <option value="" ng-model="quotation.selectedTerms" ng-change="setTerms()">No Terms and Conditions</option>
             </select>
        </span>
         <br>
@@ -194,8 +194,6 @@
       </div>
 
            <!-- Choose the sub products here. This is for the first pricing summary-->
-
-           <!-- This should be automated, ng-repeat??   -->
 
             <div ng-repeat="object in radioBoxCategories" class="span6">
                 <div ng-show="showOptions(object.class)">
@@ -560,12 +558,12 @@
             <h2>Atlas Copco Quotation</h2><br>
             <br>
             <br>
-            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #0099cc, #ffffff);height:30px;"/>
+            <!--<hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #0099cc, #ffffff);height:30px;"/>-->
             <br>
             <br>
             <br>
             <br>
-            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #ffffff, #0099cc);height:30px;"/>
+            <!--<hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #ffffff, #0099cc);height:30px;"/>-->
             <br>
             <img src="lib/img/AClogo.jpg" id="logo">
             <br>
@@ -782,7 +780,7 @@
         <!-- Terms and Conditions -->
         <div ng-show="includeTerms()" class="standardMargin">
             <h3>Terms and Conditions</h3>
-            <span ng-bind-html="quotation.terms.Content"></span>
+            <span ng-bind-html="quotation.termsText"></span>
         </div>
 
 
