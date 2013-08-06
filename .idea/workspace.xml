@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Data.xlsx" afterPath="$PROJECT_DIR$/data/Data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maintanance.docx" afterPath="$PROJECT_DIR$/Maintanance.docx" />
-    </list>
+    <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="" />
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373023575762" ignored="false" />
@@ -23,7 +20,7 @@
     <file path="/file.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373539327077" ignored="false" />
     <file path="/test.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1374140368840" ignored="false" />
     <file path="/TermConditions.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375160377085" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375774801131" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375774992807" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="42" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.34412956">
+            <state line="65" column="32" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.6653171">
               <folding>
                 <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="e#9084#18948#0" expanded="false" />
@@ -717,7 +714,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.34412956">
+        <state line="65" column="32" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.6653171">
           <folding>
             <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="e#9084#18948#0" expanded="false" />
