@@ -3,6 +3,7 @@ body{
     margin-left: 0mm;
     margin-bottom: 0mm;
     margin-right: 0mm;
+    -webkit-print-color-adjust:exact;
 }
 
 .quantityInput {
@@ -45,12 +46,13 @@ pre {
     width: 32mm;
 }
 
-#currency {
-    width: 100px;
-}
 
 .costInput {
-    width: 70px;
+    width: 90px;
+}
+
+.descInput {
+    width: 280px;
 }
 
 #logoHead {
@@ -65,10 +67,45 @@ pre {
 
 
 .tblCont {
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 100px;
     margin-top: 10px;
     margin-bottom: 100px;
 }
 
+.contTr {
+    line-height: 40px;
+}
+
+.footerTr {
+    line-height: 2px;
+}
+
+.CoverLetterFooter {
+    font-family: Arial;
+    font-size: 8px;
+    color: black;
+    width:100%;
+    line-height: 8px;
+}
+
+#CoverLetterFooterHeader {
+    font-family: Arial;
+    font-size: 9px;
+    color: black;
+    width:100%;
+    line-height: 10px;
+    border-spacing: 0px;
+    font: bold;
+}
+
+#CoverLetterLine{
+    line-height: 20px;
+}
+
+hr {
+    border-style: solid;
+    color: black;
+    height: 1px;
+}
 

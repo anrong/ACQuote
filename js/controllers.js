@@ -14,10 +14,25 @@ var IndexCtrl = function($rootScope, $scope){
     //$rootScope.selectedLetter = "";
 
     $rootScope.quotation = {};
+    $rootScope.currencies = CURRENCIES;
+    $rootScope.quotation.currency = $rootScope.currencies[0];
     $rootScope.quotation.products = PRODUCTS;
+
+    for (i=0; i < $rootScope.quotation.products.length; i++){
+        $rootScope.quotation.products[i].StdCost=Math.round($rootScope.quotation.products[i].StdCost*100)/100;
+    }
+
     for (i=0; i < $rootScope.quotation.products.length; i++){
         $rootScope.quotation.products[i].StdCost2=$rootScope.quotation.products[i].StdCost;
     }
+    for (i=0; i < $rootScope.quotation.products.length; i++){
+        $rootScope.quotation.products[i].Cost=$rootScope.quotation.products[i].StdCost*$rootScope.quotation.currency.Rate;
+    }
+    for (i=0; i < $rootScope.quotation.products.length; i++){
+        $rootScope.quotation.products[i].Cost2=$rootScope.quotation.products[i].StdCost2*$rootScope.quotation.currency.Rate;
+    }
+
+
 
 
 
@@ -25,7 +40,7 @@ var IndexCtrl = function($rootScope, $scope){
 
 
 		var blob = new Blob([JSON.stringify($rootScope.quotation, undefined, 2)], {type: "application/x-download;charset=utf-8"});
-        saveAs(blob,name+$rootScope.year+$rootScope.month+$rootScope.day +".json");
+        saveAs(blob,name+$rootScope.year+".json");
 	}
 
     $scope.loadState = function(){
@@ -175,8 +190,15 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
 /*    if ($rootScope.quotation.products == undefined){
         $rootScope.quotation.products = PRODUCTS;
     } */
-
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
+
+    $rootScope.currencyChange = function(){
+        for (i=0; i < $rootScope.quotation.products.length; i++){
+            $rootScope.quotation.products[i].Cost=$rootScope.quotation.products[i].StdCost*$rootScope.quotation.currency.Rate;
+        }
+    }
+
+    $rootScope.currencyChange();
 
 
     $rootScope.getStdCost = function (baseProduct){
@@ -591,6 +613,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                }
            }
        }
+
 };
 
 
@@ -688,6 +711,7 @@ var QuotationCtrl = function($rootScope, $scope){
         return value;
     }
 
+
     $rootScope.numberWithCommas = function (number){
         return numberWithCommas(Math.round(number*100)/100);
     }
@@ -697,7 +721,7 @@ var QuotationCtrl = function($rootScope, $scope){
         var value = 0;
         for (i=0; i<$rootScope.quotation.products.length; i++){
             if ($rootScope.quotation.products[i].Quoted == true){
-                value = value + $rootScope.quotation.products[i].StdCost*$rootScope.quotation.products[i].Quantity;
+                value = value + $rootScope.quotation.products[i].Cost*$rootScope.quotation.products[i].Quantity;
             }
         }
         return value;
@@ -706,7 +730,7 @@ var QuotationCtrl = function($rootScope, $scope){
         var value = 0;
         for (i=0; i<$rootScope.quotation.products.length; i++){
             if ($rootScope.quotation.products[i].Quoted2 == true){
-                value = value + $rootScope.quotation.products[i].StdCost2*$rootScope.quotation.products[i].Quantity2;
+                value = value + $rootScope.quotation.products[i].Cost2*$rootScope.quotation.products[i].Quantity2;
             }
         }
         return value;

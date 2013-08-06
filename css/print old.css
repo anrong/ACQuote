@@ -51,4 +51,15 @@
         page-break-after: always;
     }
 
+    .coverLetterFooterText {
+        width:25%;
+        border:thick;
+    }
+    #letterFooter {
+        position: absolute;
+        top: 780mm;
+        width: 154mm;
+        margin-right: 10mm;
+    }
+
 }
