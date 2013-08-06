@@ -1,4 +1,8 @@
 @media print {
+    *{
+    -webkit-print-color-adjust:exact;
+
+}
 
     @page {
         margin-left: 0mm;
@@ -60,8 +64,8 @@
         page-break-after: always;
     }
         #tableOfContent {
-        background-color: #0099cc;
-        color: white;
+            /* background-color: #0099cc;
+             color: white;*/
     }
 
     #gradient {
@@ -72,7 +76,7 @@
     .coverPageBar {
         border-style:none;
         border-color:white;
-        background: linear-gradient(to left, #2f97ff, #ffffff);
+        background: linear-gradient(to left, #2f97ff, #ffffff) !important;
         height:30px;
     }
 
@@ -89,8 +93,7 @@
     }
 
     .tableHeaderColor {
-        background-color:#0099cc;
-        color:white;
+        color:black !important;
         font-family:Arial;
     }
 
@@ -102,5 +105,10 @@
         margin-right:10mm;
         margin-bottom:19mm;
         width:32mm;
+    }
+
+    #letterFooter {
+        position: absolute;
+        top: 750mm;
     }
 }

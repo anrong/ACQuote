@@ -24,7 +24,7 @@
     
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-    <link rel="stylesheet" type="text/css" href="css/print.css" />
+    <link rel="stylesheet" type="text/css" href="css/print old.css" />
 
 </head>
 <body ng-controller="IndexCtrl">
@@ -446,22 +446,24 @@
 
             <strong>Quoted currency:</strong>
             <br>
-            <input type="text" ng-model="$parent.quotation.currency" placeholder="USD/EUR/INR..." id="currency">
-
+              <select ng-model="quotation.currency" ng-options="currency.Name for currency in currencies" ng-change="currencyChange()"><br>
+              </select>
+              <br>
+            USD/{{quotation.currency.Name}} &nbsp; exchange rate: {{quotation.currency.Rate}}
             <br>
             <br>
           </div>
 
 
             <!-- This is the first pricing summary-->
-        <div class="span6">
+        <div class="span8">
            <h3>Price Summary</h3>
            <table class="table table-striped">
             <tr>
                 <th> Type </th>
                 <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                 <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
-                <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+                <th> <a href="" ng-click="settings.order = 'Cost'; settings.reverse=!settings.reverse">Cost</a></th>
                 <th> Quantity </th>
                 <th> </th>
             </tr>
@@ -469,9 +471,8 @@
                 <!-- Add Strong if it is Base -->
                 <td>{{product.Class}}</td>
                 <td>{{product.Part}}</td>
-                <td>{{product.Description}}</td>
-
-                <td><input type="text" ng-model="product.StdCost" class="costInput"></td>
+                <td><input type="text" ng-model="product.Description" class="descInput"></td>
+                <td><input type="text" ng-model="product.Cost" class="costInput"></td>
                 <td><input type="text" ng-model="product.Quantity" required min="1" class="quantityInput"></td>
                 <td><button ng-click="removeClick(product, 'Main')" class="btn-small">-</button></td>
             </tr>
@@ -487,7 +488,8 @@
                    <th> Type </th>
                    <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                    <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
-                   <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost</a></th>
+                   <th> <a href="" ng-click="settings.order = 'Cost2'; settings.reverse=!settings.reverse">Cost</a></th>
+                  <!-- <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost({{quotation.currency.Name}})</a></th>-->
                    <th> Quantity </th>
                    <th> </th>
 
@@ -497,7 +499,7 @@
                    <td>{{product.Class}}</td>
                    <td>{{product.Part}}</td>
                    <td>{{product.Description}}</td>
-                   <td><input type="text" ng-model="product.StdCost2" class="costInput"></td>
+                   <td><input type="text" ng-model="product.Cost2" class="costInput"></td>
                    <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
                    <td><button ng-click="removeClick(product, 'Second')" class="btn-small">-</button></td>
                </tr>
@@ -530,7 +532,7 @@
                       <td><button ng-click="addCustom2(product)" class="btn">Add Second</button></td>
                       <td>{{product.Part}}</td>
                       <td>{{product.Description}}</td>
-                      <td>{{product.StdCost}}</td>
+                      <td>{{product.Cost}}</td>
                   </tr>
               </table>
 
@@ -583,32 +585,26 @@
         </div>
 
         <!-- Table of Contents -->
-        <div class="standardMargin" id="tableOfContent" style="background-color:#0099cc; color:white; width=100%; height=100%;">
+        <div class="standardMargin" id="tableOfContent">
             <h2>Table of Contents</h2>
             <br>
             <br>
             <br>
             <table class="tblCont">
-                <tr ng-show="includeLetter()"><td>Cover Letter</td></tr>
-                <tr>
-                <tr ng-show="true"><td>Price Summary</td></tr>
-                <tr>
-                <tr ng-show="secondQuote()"><td>Price Summary 2</td></tr>
-                <tr>
-                <tr ng-show="includeNotes()"><td>Notes</td></tr>
-                <tr>
-                <tr ng-show="includeTerms()"><td>Terms and Conditions</td></tr>
-                <tr>
-                <tr ng-show="includeDesc()"><td>Product Descriptions</td></tr>
-                <tr>
-                <tr ng-show="includeSpec()"><td>Technical Specifications</td></tr>
+                <tr class="contTr" ng-show="includeLetter()"><td>Cover Letter</td></tr>
+                <tr class="contTr" ng-show="true"><td>Price Summary</td></tr>
+                <tr class="contTr" ng-show="secondQuote()"><td>Price Summary 2</td></tr>
+                <tr class="contTr" ng-show="includeNotes()"><td>Notes</td></tr>
+                <tr class="contTr" ng-show="includeTerms()"><td>Terms and Conditions</td></tr>
+                <tr class="contTr" ng-show="includeDesc()"><td>Product Descriptions</td></tr>
+                <tr class="contTr" ng-show="includeSpec()"><td>Technical Specifications</td></tr>
             </table>
         </div>
 
         <!-- Cover Letter -->
         <div class="coverLetter" ng-show="includeLetter()">
-            <table>
-                <tr>
+
+
             <p>{{quotation.customerTitle}} {{quotation.customerFirst}} {{quotation.customerLast}}
             <br>
             {{quotation.companyName}}
@@ -627,19 +623,20 @@
             </p>
             <br>
             <br>
-                </tr>
-                <tr>
+
                     <!--<footer>-->
 
-
-                    <table width="100%">
-                <tr>
+            <table id="letterFooter">
+                <tr id="CoverLetterFooterHeader">
                     <td colspan="4;">
-                    <h6>Atlas Copco Group Centre</h6>
-                    <hr height="1px" style= "border-top:1px solid black;"/>
+                    Atlas Copco Group Centre
                     </td>
                 </tr>
-                <tr>
+                <tr height="1px">
+                    <td colspan="4;">
+                    <hr size="1px" style= "border-top:1px solid black; width: 90%" />
+                    </td>
+                </tr>
                 <tr class="CoverLetterFooter">
                     <td class="coverLetterFooterText">Atlas Copco AB</td>
                     <td class="coverLetterFooterText">Visitors' address:</td>
@@ -661,24 +658,24 @@
                     <td class="coverLetterFooterText">Reg. Office Nacka</td>
                 </tr>
             </table>
-            </tr>
+
             <!--</footer>-->
-            </table>
+
         </div>
 
         <!-- Pricing Summary -->
         <div class="standardMargin">
         <h2>Price Summary</h2>
-            <em>Prices given in {{quotation.currency}}</em>
+            <em>Prices given in {{quotation.currency.Name}}</em>
 
             <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
-                <tr style="background-color:#0099cc;">
-                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type </font></a> </th>
-                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
-                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
-                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
-                    <th class="tableHeaderColor"><font color="white">Quantity</font></th>
-                    <th class="tableHeaderColor"><font color="white">Cost ({{quotation.currency}})</font></th>
+                <tr>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
+                    <th class="tableHeaderColor">Quantity</th>
+                    <th class="tableHeaderColor">Cost ({{quotation.currency.Name}})</th>
                 </tr>
 
                 <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
@@ -687,9 +684,9 @@
                 <td>{{product.Class}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
-                <td>{{numberWithCommas(product.StdCost)}}</td>
+                <td>{{numberWithCommas(product.Cost)}}</td>
                 <td>{{product.Quantity}}</td>
-                <td>{{numberWithCommas(getSubTot(product.Quantity, product.StdCost))}}</td>
+                <td>{{numberWithCommas(getSubTot(product.Quantity, product.Cost))}}</td>
             </tr>
             <tr ng-show="includeDiscount(1)">
                 <td >Sum: </td>
@@ -727,24 +724,24 @@
         <!-- Second Pricing Summary -->
     <div ng-show="secondQuote()" class="standardMargin">
         <h2>Price Summary 2</h2>
-        <em>Prices given in {{quotation.currency}}</em>
+        <em>Prices given in {{quotation.currency.Name}}</em>
         <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
-            <tr style="background-color:#0099cc;">
-                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse"><font color="white">Type </font></a> </th>
-                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse"><font color="white">Part</font></a></th>
-                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse"><font color="white">Description</font></a></th>
-                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse"><font color="white">Unit Price</font></a></th>
-                <th class="tableHeaderColor"><font color="white">Quantity</font></th>
-                <th class="tableHeaderColor"><font color="white">Cost ({{quotation.currency}})</font></th>
+            <tr>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
+                <th class="tableHeaderColor">Quantity</th>
+                <th class="tableHeaderColor">Cost ({{quotation.currency.Name}})</th>
             </tr>
             <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
                 <!-- Add Strong if it is Base -->
                 <td>{{product.Class}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
-                <td>{{numberWithCommas(product.StdCost2)}}</td>
+                <td>{{numberWithCommas(product.Cost2)}}</td>
                 <td>{{product.Quantity2}}</td>
-                <td>{{numberWithCommas(getSubTot(product.Quantity2, product.StdCost2))}}</td>
+                <td>{{numberWithCommas(getSubTot(product.Quantity2, product.Cost2))}}</td>
             </tr>
             <tr ng-show="includeDiscount(2)">
                 <td>Sum: </td>
@@ -845,11 +842,6 @@
 
     <script type="text/javascript" src="lib/tinymce/assets/jquery.tinymce.js"></script>
 
-    <script type="text/javascript" src="lib/tinymce/assets/plugins/spellchecker/editor_plugin.js"></script>
-
-    <script type="text/javascript" src="lib/tinymce/assets/plugins/spellchecker/editor_plugin_src.js"></script>
-
-
 
     <!--Application-->
     <script type="text/javascript" src="lib/js/angular_sanitize.js"></script>
@@ -863,6 +855,8 @@
     <script type="text/javascript" src="data/ProductDescriptions.js"></script>
 
     <script type="text/javascript" src="data/TechnicalSpecifications.js"></script>
+
+    <script type="text/javascript" src="data/ExchangeRate.js"></script>
 
 
     <script type="text/javascript" src="js/app.js"></script>
