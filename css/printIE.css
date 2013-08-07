@@ -22,7 +22,7 @@
         width: 26mm;
         visibility: visible;
         position: absolute;
-        top: 560mm;
+        top: 580mm;
         left: 10mm;
     }
 
@@ -58,7 +58,7 @@
     }
     #letterFooter {
         position: absolute;
-        top: 780mm;
+        top: 800mm;
         width: 154mm;
         margin-right: 10mm;
     }

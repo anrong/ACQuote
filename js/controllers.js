@@ -192,6 +192,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     } */
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
 
+    //$scope.selectedBase = "";
+
     $rootScope.currencyChange = function(){
         for (i=0; i < $rootScope.quotation.products.length; i++){
             $rootScope.quotation.products[i].Cost=$rootScope.quotation.products[i].StdCost*$rootScope.quotation.currency.Rate;
@@ -227,7 +229,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             return false;
         }
         for(i=0 ;i < $rootScope.quotation.products.length; i++){
-            if(productClass==$rootScope.quotation.products[i].Class){
+            if(productClass==$rootScope.quotation.products[i].Category){
                 if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
                     return true;
                 }
@@ -239,8 +241,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     $scope.getCategories = function(BoxType){
         cat = [];
         for(i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Class!='Base' && $rootScope.quotation.products[i].BoxType==BoxType){
-                cat.push($rootScope.quotation.products[i].Class)
+            if($rootScope.quotation.products[i].Category!='Base' && $rootScope.quotation.products[i].BoxType==BoxType){
+                cat.push($rootScope.quotation.products[i].Category)
             }
         }
         return eliminateDuplicates(cat);
@@ -267,9 +269,9 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         items = [];
         if(BoxType=='Radio'){
             for (j = 0; j < cat.length; j++){
-                items[j]= {class: cat[j], products: []};
+                items[j]= {Category: cat[j], products: []};
                 for (i = 0; i < $rootScope.quotation.products.length; i++){
-                    if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Radio'){
+                    if (cat[j]== $rootScope.quotation.products[i].Category && $rootScope.quotation.products[i].BoxType=='Radio'){
                         items[j].products.push($rootScope.quotation.products[i])
                         items[j].selected="";
 
@@ -280,9 +282,9 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
         if(BoxType=='Check'){
         for (j = 0; j < cat.length; j++){
-            items[j]= {class: cat[j], products: []};
+            items[j]= {Category: cat[j], products: []};
             for (i = 0; i < $rootScope.quotation.products.length; i++){
-                if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Check'){
+                if (cat[j]== $rootScope.quotation.products[i].Category && $rootScope.quotation.products[i].BoxType=='Check'){
                     items[j].products.push($rootScope.quotation.products[i])
                 }
             }
@@ -327,9 +329,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             for (i=0; i < $rootScope.quotation.products.length; i++){
                 for(j=0; j < $scope.selectedRadio.length; j++){
                     if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
-                        $rootScope.quotation.products[i].Quoted=true;
-                        $rootScope.quotation.products[i].Quantity=1;
-                      //  $scope.selectedRadio[j]="";
+                        if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                            $rootScope.quotation.products[i].Quoted=true;
+                            $rootScope.quotation.products[i].Quantity=1;
+                            //  $scope.selectedRadio[j]="";
+                        }
                     }
                 }
             }
