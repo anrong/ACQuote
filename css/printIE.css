@@ -1,10 +1,11 @@
 @media print {
 
     @page {
+        size : 210mm 297mm;
         margin-left: 0mm;
         margin-right: 0mm;
-        margin-bottom: 0mm;
-        margin-top: 10mm;
+        margin-bottom: 10mm;
+        margin-top: 20mm;
     }
 
 
@@ -13,7 +14,7 @@
 
     #logo {
         position: absolute;
-        top: 235mm;
+        top: 250mm;
         right: 10mm;
         width: 32mm;
     }
@@ -22,14 +23,14 @@
         width: 26mm;
         visibility: visible;
         position: absolute;
-        top: 580mm;
+        top: 555mm;
         left: 10mm;
     }
 
     #promise {
         position: absolute;
         left: 10mm;
-        top: 248mm;
+        top: 260mm;
         width: 64mm;
         visibility: visible;
     }
@@ -48,6 +49,9 @@
         margin-top: 26mm;
         margin-bottom: 20mm;
         margin-right: 10mm;
+        padding-top: 20mm;
+        padding-bottom: 20mm;
+        size : 210mm 297mm;
         page-break-after: always;
         page-break-inside: auto;
     }

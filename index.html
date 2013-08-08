@@ -26,13 +26,19 @@
     
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-    <!--[if !IE]>-->
-    <link rel="stylesheet" type="text/css" href="css/print old.css" />
-    <!--[endif]-->
-
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="css/printIE.css" />
     <![endif]-->
+    <!--<link rel="stylesheet" type="text/css" href="css/printIE.css" />-->
+
+    <!--[if !IE]<!-->
+    <link rel="stylesheet" type="text/css" href="css/print old.css" />
+    <!--<![endif]-->
+
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/printIE.css" />
+    ]-->
 </head>
 <body ng-controller="IndexCtrl">
 
@@ -202,35 +208,36 @@
 
            <!-- Choose the sub products here. This is for the first pricing summary-->
 
-            <div ng-repeat="object in radioBoxCategories" class="span6">
-                <div ng-show="showOptions(object.Category)">
-                    <strong>{{object.Category}}: </strong><br>
-                    <div class="row">
-                          <input type="radio" ng-model=selectedRadio[$index]  value="" ng-checked="true" > No {{object.Category}} <br><br>
+        <div ng-repeat="object in radioBoxCategories" class="span6">
+            <div ng-show="showOptions(object.Category)">
+                <strong>{{object.Category}}: </strong>
 
-                          <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
-                              <input type="radio" ng-model=selectedRadio[$parent.$index] value="{{product.Part}}" > {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                          </div>
-                      </div>
-
-                      <br>
-                      <br>
-                  </div>
+                    <table cellpadding="5px" cellspacing="5px" width="100%">
+                        <tr>
+                            <td><input type="radio" ng-model=selectedRadio[$index]  value="" ng-checked="true"> </td> <td>No {{object.Category}}</td> <br><br>
+                        </tr>
+                          <tr ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                              <td><input type="radio" ng-model=selectedRadio[$parent.$index] value="{{product.Part}}"></td><td width="50%"> {{product.Description}} &nbsp;&nbsp;</td> <td>Price:</td><td> {{getStdCost(product)}}</td>
+                           </tr>
+                    </table>
+                <br>
+                <br>
+                <br>
               </div>
-
-              <div ng-repeat="object in checkBoxCategories" class="span6">
-                  <div ng-show="showOptions(object.Category)">
-                      <strong>{{object.Category}}: </strong><br>
-                      <div class="row">
-                              <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
-                                  <input type="checkbox" ng-model="product.checked" value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                              </div>
-                      </div>
-
-                      <br>
-                      <br>
-                  </div>
+          </div>
+            <div ng-repeat="object in checkBoxCategories" class="span6">
+              <div ng-show="showOptions(object.Category)">
+                  <strong>{{object.Category}}: </strong>
+                  <table cellpadding="5px" cellspacing="5px" width="100%">
+                      <tr ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                          <td><input type="checkbox" ng-model="product.checked" value="{{product.Part}}"></td><td width="50%"> {{product.Description}} </td>&nbsp;&nbsp; <td>Price:</td> <td>{{getStdCost(product)}}</td>
+                      </tr>
+                 </table>
+                  <br>
+                  <br>
+                  <br>
               </div>
+          </div>
 
               <!--      <div ng-show="showOptions('Accessories')">
              <strong> Accessories: </strong><br>
@@ -426,7 +433,7 @@
           <div class="span6">
             <table>
                 <tr>
-                    <td><button ng-click="addClick(1)" class="btn">Add to Price Summary</button></td>
+                    <td><button ng-click="addClick(1)" class="btn">Add to Price Summary 1</button></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td><button ng-click="addClick(2)" class="btn">Add to Price Summary 2</button></td>
                 </tr>
@@ -466,7 +473,7 @@
            <h3>Price Summary</h3>
            <table class="table table-striped">
             <tr>
-                <th> Type </th>
+                <th> <a href="" ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a></th>
                 <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                 <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th> <a href="" ng-click="settings.order = 'Cost'; settings.reverse=!settings.reverse">Cost</a></th>
@@ -491,7 +498,7 @@
         <br>
            <table class="table table-striped">
                <tr>
-                   <th> Type </th>
+                   <th> <a href="" ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
                    <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
                    <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                    <th> <a href="" ng-click="settings.order = 'Cost2'; settings.reverse=!settings.reverse">Cost</a></th>
@@ -504,7 +511,7 @@
                    <!-- Add Strong if it is Base -->
                    <td>{{product.Category}}</td>
                    <td>{{product.Part}}</td>
-                   <td>{{product.Description}}</td>
+                   <td><input type="text" ng-model="product.Description" class="descInput"></td>
                    <td><input type="text" ng-model="product.Cost2" class="costInput"></td>
                    <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
                    <td><button ng-click="removeClick(product, 'Second')" class="btn-small">-</button></td>
@@ -634,14 +641,14 @@
                     <!--<footer>-->
 
           <!--  <footer style="position:absolute; bottom:0px;width:100%;">  -->
-            <!--<hr style="border-top:1px solid black;"/>-->
+            <!--<hr style="border-top:1px solid black;"/>
 
-                <table cellpadding="0" cellspacing="0" style="height:80px; width:100%">
+                <table cellpadding="0" cellspacing="0" style="height:80px; width:100%" id="letterFooter">
             <tr>
                 <td colspan="4" style="border-bottom:solid 1px black;">
                     <div style="height:0.1px; text-indent:10px;">
                         <h6>Atlas Copco Group Centre</h6>
-                        <!--<hr style="border-top:1px solid black;"/>-->
+
                     </div>
                 </td>
             </tr>

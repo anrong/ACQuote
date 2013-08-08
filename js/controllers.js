@@ -200,6 +200,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
     }
 
+    console.log($rootScope.quotation.products);
+
     $rootScope.currencyChange();
 
 
@@ -247,6 +249,8 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
         return eliminateDuplicates(cat);
     }
+
+    console.log($scope.getCategories('Radio'))
 
     function eliminateDuplicates(cat) {
         var i,
@@ -343,8 +347,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 for(j=0; j < $scope.checkBoxCategories.length; j++){
                     for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
                         if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
-                            $rootScope.quotation.products[i].Quoted=true;
-                            $rootScope.quotation.products[i].Quantity=1;
+                            if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                                $rootScope.quotation.products[i].Quoted=true;
+                                $rootScope.quotation.products[i].Quantity=1;
+                                //  $scope.selectedRadio[j]="";
+                            }
                           //  $scope.checkBoxCategories[j].products[k].checked=false;
                         }
                     }
@@ -363,8 +370,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             for (i=0; i < $rootScope.quotation.products.length; i++){
                 for(j=0; j < $scope.selectedRadio.length; j++){
                     if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
-                        $rootScope.quotation.products[i].Quoted2=true;
-                        $rootScope.quotation.products[i].Quantity2=1;
+                        if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                            $rootScope.quotation.products[i].Quoted2=true;
+                            $rootScope.quotation.products[i].Quantity2=1;
+                            //  $scope.selectedRadio[j]="";
+                        }
                        // $scope.selectedRadio[j]="";
                     }
                 }
@@ -373,8 +383,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 for(j=0; j < $scope.checkBoxCategories.length; j++){
                     for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
                         if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
-                            $rootScope.quotation.products[i].Quoted2=true;
-                            $rootScope.quotation.products[i].Quantity2=1;
+                            if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                                $rootScope.quotation.products[i].Quoted2=true;
+                                $rootScope.quotation.products[i].Quantity2=1;
+                                //  $scope.selectedRadio[j]="";
+                            }
                            // $scope.checkBoxCategories[j].products[k].checked=false;
                         }
                     }
@@ -652,7 +665,7 @@ var QuotationCtrl = function($rootScope, $scope){
     }
     $rootScope.year = today.getFullYear();
 
-    $rootScope.settings.order = "Description";
+    $rootScope.settings.order = "Type";
     $rootScope.settings.reverse = false;
 
     $rootScope.isSelected = function(product){

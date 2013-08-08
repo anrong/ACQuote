@@ -3,4 +3,4 @@
 
  The files should be put in /data/spec/[name] where [name] is a folder with the name of the Product Technical Specification.
  */
-var SPECIFICATIONS = [{Name:"TW3", "ImageCount": 4}]
+var SPECIFICATIONS = []
