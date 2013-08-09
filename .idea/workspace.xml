@@ -2,23 +2,308 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2779084-d933-44fc-a54f-a6d8c30e335e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Quotes\Coal India2013.json" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\css\print old.css" afterPath="$PROJECT_DIR$/css/printChrome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/Data.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/Footers.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Data.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Letters\Letter 4.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Letters\five.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\Saved Letters\newletter.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\css\print.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\js\Test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.PLUGINTEMPLATE.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.addimage.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.cell.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.from_html.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.ie_below_9_shim.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.javascript.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.sillysvgrenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.split_text_to_size.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\jspdf.plugin.standard_fonts_metrics.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\opensave.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\js\pdfgen.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\css\advhr.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\js\rule.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advhr\rule.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\css\advimage.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\image.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\img\sample.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\js\image.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advimage\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\css\advlink.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\js\advlink.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlink\link.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlist\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\advlist\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autolink\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autolink\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autoresize\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autoresize\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autosave\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autosave\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\autosave\langs\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\bbcode\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\bbcode\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\contextmenu\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\contextmenu\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\directionality\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\directionality\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\emotions.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-embarassed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-foot-in-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-frown.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-innocent.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-laughing.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-money-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-sealed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-surprised.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-tongue-out.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-undecided.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\img\smiley-yell.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\js\emotions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\emotions\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\dialog.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\img\example.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\js\dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\langs\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example_dependency\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\example_dependency\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\css\fullpage.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\fullpage.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\js\fullpage.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullpage\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullscreen\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullscreen\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\fullscreen\fullscreen.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\iespell\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\iespell\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\button.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\skins\clearlooks2\window.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\inlinepopups\template.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\insertdatetime\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\insertdatetime\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\layer\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\layer\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\legacyoutput\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\legacyoutput\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\lists\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\lists\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\css\media.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\js\embed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\js\media.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\media.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\media\moxieplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\nonbreaking\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\nonbreaking\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\noneditable\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\noneditable\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\pagebreak\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\pagebreak\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\js\pastetext.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\js\pasteword.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\pastetext.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\paste\pasteword.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\preview\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\preview\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\preview\example.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\preview\jscripts\embed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\preview\preview.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\print\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\print\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\save\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\save\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\css\searchreplace.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\js\searchreplace.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\searchreplace\searchreplace.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\spellchecker\css\content.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\spellchecker\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\spellchecker\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\spellchecker\img\wline.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\css\props.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\js\props.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\style\props.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\tabfocus\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\tabfocus\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\cell.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\css\cell.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\css\row.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\css\table.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\js\cell.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\js\merge_cells.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\js\row.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\js\table.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\merge_cells.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\row.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\table\table.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\blank.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\css\template.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\js\template.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\langs\en_dlg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\template\template.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\visualchars\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\visualchars\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\wordcount\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\wordcount\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\abbr.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\acronym.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\attributes.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\cite.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\css\attributes.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\css\popup.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\del.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\editor_plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\ins.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\abbr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\acronym.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\attributes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\cite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\del.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\element_common.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\js\ins.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\lib\tinymce\assets\plugins\xhtmlxtras\langs\en_dlg.js" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\MHNes\Documents\GitHub\ACQuote\js\filters.js" afterPath="$PROJECT_DIR$/data/Address.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Management.docx" afterPath="$PROJECT_DIR$/Data Management.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User Manual.docx" afterPath="$PROJECT_DIR$/User Manual.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg.png" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/img/button_bg.png" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/img/button_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg_black.png" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg_black.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg_silver.png" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/img/button_bg_silver.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/buttons.png" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/buttons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/colorpicker.jpg" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/colorpicker.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/flash.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/flash.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/icons.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/img/icons.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/img/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/iframe.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/iframe.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/items.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/items.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/menu_arrow.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/menu_arrow.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/menu_check.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/menu_check.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/pagebreak.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/pagebreak.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/progress.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/progress.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/quicktime.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/quicktime.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/realmedia.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/realmedia.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/shockwave.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/shockwave.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/tabs.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/img/tabs.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/trans.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/trans.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/video.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/video.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/windowsmedia.gif" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/img/windowsmedia.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ProductData.js" afterPath="$PROJECT_DIR$/data/ProductData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TechnicalSpecifications.js" afterPath="$PROJECT_DIR$/data/TechnicalSpecifications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/about.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/about.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/about.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/about.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/anchor.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/anchor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/anchor.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/charmap.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/charmap.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/charmap.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/charmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/color_picker.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/color_picker.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/color_picker.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/color_picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/content.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/content.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/default/content.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/dialog.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/dialog.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/dialog.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/directive.js" afterPath="$PROJECT_DIR$/lib/tinymce/directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/utils/editable_selects.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/utils/editable_selects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template_src.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/langs/en.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/langs/en.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/langs/en.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/langs/en_dlg.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/langs/en_dlg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/utils/form_utils.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/utils/form_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/image.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/image.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/image.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/image.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/index.html" afterPath="$PROJECT_DIR$/lib/tinymce/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/jquery.tinymce.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/jquery.tinymce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/license.txt" afterPath="$PROJECT_DIR$/lib/tinymce/assets/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/link.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/link.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/link.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/utils/mctabs.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/utils/mctabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/printChrome.css" afterPath="$PROJECT_DIR$/css/printChrome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/shortcuts.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/shortcuts.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/source_editor.htm" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/source_editor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/source_editor.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/js/source_editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_popup.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_src.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/tiny_mce_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/ui.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/ui.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/highcontrast/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/default/ui.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/simple/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui_black.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui_black.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui_silver.css" afterPath="$PROJECT_DIR$/lib/tinymce/assets/themes/advanced/skins/o2k7/ui_silver.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tinymce/assets/utils/validate.js" afterPath="$PROJECT_DIR$/lib/tinymce/assets/utils/validate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quotation System.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375866504785" ignored="false" />
-    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375954674568" ignored="false" />
-    <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375871959324" ignored="false" />
+    <file path="/index.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1376042912313" ignored="false" />
+    <file path="/controllers.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1376033316862" ignored="false" />
     <file path="/info.html" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372919983514" ignored="false" />
     <file path="/pdfgen.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372311800745" ignored="false" />
     <file path="/ProductDataN.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372746934108" ignored="false" />
     <file path="/ProductData.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375791758015" ignored="false" />
     <file path="/Test.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372758732185" ignored="false" />
     <file path="/bootstrap.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372835936532" ignored="false" />
-    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375774062400" ignored="false" />
+    <file path="/styles.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1376042326720" ignored="false" />
     <file path="/dummy.xml" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1372998083107" ignored="false" />
     <file path="/fileHandler.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1373273245359" ignored="false" />
     <file path="/Dummy.txt" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375789101664" ignored="false" />
@@ -29,6 +314,9 @@
     <file path="/Currency.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375763376089" ignored="false" />
     <file path="/print old.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375948889703" ignored="false" />
     <file path="/printIE.css" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375948353775" ignored="false" />
+    <file path="/CoverLetters.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1375956356510" ignored="false" />
+    <file path="/Address.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1376032458585" ignored="false" />
+    <file path="/ProductDescriptions.js" changelist="f2779084-d933-44fc-a54f-a6d8c30e335e" time="1376043427401" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +385,38 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="59" selection-start="379" selection-end="379" vertical-scroll-proportion="0.21276596">
+            <state line="183" column="16" selection-start="7086" selection-end="7086" vertical-scroll-proportion="3.893617">
               <folding>
-                <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="e#9374#19238#0" expanded="false" />
+                <element signature="e#18447#21382#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnicalSpecifications.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/TechnicalSpecifications.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="23" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDescriptions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ProductDescriptions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="16" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Address.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/Address.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#152#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,7 +434,7 @@
       <file leaf-file-name="printChrome.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/printChrome.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+            <state line="48" column="49" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +443,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="12" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
+            <state line="106" column="23" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,8 +452,35 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="667" column="37" selection-start="24304" selection-end="24304" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="100" column="10" selection-start="3530" selection-end="3530" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2014#3102#0" expanded="false" />
+                <element signature="e#14605#15569#0" expanded="false" />
+                <marker date="1376041715888" expanded="true" signature="3863:3886" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="4056:4086" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="4142:4154" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="4590:4602" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="4854:4865" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="5123:5134" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="5402:5413" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="5826:5837" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="6108:6119" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="6394:6405" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="6671:6682" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="7100:7111" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="7381:7392" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="7659:7670" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="7940:7951" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="8712:8742" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="10389:10400" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="10637:10648" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="10887:10898" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="11137:11148" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="11530:11541" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="11766:11777" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="12001:12012" placeholder="..." />
+                <marker date="1376041715888" expanded="true" signature="12277:12288" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,16 +488,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="5" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/print.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0">
+            <state line="53" column="19" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,7 +497,7 @@
       <file leaf-file-name="ProductData.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ProductData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
+            <state line="136" column="44" selection-start="3629" selection-end="3629" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,22 +531,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/file.html" />
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/data/CoverLetters.js" />
         <option value="$PROJECT_DIR$/data/TermConditions.js" />
         <option value="$PROJECT_DIR$/lib/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/data/Currency.js" />
         <option value="$PROJECT_DIR$/css/print.css" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/data/ProductDescriptions.js" />
-        <option value="$PROJECT_DIR$/data/TechnicalSpecifications.js" />
-        <option value="$PROJECT_DIR$/data/ProductData.js" />
-        <option value="$PROJECT_DIR$/js/controllers.js" />
         <option value="$PROJECT_DIR$/css/printIE.css" />
         <option value="$PROJECT_DIR$/css/print old.css" />
+        <option value="$PROJECT_DIR$/data/ProductData.js" />
+        <option value="$PROJECT_DIR$/data/CoverLetters.js" />
+        <option value="$PROJECT_DIR$/css/printChrome.css" />
+        <option value="$PROJECT_DIR$/data/Address.js" />
+        <option value="$PROJECT_DIR$/js/controllers.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/data/TechnicalSpecifications.js" />
+        <option value="$PROJECT_DIR$/data/ProductDescriptions.js" />
       </list>
     </option>
   </component>
@@ -299,42 +633,6 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinymce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Atlas Copco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ACQuote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Atlas Copco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ACQuote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -361,42 +659,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Atlas Copco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ACQuote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Atlas Copco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ACQuote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,6 +699,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\system" />
       <recent name="C:\Users\MHNes\Documents\GitHub\ACQuote\data" />
       <recent name="C:\Users\MHNes\Documents\Quotation system\Atlas Copco\js\data" />
       <recent name="C:\Users\MHNes\Documents\Quotation system\Atlas Copco" />
@@ -603,7 +866,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.021864211" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24893071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19400245" sideWeight="0.9965398" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19094247" sideWeight="0.9965398" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -684,21 +947,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/CoverLetters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="77" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.26215896" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/js/pdfgen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/TermConditions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="73" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/ExchangeRate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="94" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" />
@@ -707,13 +955,6 @@
     <entry file="file://$PROJECT_DIR$/lib/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="14" selection-start="2411" selection-end="2411" vertical-scroll-proportion="-10.52" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="12" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/bootstrap.js">
@@ -725,48 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/print.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ProductDescriptions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/TechnicalSpecifications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="47" selection-start="251" selection-end="251" vertical-scroll-proportion="0.10131109">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="5" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="667" column="37" selection-start="24304" selection-end="24304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/printIE.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="12" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
@@ -774,19 +973,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/printChrome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+        <state line="48" column="49" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CoverLetters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="75" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.3152318">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ProductData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="44" selection-start="3629" selection-end="3629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#152#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="10" selection-start="3530" selection-end="3530" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2014#3102#0" expanded="false" />
+            <element signature="e#14605#15569#0" expanded="false" />
+            <marker date="1376041715888" expanded="true" signature="3863:3886" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="4056:4086" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="4142:4154" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="4590:4602" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="4854:4865" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="5123:5134" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="5402:5413" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="5826:5837" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="6108:6119" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="6394:6405" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="6671:6682" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="7100:7111" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="7381:7392" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="7659:7670" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="7940:7951" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="8712:8742" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="10389:10400" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="10637:10648" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="10887:10898" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="11137:11148" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="11530:11541" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="11766:11777" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="12001:12012" placeholder="..." />
+            <marker date="1376041715888" expanded="true" signature="12277:12288" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="23" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/TechnicalSpecifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ProductDescriptions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="379" selection-end="379" vertical-scroll-proportion="0.21276596">
+        <state line="183" column="16" selection-start="7086" selection-end="7086" vertical-scroll-proportion="3.893617">
           <folding>
-            <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="e#9374#19238#0" expanded="false" />
+            <element signature="e#18447#21382#0" expanded="false" />
           </folding>
         </state>
       </provider>

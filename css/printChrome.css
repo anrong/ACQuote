@@ -45,12 +45,19 @@
         page-break-after: always;
     }
 
-    .coverLetter {
+    /*.coverLetter {
         margin-left: 40mm;
         margin-top: 26mm;
         margin-bottom: 20mm;
         margin-right: 10mm;
         padding-bottom: 20mm;
+        page-break-after: always;
+    }*/
+    .coverLetter {
+        margin-left: 40mm;
+        margin-top: 26mm;
+        margin-bottom: 20mm;
+        margin-right: 10mm;
         page-break-after: always;
     }
 

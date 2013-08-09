@@ -52,14 +52,6 @@ QuotationApp.factory('productFactory', function(){
     }
 
     return factory;
-    /*
-    factory.addQuotedProducts = function(newProduct){
-        quotedProducts.push(newProduct)
-    }
-
-    factory.getQuotedProducts = function () {
-        return quotedProducts;
-    } */
 })
 
 
