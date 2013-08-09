@@ -87,11 +87,202 @@ var InfoCtrl = function ($rootScope,$scope) {
 
     $rootScope.quotation.terms = TERMS;
 
+    $rootScope.addresses = ADDRESSES;
 
     $rootScope.quotation.productDesc=false;
 
-    $rootScope.setContent = function(text){
-        $rootScope.quotation.letterText=text;
+    $rootScope.selectedFooter = $rootScope.addresses[0];
+
+    $rootScope.setContent = function (text) {
+
+        console.log($rootScope.selectedFooter);
+
+        $rootScope.quotation.letterText = text;
+        /*var editText;
+        editText = '<tr><td>';
+        var split = text.split("\n");
+        var le = split.length
+
+        for (i = 0; i < le; i++) {
+            if (i == 15) {
+                //alert(editText);
+                //Added by Rajaneesh
+                editText = editText + "<table cellpadding='0' cellspacing='0' style='height:80px; width:100%'>";
+                editText = editText + "<tr class='CoverLetterFooter'>";
+                editText = editText + " <td class='coverLetterFooterText' colspan='4' style='border-bottom:solid 2px black;'>";
+                editText = editText + "<div style='height:12px;'>";
+                editText = editText + "<h6 align='left;'>Atlas Copco Group Centre</h6>";
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "</tr>";
+
+                editText = editText + "<tr class='CoverLetterFooter'>";
+                editText = editText + "<td class='coverLetterFooterText'>";
+                editText = editText + "<div style='height:5px;>";
+                editText = editText + "Atlas Copco AB";
+                editText = editText + "</div>";
+                editText = editText + " </td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + "Visitors' address:";
+                editText = editText + "</div>";
+                editText = editText + " </td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.Phone;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + "A Public Company (publ)";
+                editText = editText + " </div>";
+                editText = editText + "</td>";
+                editText = editText + "</tr>";
+
+                editText = editText + "<tr class='CoverLetterFooter'>";
+                editText = editText + "<td class='coverLetterFooterText'>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.Address1;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.VisitAddress;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.Fax;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.RegNo;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "</tr>";
+
+                editText = editText + "<tr class='CoverLetterFooter'>";
+                editText = editText + "<td class='coverLetterFooterText'>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.Country;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.City;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.WebPage;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + "<td>";
+                editText = editText + "<div style='height:5px;'>";
+                editText = editText + $rootScope.selectedFooter.RegOffice;
+                editText = editText + "</div>";
+                editText = editText + "</td>";
+                editText = editText + " </tr>";
+                editText = editText + "</table></td></tr>";
+
+
+            }
+
+
+
+            editText = editText + split[i]+"</td></tr><tr><td>";
+
+        }
+        if (le < 15) {
+            for (j = 0; j < (15 - le)*2; j++) {
+
+                editText = editText+ "&nbsp;</td></tr><tr><td>";
+            }
+
+            editText = editText + "<table   height='100%' width='100%'>";
+            editText = editText + "<tr class='CoverLetterFooter'>";
+            editText = editText + " <td class='coverLetterFooterText' colspan='4' style='border-bottom:solid 2px black;'>";
+            // editText = editText + "<div style='height:12px;'>";
+            editText = editText + "<h6 align='left;'>Atlas Copco Group Centre</h6>";
+            // editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "</tr>";
+
+            editText = editText + "<tr class='CoverLetterFooter'>";
+            editText = editText + "<td class='coverLetterFooterText'>";
+            // editText = editText + "<div style='height:5px;>";
+            editText = editText + "Atlas Copco AB";
+            // editText = editText + "</div>";
+            editText = editText + " </td>";
+            editText = editText + "<td>";
+            //editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Visitors' address:";
+            // editText = editText + "</div>";
+            editText = editText + " </td>";
+            editText = editText + "<td>";
+            //  editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Telephone: + 46(0)87438000";
+            // editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            // editText = editText + "<div style='height:5px;'>";
+            editText = editText + "A Public Company (publ)";
+            // editText = editText + " </div>";
+            editText = editText + "</td>";
+            editText = editText + "</tr>";
+
+            editText = editText + "<tr class='CoverLetterFooter'>";
+            editText = editText + "<td class='coverLetterFooterText'>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "SE-10523 Stockholm";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Sickla Industrivag 3";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Fax: + 46(0)86449045";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + " Reg. No: 556014-2720";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "</tr>";
+
+            editText = editText + "<tr class='CoverLetterFooter'>";
+            editText = editText + "<td class='coverLetterFooterText'>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Sweden";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Nacka";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "www.atlascopco.com (http://www.atlascopco.com)";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + "<td>";
+            editText = editText + "<div style='height:5px;'>";
+            editText = editText + "Reg. Office Nacka";
+            editText = editText + "</div>";
+            editText = editText + "</td>";
+            editText = editText + " </tr>";
+            editText = editText + "</table></td></tr>";
+
+
+
+        }
+        $rootScope.quotation.letterText = "<table  height='100%' width='100%' class='coverLetter' >" + editText + "</table>";*/
     }
 
     $rootScope.setNotes = function(text){
@@ -192,11 +383,15 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     } */
     $rootScope.quotation.baseProducts = productFactory.getBaseProducts();
 
+    //$scope.selectedBase = "";
+
     $rootScope.currencyChange = function(){
         for (i=0; i < $rootScope.quotation.products.length; i++){
             $rootScope.quotation.products[i].Cost=$rootScope.quotation.products[i].StdCost*$rootScope.quotation.currency.Rate;
         }
     }
+
+    console.log($rootScope.quotation.products);
 
     $rootScope.currencyChange();
 
@@ -227,7 +422,7 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             return false;
         }
         for(i=0 ;i < $rootScope.quotation.products.length; i++){
-            if(productClass==$rootScope.quotation.products[i].Class){
+            if(productClass==$rootScope.quotation.products[i].Category){
                 if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
                     return true;
                 }
@@ -239,12 +434,14 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
     $scope.getCategories = function(BoxType){
         cat = [];
         for(i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Class!='Base' && $rootScope.quotation.products[i].BoxType==BoxType){
-                cat.push($rootScope.quotation.products[i].Class)
+            if($rootScope.quotation.products[i].Category!='Base' && $rootScope.quotation.products[i].BoxType==BoxType){
+                cat.push($rootScope.quotation.products[i].Category)
             }
         }
         return eliminateDuplicates(cat);
     }
+
+    console.log($scope.getCategories('Radio'))
 
     function eliminateDuplicates(cat) {
         var i,
@@ -267,9 +464,9 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         items = [];
         if(BoxType=='Radio'){
             for (j = 0; j < cat.length; j++){
-                items[j]= {class: cat[j], products: []};
+                items[j]= {Category: cat[j], products: []};
                 for (i = 0; i < $rootScope.quotation.products.length; i++){
-                    if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Radio'){
+                    if (cat[j]== $rootScope.quotation.products[i].Category && $rootScope.quotation.products[i].BoxType=='Radio'){
                         items[j].products.push($rootScope.quotation.products[i])
                         items[j].selected="";
 
@@ -280,9 +477,9 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
         }
         if(BoxType=='Check'){
         for (j = 0; j < cat.length; j++){
-            items[j]= {class: cat[j], products: []};
+            items[j]= {Category: cat[j], products: []};
             for (i = 0; i < $rootScope.quotation.products.length; i++){
-                if (cat[j]== $rootScope.quotation.products[i].Class && $rootScope.quotation.products[i].BoxType=='Check'){
+                if (cat[j]== $rootScope.quotation.products[i].Category && $rootScope.quotation.products[i].BoxType=='Check'){
                     items[j].products.push($rootScope.quotation.products[i])
                 }
             }
@@ -327,9 +524,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             for (i=0; i < $rootScope.quotation.products.length; i++){
                 for(j=0; j < $scope.selectedRadio.length; j++){
                     if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
-                        $rootScope.quotation.products[i].Quoted=true;
-                        $rootScope.quotation.products[i].Quantity=1;
-                      //  $scope.selectedRadio[j]="";
+                        if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                            $rootScope.quotation.products[i].Quoted=true;
+                            $rootScope.quotation.products[i].Quantity=1;
+                            //  $scope.selectedRadio[j]="";
+                        }
                     }
                 }
             }
@@ -339,8 +538,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 for(j=0; j < $scope.checkBoxCategories.length; j++){
                     for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
                         if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
-                            $rootScope.quotation.products[i].Quoted=true;
-                            $rootScope.quotation.products[i].Quantity=1;
+                            if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                                $rootScope.quotation.products[i].Quoted=true;
+                                $rootScope.quotation.products[i].Quantity=1;
+                                //  $scope.selectedRadio[j]="";
+                            }
                           //  $scope.checkBoxCategories[j].products[k].checked=false;
                         }
                     }
@@ -359,8 +561,11 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
             for (i=0; i < $rootScope.quotation.products.length; i++){
                 for(j=0; j < $scope.selectedRadio.length; j++){
                     if($scope.selectedRadio[j]==$rootScope.quotation.products[i].Part){
-                        $rootScope.quotation.products[i].Quoted2=true;
-                        $rootScope.quotation.products[i].Quantity2=1;
+                        if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                            $rootScope.quotation.products[i].Quoted2=true;
+                            $rootScope.quotation.products[i].Quantity2=1;
+                            //  $scope.selectedRadio[j]="";
+                        }
                        // $scope.selectedRadio[j]="";
                     }
                 }
@@ -369,235 +574,17 @@ var ProductsCtrl = function ($rootScope, $scope, productFactory) {
                 for(j=0; j < $scope.checkBoxCategories.length; j++){
                     for(k=0; k < $scope.checkBoxCategories[j].products.length; k++){
                         if(($scope.checkBoxCategories[j].products[k].Part==$rootScope.quotation.products[i].Part) && ($scope.checkBoxCategories[j].products[k].checked==true)){
-                            $rootScope.quotation.products[i].Quoted2=true;
-                            $rootScope.quotation.products[i].Quantity2=1;
+                            if($rootScope.quotation.products[i].Dep==$scope.selectedBase.Part){
+                                $rootScope.quotation.products[i].Quoted2=true;
+                                $rootScope.quotation.products[i].Quantity2=1;
+                                //  $scope.selectedRadio[j]="";
+                            }
                            // $scope.checkBoxCategories[j].products[k].checked=false;
                         }
                     }
                 }
             }
         }
-
-
-       /*
-        //Adds the Truck
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTruck==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Truck Options
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTruckOption==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Rotation Torque
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTorque==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Drill Pipe Setup
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedDrillPipe==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Air Piping
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedAirPiping==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Water Injection
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedWaterInjection==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Drill Pipe Setup
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedDrillPipe==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Hoists
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedHoist==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Piping Handling
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedPipingHandling==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Mud pump
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedPump==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Cold Weather Package
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].ColdWeather==true){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds the Miscellaneous
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Miscellaneous==true){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-
-        //Adds Accessories
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Accessories==true){
-                $rootScope.quotation.products[i].Quoted=true;
-                $rootScope.quotation.products[i].Quantity=1;
-            }
-        }
-    }
-
-
-    $rootScope.addClick2 = function() {
-        //Adds the base
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedBase.Part==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-                // $rootScope.quotation.products[i].checked = true;
-            }
-        }
-        //Adds the Truck
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTruck==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Truck Options
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTruckOption==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Rotation Torque
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedTorque==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Drill Pipe Setup
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedDrillPipe==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Air Piping
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedAirPiping==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Water Injection
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedWaterInjection==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Drill Pipe Setup
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedDrillPipe==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Hoists
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedHoist==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Piping Handling
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedPipingHandling==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Mud pump
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($scope.selectedPump==$rootScope.quotation.products[i].Part){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Cold Weather Package
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].ColdWeather==true){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds the Miscellaneous
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Miscellaneous==true){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        }
-
-        //Adds Accessories
-        for (i=0; i < $rootScope.quotation.products.length; i++){
-            if($rootScope.quotation.products[i].Accessories==true){
-                $rootScope.quotation.products[i].Quoted2=true;
-                $rootScope.quotation.products[i].Quantity2=1;
-            }
-        } */
     }
    $rootScope.resetAll = function (){
        for (i=0; i < $rootScope.quotation.products.length; i++){
@@ -648,7 +635,7 @@ var QuotationCtrl = function($rootScope, $scope){
     }
     $rootScope.year = today.getFullYear();
 
-    $rootScope.settings.order = "Description";
+    $rootScope.settings.order = "Type";
     $rootScope.settings.reverse = false;
 
     $rootScope.isSelected = function(product){
@@ -752,13 +739,13 @@ var QuotationCtrl = function($rootScope, $scope){
             return 0;
         }
         if (quote=='1'){
-            console.log("discount one");
+
             amount = $rootScope.TotalSum()*rate/100;
             return amount;
         }
         else if (quote =='2'){
             amount = $rootScope.TotalSum2()*rate/100;
-            console.log("discount two");
+
             return amount;
         }
 
@@ -784,7 +771,7 @@ var QuotationCtrl = function($rootScope, $scope){
             descriptions[key].imgsrc = [];
             j=1;
             for (i=0; i < descriptions[key].ImageCount; i++){
-                descriptions[key].imgsrc[i] = descriptions[key].Name+" "+j+".png";
+                descriptions[key].imgsrc[i] = descriptions[key].Name+" "+j+".jpg";
                 j++;
             }
                 //descriptions[key].Included = false;
@@ -832,7 +819,7 @@ var QuotationCtrl = function($rootScope, $scope){
             specifications[key].imgsrc = [];
             j=1;
             for (i=0; i < specifications[key].ImageCount; i++){
-                specifications[key].imgsrc[i] = specifications[key].Name+" "+j+".png";
+                specifications[key].imgsrc[i] = specifications[key].Name+" "+j+".jpg";
                 j++;
             }
             //descriptions[key].Included = false;

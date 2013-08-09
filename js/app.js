@@ -43,33 +43,15 @@ QuotationApp.factory('productFactory', function(){
     factory.getBaseProducts = function () {
         j = 0;
       for (i = 0; i < products.length; i++) {
-            if (products[i].Class=="Base") {
+            if (products[i].Category=="Base") {
             baseProducts[j]=products[i];
                 j++;
            }
       }
         return baseProducts;
     }
-    factory.getPumps = function (){
-        j = 0;
-        for (i = 0; i < products.length; i++) {
-            if (products[i].Class=="Pump") {
-                tempProducts[j]=products[i];
-                j++;
-            }
-        }
-        return tempProducts;
-    }
 
     return factory;
-    /*
-    factory.addQuotedProducts = function(newProduct){
-        quotedProducts.push(newProduct)
-    }
-
-    factory.getQuotedProducts = function () {
-        return quotedProducts;
-    } */
 })
 
 

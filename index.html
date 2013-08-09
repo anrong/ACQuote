@@ -12,19 +12,29 @@
     <!--[if lte IE 8]>
     <script src="/lib/js/json2.js"></script>
     <![endif]-->
+
+
   <meta charset="utf-8">
   <title></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" type="text/css" href="lib/css/ng-grid.css" /> -->
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
    
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-responsive.min.css" />
     
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-    <link rel="stylesheet" type="text/css" href="css/print old.css" />
+    <link rel="stylesheet" type="text/css" href="css/printChrome.css" />
+
+
+   <!--<link rel="stylesheet" type="text/css" href="css/printIE.css" /> -->
+
+    <!--[if !IE]<!-->
+     <!--<link rel="stylesheet" type="text/css" href="css/printChrome.css" /> -->
+     <!--<![endif]-->
+
+
 
 </head>
 <body ng-controller="IndexCtrl">
@@ -123,6 +133,16 @@
                 <td><button ng-click="saveTextAsFile(saveName)" class="btn">Save to File</button></td>
             </tr>
         </table>
+        <br>
+
+        <!-- Cover Letter footer -->
+        <!--
+        <h4>Please choose an address for the cover letter footer </h4>
+        <select ng-model="$parent.selectedFooter" ng-options="address.Name for address in addresses" ng-change="setFooter(selectedFooter)"> </select>
+        <br>
+            <br>
+            <br>
+            <br>   -->
 
         <!-- Notes -->
         <h3>Notes</h3>
@@ -133,8 +153,8 @@
         <h3>Terms and Conditions</h3>
         <br>
         <span class="nullable">
-            <select ng-model="$parent.selectedTerms" ng-options="term.title for term in quotation.terms" ng-change="setTerms(selectedTerms.content)"><br>
-                <option value="" ng-model="$parent.selectedTerms" ng-change="setTerms()">No Terms and Conditions</option>
+            <select ng-model="quotation.selectedTerms" ng-options="term.title for term in quotation.terms" ng-change="setTerms(quotation.selectedTerms.content)"><br>
+                <option value="" ng-model="quotation.selectedTerms" ng-change="setTerms()">No Terms and Conditions</option>
             </select>
        </span>
         <br>
@@ -144,30 +164,25 @@
         <br>
         <h3>Product Description </h3>
         <br>
-        <div ng-repeat="desc in quotation.productDescriptions">
-            <table>
-                <tr>
-                    <td>{{desc.Name}} </td>
+        <table>
+        <tr ng-repeat="desc in quotation.productDescriptions">
+            <td>{{desc.Name}} </td>
                     <td><input type="checkbox" ng-model="desc.included" ng-checked="desc.included" ng-change="includeDesc(desc, desc.included)"/></td>
                 </tr>
             </table>
 
         <br>
-        </div>
 
         <!-- Technical Specifications -->
         <h3>Technical Specifications </h3>
         <br>
-        <div ng-repeat="spec in quotation.technicalSpecifications">
-            <table>
-                <tr>
-                    <td>{{spec.Name}}</td>
-                    <td><input type="checkbox" ng-model="spec.included" ng-checked="spec.included" ng-change="includeSpec(spec, spec.included)"/></td>
-                </tr>
-            </table>
-
+        <table>
+        <tr ng-repeat="spec in quotation.technicalSpecifications">
+            <td>{{spec.Name}}</td>
+            <td><input type="checkbox" ng-model="spec.included" ng-checked="spec.included" ng-change="includeSpec(spec, spec.included)"/></td>
+        </tr>
+        </table>
             <br>
-            </div>
 
 
     </script>
@@ -175,13 +190,13 @@
 
 
     <!-- This is the Product view -->
-<script type="text/ng-template" id="partials/products-view.html">
+
+    <script type="text/ng-template" id="partials/products-view.html">
        <div class="span8">
 
             <div class="span6">
 
-                <!-- Choose the Base Product
-                Set pump to "" when changing-->
+                <!-- Choose the Base Product-->
           <select ng-model="$parent.selectedBase" ng-options="productTitle.Description for productTitle in quotation.baseProducts" ng-change="resetAll()">
               <option value="">Select Base</option>
           </select>
@@ -195,233 +210,42 @@
 
            <!-- Choose the sub products here. This is for the first pricing summary-->
 
-           <!-- This should be automated, ng-repeat??   -->
+        <div ng-repeat="object in radioBoxCategories" class="span6">
+            <div ng-show="showOptions(object.Category)">
+                <strong>{{object.Category}}: </strong>
 
-            <div ng-repeat="object in radioBoxCategories" class="span6">
-                <div ng-show="showOptions(object.class)">
-                    <strong>{{object.class}}: </strong><br>
-                    <div class="row">
-                          <input type="radio" ng-model=selectedRadio[$index]  value="" ng-checked="true" > No {{object.class}} <br><br>
-
-                          <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
-                              <input type="radio" ng-model=selectedRadio[$parent.$index] value="{{product.Part}}" > {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                          </div>
-                      </div>
-
-                      <br>
-                      <br>
-                  </div>
+                    <table cellpadding="5px" cellspacing="5px" width="100%">
+                        <tr>
+                            <td><input type="radio" ng-model=selectedRadio[$index]  value="" ng-checked="true"> </td> <td>No {{object.Category}}</td> <br><br>
+                        </tr>
+                          <tr ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                              <td><input type="radio" ng-model=selectedRadio[$parent.$index] value="{{product.Part}}"></td><td width="75%"> {{product.Description}} &nbsp;&nbsp;</td> <td>Price:</td><td> {{getStdCost(product)}}</td>
+                           </tr>
+                    </table>
+                <br>
+                <br>
+                <br>
               </div>
-
-              <div ng-repeat="object in checkBoxCategories" class="span6">
-                  <div ng-show="showOptions(object.class)">
-                      <strong>{{object.class}}: </strong><br>
-                      <div class="row">
-                              <div ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
-                                  <input type="checkbox" ng-model="product.checked" value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                              </div>
-                      </div>
-
-                      <br>
-                      <br>
-                  </div>
-              </div>
-
-              <!--      <div ng-show="showOptions('Accessories')">
-             <strong> Accessories: </strong><br>
-             <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
-                 <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-             </div>
-             <br>
-             <br>
-         </div>
-
-
-
-       <!-- Truck
-        <!-- Need to be changed to the correct filter
-            <!--  <div class="span6">
-              <div ng-show="showOptions('Truck')">
-
-              <strong> Truck: </strong><br>
-                  <div class="row">
-                      <input type="radio" ng-model="$parent.selectedTruck"  value="" ng-checked="true" name="truckSelect"> No Truck <br><br>
-                  </div>
-                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Truck'}" class="row">
-                      <input type="radio" ng-model="$parent.selectedTruck"  value="{{product.Part}}" name="truckSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                  </div>
+          </div>
+            <div ng-repeat="object in checkBoxCategories" class="span6">
+              <div ng-show="showOptions(object.Category)">
+                  <strong>{{object.Category}}: </strong>
+                  <table cellpadding="5px" cellspacing="5px" width="100%">
+                      <tr ng-repeat="product in object.products | filter:{Dep:selectedBase.Part}">
+                          <td><input type="checkbox" ng-model="product.checked" value="{{product.Part}}"></td><td width="75%"> {{product.Description}} </td>&nbsp;&nbsp; <td>Price:</td> <td>{{getStdCost(product)}}</td>
+                      </tr>
+                 </table>
+                  <br>
                   <br>
                   <br>
               </div>
+          </div>
 
-
-
-              <!-- Truck Options
-            <!--    <div ng-show="showOptions('TruckOption')">
-                    <strong> Truck Options: </strong><br>
-                    <div class="row">
-                        <input type="radio" ng-model="$parent.selectedTruckOption"  value="" ng-checked="true" name="truckOptionSelect"> No Truck Options <br><br>
-                    </div>
-                    <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'TruckOption'}" class="row">
-                        <input type="radio" ng-model="$parent.selectedTruckOption"  value="{{product.Part}}" name="truckOptionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                    </div>
-                    <br>
-                    <br>
-                </div>
-
-
-                <!-- Rotation Torque
-
-            <!--   <div ng-show="showOptions('Torque')">
-                   <strong> Rotation Torque: </strong><br>
-                   <div class="row">
-                       <input type="radio" ng-model="$parent.selectedTorque"  value="" ng-checked="true" name="torqueSelect"> No Rotation Torque <br><br>
-                   </div>
-                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Torque'}" class="row">
-                       <input type="radio" ng-model="$parent.selectedTorque"  value="{{product.Part}}" name="torqueSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                   </div>
-                   <br>
-                   <br>
-              </div>
-
-
-               <!-- Drill Pipe Setup
-
-            <!--     <div ng-show="showOptions('DrillPipe')">
-                     <strong> Drill Pipe Setup: </strong><br>
-                     <div class="row">
-                     <input type="radio" ng-model="$parent.selectedDrillPipe"  value="" ng-checked="true" name="DrillPipeSelect"> No Drill Pipe <br><br>
-                     </div>
-                     <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'DrilPipe'}" class="row">
-                         <input type="radio" ng-model="$parent.selectedDrillPipe"  value="{{product.Part}}" name="DrillPipeSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                     </div>
-                     <br>
-                     <br>
-                </div>
-
-
-                 <!-- Air Piping
-
-            <!--   <div ng-show="showOptions('AirPiping')">
-               <strong> Air Piping: </strong><br>
-                   <div class="row">
-                       <input type="radio" ng-model="$parent.selectedAirPiping"  value="" ng-checked="true" name="airPipingSelect"> No Air Piping <br><br>
-                   </div>
-                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'AirPiping'}" class="row">
-                       <input type="radio" ng-model="$parent.selectedAirPiping"  value="{{product.Part}}" name="airPipingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                   </div>
-                   <br>
-                   <br>
-              </div>
-
-
-               <!-- Water Injection
-
-            <!--  <div ng-show="showOptions('WaterInjection')">
-              <strong> Water Injection: </strong><br>
-                  <div class="row">
-                      <input type="radio" ng-model="$parent.selectedWaterInjection"  value="" ng-checked="true" name="waterInjectionSelect"> No Water Injection <br><br>
-                  </div>
-                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'WaterInjection'}" class="row">
-                      <input type="radio" ng-model="$parent.selectedWaterInjection"  value="{{product.Part}}" name="waterInjectionSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                  </div>
-                  <br>
-                  <br>
-             </div>
-
-
-
-              <!-- Hoists
-
-            <!--  <div ng-show="showOptions('Hoist')">
-                  <strong> Hoists: </strong><br>
-                  <div class="row">
-                      <input type="radio" ng-model="$parent.selectedHoist"  value="" ng-checked="true" name="hoistSelect"> No Hoists <br><br>
-                  </div>
-                  <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Hoist'}" class="row">
-                      <input type="radio" ng-model="$parent.selectedHoist"  value="{{product.Part}}" name="hoistSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                  </div>
-                  <br>
-                  <br>
-             </div>
-
-
-
-              <!-- Piping Handling
-
-            <!--   <div ng-show="showOptions('PipingHandling')">
-                   <strong> Piping Handling: </strong><br>
-                   <div class="row">
-                       <input type="radio" ng-model="$parent.selectedPipingHandling"  value="" ng-checked="true" name="pipingHandlingSelect"> No Piping Handling <br><br>
-                   </div>
-                   <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'PipingHandling'}" class="row">
-                       <input type="radio" ng-model="$parent.selectedPipingHandling"  value="{{product.Part}}" name="pipingHandlingSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                   </div>
-                   <br>
-                   <br>
-              </div>
-
-
-
-               <!-- Mud Pump
-
-            <!--    <div ng-show="showOptions('Pump')">
-                <strong> Mud Pump: </strong><br>
-                    <div class="row">
-                    <input type="radio" ng-model="$parent.selectedPump"  value="" name="pumpSelect" ng-checked="true"> No Pump <br><br>
-                    </div>
-                    <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Pump'}" class="row">
-                        <input type="radio" ng-model="$parent.selectedPump"  value="{{product.Part}}" name="pumpSelect"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                    </div>
-
-                    <br>
-                    <br>
-               </div>
-
-
-                <!-- Cold Weather Package
-            <!--
-           <div ng-show="showOptions('ColdWeather')">
-               <strong> Cold Weather: </strong><br>
-               <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'ColdWeather'}" class="row">
-                   <input type="checkbox" ng-model="product.ColdWeather"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-               </div>
-               <br>
-               <br>
-           </div>
-
-           <!-- Miscellaneous
-
-            <!--       <div ng-show="showOptions('Miscellaneous')">
-                      <strong> Miscellaneous: </strong><br>
-                      <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Miscellaneous'}" class="row">
-                          <input type="checkbox" ng-model="product.Miscellaneous"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                      </div>
-                      <br>
-                      <br>
-                  </div>
-
-                  <!-- Accessories
-            <!--      <div ng-show="showOptions('Accessories')">
-                     <strong> Accessories: </strong><br>
-                     <div ng-repeat="product in quotation.products | filter:{Dep:selectedBase.Part, Class:'Accessories'}" class="row">
-                         <input type="checkbox" ng-model="product.Accessories"  value="{{product.Part}}"> {{product.Description}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: {{getStdCost(product)}}<br><br>
-                     </div>
-                     <br>
-                     <br>
-                 </div>
-
-
-
-                 <!-- Trying to Automate it
-        <!-- <div class="span6" ng-repeat="product.Class in products">
-             {{product.Class}}
-         </div>      -->
 
           <div class="span6">
             <table>
                 <tr>
-                    <td><button ng-click="addClick(1)" class="btn">Add to Price Summary</button></td>
+                    <td><button ng-click="addClick(1)" class="btn">Add to Price Summary 1</button></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td><button ng-click="addClick(2)" class="btn">Add to Price Summary 2</button></td>
                 </tr>
@@ -461,8 +285,8 @@
            <h3>Price Summary</h3>
            <table class="table table-striped">
             <tr>
-                <th> Type </th>
-                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th> <a href="" ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a></th>
+                <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                 <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th> <a href="" ng-click="settings.order = 'Cost'; settings.reverse=!settings.reverse">Cost</a></th>
                 <th> Quantity </th>
@@ -470,7 +294,7 @@
             </tr>
             <tr ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
                 <!-- Add Strong if it is Base -->
-                <td>{{product.Class}}</td>
+                <td>{{product.Category}}</td>
                 <td>{{product.Part}}</td>
                 <td><input type="text" ng-model="product.Description" class="descInput"></td>
                 <td><input type="text" ng-model="product.Cost" class="costInput"></td>
@@ -486,8 +310,8 @@
         <br>
            <table class="table table-striped">
                <tr>
-                   <th> Type </th>
-                   <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                   <th> <a href="" ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
+                   <th> <a href="" ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                    <th> <a href="" ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                    <th> <a href="" ng-click="settings.order = 'Cost2'; settings.reverse=!settings.reverse">Cost</a></th>
                   <!-- <th> <a href="" ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Cost({{quotation.currency.Name}})</a></th>-->
@@ -497,9 +321,9 @@
                </tr>
                <tr ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
                    <!-- Add Strong if it is Base -->
-                   <td>{{product.Class}}</td>
+                   <td>{{product.Category}}</td>
                    <td>{{product.Part}}</td>
-                   <td>{{product.Description}}</td>
+                   <td><input type="text" ng-model="product.Description" class="descInput"></td>
                    <td><input type="text" ng-model="product.Cost2" class="costInput"></td>
                    <td><input type="text" ng-model="product.Quantity2" required min="1" class="quantityInput"></td>
                    <td><button ng-click="removeClick(product, 'Second')" class="btn-small">-</button></td>
@@ -524,7 +348,7 @@
               <tr>
                 <th>Quote 1</th>
                 <th>Quote 2</th>
-                <th>Part</th>
+                <th>Part No.</th>
                 <th>Description</th>
                 <th>StdCost</th>
               </tr>
@@ -552,7 +376,8 @@
 
 
     <!-- This is the Quotation view -->
-<script type="text/ng-template" id="partials/quotation-view.html" >
+
+    <script type="text/ng-template" id="partials/quotation-view.html" >
 
     <div class="span8">
         <!-- First the front page is added -->
@@ -560,12 +385,12 @@
             <h2>Atlas Copco Quotation</h2><br>
             <br>
             <br>
-            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #0099cc, #ffffff);height:30px;"/>
+            <!--<hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #0099cc, #ffffff);height:30px;"/>-->
             <br>
             <br>
             <br>
             <br>
-            <hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #ffffff, #0099cc);height:30px;"/>
+            <!--<hr class="coverPageBar" style="border-style:none; border-color:white; background: linear-gradient(to left, #ffffff, #0099cc);height:30px;"/>-->
             <br>
             <img src="lib/img/AClogo.jpg" id="logo">
             <br>
@@ -619,7 +444,7 @@
             <p>
                 <!-- Here is the contents of the Cover Letter added -->
 
-            <span ng-bind-html="quotation.letterText"></span>
+            <span align="justify" ng-bind-html="quotation.letterText"></span>
 
             </p>
             <br>
@@ -627,40 +452,89 @@
 
                     <!--<footer>-->
 
-            <table id="letterFooter">
-                <tr id="CoverLetterFooterHeader">
-                    <td colspan="4;">
-                    Atlas Copco Group Centre
-                    </td>
-                </tr>
-                <tr height="1px">
-                    <td colspan="4;">
-                    <hr size="1px" style= "border-top:1px solid black; width: 90%" />
-                    </td>
-                </tr>
-                <tr class="CoverLetterFooter">
-                    <td class="coverLetterFooterText">Atlas Copco AB</td>
-                    <td class="coverLetterFooterText">Visitors' address:</td>
-                    <td class="coverLetterFooterText">Telephone: + 46(0)87438000</td>
-                    <td class="coverLetterFooterText">A Public Company (publ)</td>
-                </tr>
+          <!--  <footer style="position:absolute; bottom:0px;width:100%;">  -->
+            <!--<hr style="border-top:1px solid black;"/>  -->
 
-                <tr class="CoverLetterFooter">
-                    <td class="coverLetterFooterText">SE-10523 Stockholm</td>
-                    <td class="coverLetterFooterText">Sickla Industrivag 3</td>
-                    <td class="coverLetterFooterText">Fax: + 46(0)86449045</td>
-                    <td class="coverLetterFooterText">Reg. No: 556014-2720</td>
-                </tr>
+            <!-- REMOVE THIS COMMENT TO VIEW THE FOOTER
+                <table cellpadding="0" cellspacing="0" style="height:80px; width:100%" id="letterFooter">
+            <tr>
+                 <td colspan="4" style="border-bottom:solid 1.5px black;">
+                    <div align="right;" style="height:12px;">
+                        <h6 align="left;">Atlas Copco Group Centre</h6>
+                    </div>
+                </td>
+            </tr>
+            <tr class="CoverLetterFooter">
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Atlas Copco AB
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Visitors' address:
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Telephone: + 46(0)87438000
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        A Public Company (publ)
+                    </div>
+                </td>
+            </tr>
+            <tr class="CoverLetterFooter">
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        SE-10523 Stockholm
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Sickla Industrivag 3
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Fax: + 46(0)86449045
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Reg. No: 556014-2720
+                    </div>
+                </td>
+            </tr>
+            <tr class="CoverLetterFooter">
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Sweden
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Nacka
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        www.atlascopco.com
+                    </div>
+                </td>
+                <td class="coverLetterFooterText">
+                    <div style="height:5px;">
+                        Reg. Office Nacka
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-                <tr class="CoverLetterFooter">
-                    <td class="coverLetterFooterText">Sweden</td>
-                    <td class="coverLetterFooterText">Nacka</td>
-                    <td class="coverLetterFooterText">www.atlascopco.com</td>
-                    <td class="coverLetterFooterText">Reg. Office Nacka</td>
-                </tr>
-            </table>
 
-            <!--</footer>-->
+
+                <!--</footer>-->
 
         </div>
 
@@ -672,7 +546,7 @@
             <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
                 <tr>
                     <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
-                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                    <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                     <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                     <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
                     <th class="tableHeaderColor">Quantity</th>
@@ -682,7 +556,7 @@
                 <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted:true} | orderBy:settings.order:settings.reverse ">
 
                 <!-- Add Strong if it is Base... -->
-                <td>{{product.Class}}</td>
+                <td>{{product.Category}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
                 <td>{{numberWithCommas(product.Cost)}}</td>
@@ -729,7 +603,7 @@
         <table class="table table-striped" border="2" cellspacing="0" cellpadding="0">
             <tr>
                 <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Type'; settings.reverse=!settings.reverse">Type </a> </th>
-                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part</a></th>
+                <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Part'; settings.reverse=!settings.reverse">Part No.</a></th>
                 <th class="tableHeaderColor"> <a href ng-click="settings.order = 'Description'; settings.reverse=!settings.reverse">Description</a></th>
                 <th class="tableHeaderColor"> <a href ng-click="settings.order = 'StdCost'; settings.reverse=!settings.reverse">Unit Price</a></th>
                 <th class="tableHeaderColor">Quantity</th>
@@ -737,7 +611,7 @@
             </tr>
             <tr class="tableRowStyle" ng-repeat="product in quotation.products | filter:{Quoted2:true} | orderBy:settings.order:settings.reverse ">
                 <!-- Add Strong if it is Base -->
-                <td>{{product.Class}}</td>
+                <td>{{product.Category}}</td>
                 <td>{{product.Part}}</td>
                 <td>{{product.Description}}</td>
                 <td>{{numberWithCommas(product.Cost2)}}</td>
@@ -782,7 +656,7 @@
         <!-- Terms and Conditions -->
         <div ng-show="includeTerms()" class="standardMargin">
             <h3>Terms and Conditions</h3>
-            <span ng-bind-html="quotation.terms.Content"></span>
+            <span ng-bind-html="quotation.termsText"></span>
         </div>
 
 
@@ -817,8 +691,6 @@
 
     <script type="text/javascript" src="lib/js/jquery-1.9.1.js"></script>
 
-
-
     <!-- Angular -->
     <script src="lib/js/angular.js"></script>
 
@@ -829,14 +701,6 @@
 
     <!-- SaveFiles -->
     <script type="text/javascript" src="lib/js/FileSaver.js"></script>
-    <!-- PDF Generator -->
-    <!--
-    <script type="text/javascript" src="lib/js/jspdf.js"></script>
-    <script type="text/javascript" src="lib/js/jspdf.plugin.addimage.js"></script>
-    <script type="text/javascript" src="lib/js/jspdf.plugin.cell.js"></script>
-    <script type="text/javascript" src="lib/js/jspdf.plugin.split_text_to_size.js"></script>
-    <script type="text/javascript" src="lib/js/jspdf.plugin.standard_fonts_metrics.js"></script>
-     -->
 
     <!-- Tinymce, Textarea -->
     <script type="text/javascript" src="lib/tinymce/assets/tiny_mce.js"></script>
@@ -858,6 +722,8 @@
     <script type="text/javascript" src="data/TechnicalSpecifications.js"></script>
 
     <script type="text/javascript" src="data/ExchangeRate.js"></script>
+
+    <script type="text/javascript" src="data/Address.js"></script>
 
 
     <script type="text/javascript" src="js/app.js"></script>

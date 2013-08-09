@@ -103,6 +103,10 @@ pre {
     line-height: 20px;
 }
 
+.letterContent {
+    text-align: justify;
+}
+
 hr {
     border-style: solid;
     color: black;
